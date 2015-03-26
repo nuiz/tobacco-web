@@ -1,0 +1,131 @@
+#main {
+    background: url(images/bg.jpg);
+    background-size: 100%;
+}
+.LabelKM {
+    position: absolute;
+    top: 0;
+    left: 67px;
+    width: 900px;
+    height: 609px;
+    background: url(images/LBKM.png);
+    background-size: 100%;
+}
+.txtLabel{
+    position: absolute;
+    top: 125px;
+    left: 10px;
+    width: 778px;
+    height: 400px;
+}
+
+.backHM {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    background: url(images/backhome.png);
+    background-size: 100%;
+}
+
+.centerKM {
+    position: absolute;
+    left: 330px;
+    width: 350px;
+    height: 90px;
+    background: url(images/centerkm.png);
+    background-size: 100%;
+}
+
+.buttonleft {
+    position: absolute;
+    top: 253px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background: url(images/no.png);
+    background-size: 100%;
+    border: none;
+    box-shadow: none;
+}
+
+.buttonright {
+    position: absolute;
+    top: 252px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: url(images/rightno.png);
+    background-size: 100%;
+    border: none;
+    box-shadow: none;
+}
+
+.clickcenter {
+    position: absolute;
+    top: 35px;
+    left: 125px;
+    width: 700px;
+    height: 25px;
+    color: #F4D799;
+    font-size: 36px;
+}
+
+.kmPic {
+    float: left;
+    margin-top: 93px;
+    margin-left: 62px;
+    width: 125px;
+    height: 128px;
+    background: url(images/13.png);
+    background-size: 100%;
+}
+
+.kmMsg {
+    float: left;
+    margin-top: -60px;
+    margin-left: 0;
+    width: 35px;
+    height: 48px;
+    background: url(images/msg.png);
+    background-size: 100%;
+}
+
+.kmText {
+    float: left;
+    margin-top: 160px;
+    width: 115px;
+    height: 30px;
+    font-size: 16px;
+    text-align: center;
+    color: #FDE4AF;
+}
+
+.line {
+    position: absolute;
+    top: 226px;
+    margin-left: 13px;
+    width: 700px;
+    height: 27px;
+    background: url(images/8.png);
+    background-size: 100%;
+}
+
+.blockpic{
+    position: absolute;
+    top: 140px;
+    left: 60px;
+    width: 779px;
+    height: 303px;
+    z-index: 3;
+}
+
+.map{
+    position: absolute;
+    top: 155px;
+    left: 65px;
+    width: 300px;
+    height: 350px;
+    border: #8F3D1A solid 1px;
+}

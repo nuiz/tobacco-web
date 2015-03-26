@@ -1,0 +1,98 @@
+#main {
+    background: url(images/bg.jpg);
+    background-size: 100%;
+}
+
+.Ans {
+    position: absolute;
+    left: 30px;
+    width: 410px;
+    height: 581px;
+    background: url(images/Ans.png);
+    background-size: 100%;
+}
+
+.txtAns {
+    padding-top: 130px;
+    width: 400px;
+    text-align: center;
+    font-size: 32px;
+    color: #F49647;
+}
+
+.Ans_prs {
+    position: absolute;
+    top: 383px;
+    left: 50px;
+    width: 261px;
+    height: 25px;
+    color: #F49647;
+    font-size: 36px;
+}
+
+.logo_leafFAQ {
+    position: absolute;
+    top: 125px;
+    left: 120px;
+    width: 250px;
+    height: 300px;
+    background: url(images/logo1.png);
+    background-size: 100%;
+    z-index: 1;
+}
+
+.glassFAQ {
+    position: absolute;
+    top: 196px;
+    left: 108px;
+    width: 140px;
+    height: 95px;
+    background: url(images/logo2.png);
+    background-size: 100%;
+    z-index: 2;
+}
+
+.blkQ {
+    position: absolute;
+    top: -12px;
+    left: 493px;
+    width: 380px;
+    height: 600px;
+}
+
+.LabelQ {
+    margin-top: -76px;
+    width: 400px;
+    height: 290px;
+    background: url(images/LabelQcopy.png);
+    background-size: 100%;
+    position: relative;
+}
+
+.Qus {
+    padding-top: 175px;
+    padding-left: 7px;
+    left: 8px;
+    color: #F49647;
+    font-size: 21px;
+}
+
+.backH {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    background: url(images/backhome.png);
+    background-size: 100%;
+}
+
+.LBfaq {
+    position: absolute;
+    top: -10px;
+    left: 547px;
+    width: 275px;
+    height: 102px;
+    background: url(images/faq.png);
+    background-size: 100%;
+}

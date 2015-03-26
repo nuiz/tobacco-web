@@ -1,0 +1,58 @@
+#main {
+    background: url(images/bggroup.png);
+    background-size: 100%;
+}
+
+.icon {
+    position: absolute;
+    top: 80px;
+    left: 205px;
+    width: 680px;
+    height: 600px;
+}
+
+.icon1 {
+    top: 20px;
+    width: 90px;
+    height: 45px;
+    float: left;
+    margin: 40px;
+    text-align: center;
+    color: #CFA588;
+    font-size: 14px;
+}
+
+.icon1 img {
+    width: 75px;
+    height: 75px;
+}
+
+.all {
+    position: absolute;
+    top: 0;
+    left: 400px;
+    width: 280px;
+    height: 93px;
+    background: url(images/18.png);
+    background-size: 100%;
+}
+
+.backHm {
+    position: absolute;
+    bottom: 10px;
+    left: 94px;
+    width: 100px;
+    height: 100px;
+    background: url(images/backhome.png);
+    background-size: 100%;
+}
+
+.bottom {
+    position: absolute;
+    top: 315px;
+    right: 330px;
+    width: 60px;
+    height: 60px;
+    background: url(images/buttom.png);
+    background-size: 100%;
+}

@@ -1,0 +1,744 @@
+#main {
+    background: url(images/bggroup.png);
+    background-size: 100%;
+}
+
+.select {
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    width: 870px;
+    height: 230px;
+}
+
+.Krongthip {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 160px;
+    height: 176px;
+    background: url(images/block.png);
+    background-size: 100%;
+}
+
+.TextKt {
+    position: absolute;
+    top: 127px;
+    left: 40px;
+    font-size: 20px;
+    color: #FFCEAC;
+}
+
+.ResCig {
+    position: absolute;
+    top: 0;
+    left: 170px;
+    width: 160px;
+    height: 176px;
+    background: url(images/block.png);
+    background-size: 100%;
+}
+
+.TextRc {
+    position: absolute;
+    top: 127px;
+    left: 43px;
+    font-size: 20px;
+    color: #FFCEAC;
+}
+
+.SaiFon {
+    position: absolute;
+    top: 0;
+    left: 350px;
+    width: 160px;
+    height: 176px;
+    background: url(images/block.png);
+    background-size: 100%;
+}
+
+.textSf {
+    position: absolute;
+    top: 127px;
+    left: 50px;
+    font-size: 20px;
+    color: #FFCEAC;
+}
+
+.DejaVu {
+    position: absolute;
+    top: 0;
+    right: 180px;
+    width: 160px;
+    height: 176px;
+    background: url(images/block.png);
+    background-size: 100%;
+}
+
+.TextDv {
+    position: absolute;
+    top: 127px;
+    left: 55px;
+    font-size: 20px;
+    color: #FFCEAC;
+}
+
+.develop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 160px;
+    height: 176px;
+    background: url(images/block.png);
+    background-size: 100%;
+}
+
+.TextDl {
+    position: absolute;
+    top: 108px;
+    left: 35px;
+    font-size: 16px;
+    color: #FFCEAC;
+}
+
+.line {
+    position: absolute;
+    top: 25px;
+    right: -125px;
+    width: 1118px;
+    height: 40px;
+    background: url(images/line.png);
+    background-size: 100%;
+}
+
+.Textline {
+    position: absolute;
+    left: 10px;
+    font-size: 24px;
+    color: #FFCEAC;
+}
+
+.buttonleft {
+    position: absolute;
+    top: 117px;
+    left: -70px;
+    width: 45px;
+    height: 45px;
+    background: url(images/BTleft.png);
+    background-size: 100%;
+}
+
+.buttonright {
+    position: absolute;
+    top: 120px;
+    right: -60px;
+    width: 45px;
+    height: 45px;
+    background: url(images/BTright.png);
+    background-size: 100%;
+}
+
+.icon_grp {
+    position: absolute;
+    bottom: -387px;
+    left: -108px;
+    width: 80px;
+    height: 78px;
+    background: url(images/icongrp.png);
+    background-size: 100%;
+}
+
+.groups {
+    position: absolute;
+    top: 180px;
+    left: -109px;
+    width: 200px;
+    height: 320px;
+}
+
+.on {
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    width: 30px;
+    height: 18px;
+    background: url(images/on.png);
+    background-size: 100%;
+}
+
+.grps {
+    position: absolute;
+    top: 28px;
+    left: 20px;
+    width: 200px;
+    font-size: 17px;
+    color: #DFBB9E;
+}
+
+.mass {
+    position: absolute;
+    top: 235px;
+    left: -96px;
+    width: 80px;
+    height: 47px;
+    text-align: center;
+    line-height: 47px;
+    color: #FFFFFF;
+    background-color: initial;
+    background: rgba(132, 37, 20, 0.36);
+    font-size: 14px;
+    border-width: 1px;
+    border-color: #CFA588;
+    border-style: solid;
+}
+
+.pack {
+    position: absolute;
+    top: 235px;
+    left: -2px;
+    width: 80px;
+    height: 47px;
+    text-align: center;
+    line-height: 47px;
+    color: #FFFFFF;
+    background-color: initial;
+    background: rgba(132, 37, 20, 0.36);
+    font-size: 14px;
+    border: 1px #CFA588 solid;
+}
+
+.tobacco {
+    position: absolute;
+    top: 290px;
+    left: -96px;
+    width: 80px;
+    height: 47px;
+    text-align: center;
+    line-height: 47px;
+    color: #FFFFFF;
+    background-color: initial;
+    background: rgba(132, 37, 20, 0.36);
+    font-size: 14px;
+    border: 1px #CFA588 solid;
+}
+
+.total {
+    position: absolute;
+    top: 290px;
+    left: -2px;
+    width: 80px;
+    height: 47px;
+    text-align: center;
+    line-height: 24px;
+    color: #FFFFFF;
+    background-color: initial;
+    background: rgba(132, 37, 20, 0.36);
+    font-size: 14px;
+    border: 1px #CFA588 solid;
+}
+
+.cigN {
+    position: absolute;
+    top: 345px;
+    left: -96px;
+    width: 80px;
+    height: 47px;
+    text-align: center;
+    line-height: 24px;
+    color: #FFFFFF;
+    background-color: initial;
+    background: rgba(132, 37, 20, 0.36);
+    font-size: 14px;
+    border: 1px #CFA588 solid;
+}
+
+.cigNe {
+    position: absolute;
+    top: 345px;
+    left: -2px;
+    width: 80px;
+    height: 47px;
+    text-align: center;
+    line-height: 24px;
+    color: #FFFFFF;
+    background-color: initial;
+    background: rgba(132, 37, 20, 0.36);
+    font-size: 14px;
+    border: 1px #CFA588 solid;
+}
+
+.cig {
+    position: absolute;
+    top: 400px;
+    left: -96px;
+    width: 80px;
+    height: 47px;
+    text-align: center;
+    line-height: 47px;
+    color: #FFFFFF;
+    background-color: initial;
+    background: rgba(132, 37, 20, 0.36);
+    font-size: 14px;
+    border: 1px #CFA588 solid;
+}
+
+.cigs {
+    position: absolute;
+    top: 400px;
+    left: -2px;
+    width: 80px;
+    height: 47px;
+    text-align: center;
+    line-height: 47px;
+    color: #FFFFFF;
+    background-color: initial;
+    background: rgba(132, 37, 20, 0.36);
+    font-size: 14px;
+    border: 1px #CFA588 solid;
+}
+
+.receipts {
+    position: absolute;
+    top: 455px;
+    left: -96px;
+    width: 80px;
+    height: 47px;
+    text-align: center;
+    line-height: 47px;
+    color: #FFFFFF;
+    background-color: initial;
+    background: rgba(132, 37, 20, 0.36);
+    font-size: 14px;
+    border: 1px #CFA588 solid;
+}
+
+.receiptsII {
+    position: absolute;
+    top: 455px;
+    left: -2px;
+    width: 80px;
+    height: 47px;
+    text-align: center;
+    line-height: 47px;
+    color: #FFFFFF;
+    background-color: initial;
+    background: rgba(132, 37, 20, 0.36);
+    font-size: 14px;
+    border: 1px #CFA588 solid;
+}
+
+.down {
+    position: absolute;
+    bottom: -300px;
+    left: -32px;
+    width: 30px;
+    height: 18px;
+    background: url(images/down.png);
+    background-size: 100%;
+}
+
+.Tinews {
+    position: absolute;
+    top: 200px;
+    left: 350px;
+    width: 770px;
+    height: 380px;
+    z-index: 3;
+    line-height: 47px;
+    color: #FFFFFF;
+    background-color: initial;
+    background: rgba(132, 37, 20, 0.36);
+    border: 1px #CFA588 solid;
+}
+
+.sum {
+    position: absolute;
+    top: 210px;
+    right: 160px;
+    width: 200px;
+    height: 45px;
+    z-index: 3;
+    line-height: 47px;
+    color: #FFFFFF;
+    background-color: initial;
+    background: rgba(132, 37, 20, 0.36);
+    border: 1px black solid;
+}
+
+.material {
+    position: absolute;
+    top: 4px;
+    right: 104px;
+    width: 90px;
+    height: 35px;
+    z-index: 3;
+    line-height: 40px;
+    color: #FFFFFF;
+    background-color: initial;
+    background: rgba(132, 37, 20, 0.36);
+    border: 1px black solid;
+    text-align: center;
+    font-size: 15px;
+}
+
+.video {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 90px;
+    height: 35px;
+    z-index: 3;
+    line-height: 40px;
+    color: #FFFFFF;
+    background-color: initial;
+    background: rgba(132, 37, 20, 0.36);
+    border: 1px black solid;
+    text-align: center;
+    font-size: 15px;
+}
+
+.Caption {
+    position: absolute;
+    top: 265px;
+    right: 160px;
+    width: 200px;
+    height: 185px;
+    z-index: 3;
+    color: #FFFFFF;
+    background-color: initial;
+    background: #2b1302;
+    border: 1px black solid;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+.Pic {
+    position: absolute;
+    top: 290px;
+    right: 265px;
+    width: 85px;
+    height: 50px;
+    background: url(images/Image.jpeg);
+    background-size: 100%;
+    z-index: 4;
+    text-align: center;
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+.TextPic {
+    position: absolute;
+    top: 50px;
+    width: 80px;
+    height: 30px;
+    font-size: 10px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.PicII {
+    position: absolute;
+    top: 290px;
+    right: 170px;
+    width: 85px;
+    height: 50px;
+    background: url(images/Image.jpeg);
+    background-size: 100%;
+    z-index: 4;
+    text-align: center;
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+.TextPicII {
+    position: absolute;
+    top: 50px;
+    width: 80px;
+    height: 30px;
+    font-size: 10px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.Pix {
+    position: absolute;
+    top: 370px;
+    right: 265px;
+    width: 85px;
+    height: 50px;
+    background: url(images/Image.jpeg);
+    background-size: 100%;
+    z-index: 4;
+    text-align: center;
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+.TextPix {
+    position: absolute;
+    top: 50px;
+    width: 80px;
+    height: 30px;
+    font-size: 10px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.PixII {
+    position: absolute;
+    top: 370px;
+    right: 170px;
+    width: 85px;
+    height: 50px;
+    background: url(images/Image.jpeg);
+    background-size: 100%;
+    z-index: 4;
+    text-align: center;
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+.TextPixII {
+    position: absolute;
+    top: 50px;
+    width: 80px;
+    height: 30px;
+    font-size: 10px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.CaptionII {
+    position: absolute;
+    top: 460px;
+    right: 160px;
+    width: 200px;
+    height: 100px;
+    z-index: 3;
+    color: #FFFFFF;
+    background-color: initial;
+    background: #2b1302;
+    border: 1px black solid;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+.Picture {
+    position: absolute;
+    top: 480px;
+    right: 265px;
+    width: 85px;
+    height: 50px;
+    background: url(images/Image.jpeg);
+    background-size: 100%;
+    z-index: 4;
+    text-align: center;
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+.TextPicture {
+    position: absolute;
+    top: 50px;
+    width: 80px;
+    height: 30px;
+    font-size: 10px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.PictureII {
+    position: absolute;
+    top: 480px;
+    right: 170px;
+    width: 85px;
+    height: 50px;
+    background: url(images/Image.jpeg);
+    background-size: 100%;
+    z-index: 4;
+    text-align: center;
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+.TextPictureII {
+    position: absolute;
+    top: 50px;
+    width: 80px;
+    height: 30px;
+    font-size: 10px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.CaptionNews {
+    position: absolute;
+    top: 215px;
+    Left: 375px;
+    width: 500px;
+    height: 235px;
+    z-index: 3;
+    color: #FFFFFF;
+    background-color: initial;
+    background: #2b1302;
+    border: 1px black solid;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+.PictureNews {
+    position: absolute;
+    top: 240px;
+    left: 485px;
+    width: 290px;
+    height: 192px;
+    background: url(images/42585048.jpg);
+    background-size: 100%;
+    z-index: 4;
+    text-align: center;
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+.TextPN {
+    position: absolute;
+    top: 192px;
+    width: 289px;
+    height: 20px;
+    font-size: 12px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.CaptionOther {
+    position: absolute;
+    top: 460px;
+    Left: 375px;
+    width: 500px;
+    height: 115px;
+    z-index: 3;
+    color: #FFFFFF;
+    background-color: initial;
+    background: #2b1302;
+    border: 1px black solid;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+.Pic_other {
+    position: absolute;
+    top: 485px;
+    Left: 390px;
+    width: 105px;
+    height: 70px;
+    background: url(images/Tobaccoo.jpg);
+    background-size: 100%;
+    z-index: 4;
+    text-align: center;
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+.TextPicOther {
+    position: absolute;
+    top: 70px;
+    width: 118px;
+    height: 16px;
+    font-size: 9px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.Pic_OtherII {
+    position: absolute;
+    top: 485px;
+    Left: 510px;
+    width: 105px;
+    height: 70px;
+    background: url(images/Tobaccoo.jpg);
+    background-size: 100%;
+    z-index: 4;
+    text-align: center;
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+.Text_POII {
+    position: absolute;
+    top: 70px;
+    width: 118px;
+    height: 16px;
+    font-size: 9px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.Pic_OtherIII {
+    position: absolute;
+    top: 485px;
+    Left: 630px;
+    width: 105px;
+    height: 70px;
+    background: url(images/Tobaccoo.jpg);
+    background-size: 100%;
+    z-index: 4;
+    text-align: center;
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+.Text_POIII {
+    position: absolute;
+    top: 70px;
+    width: 118px;
+    height: 16px;
+    font-size: 9px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.Pic_OtherIV {
+    position: absolute;
+    top: 485px;
+    Left: 750px;
+    width: 105px;
+    height: 70px;
+    background: url(images/Tobaccoo.jpg);
+    background-size: 100%;
+    z-index: 4;
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+.Text_POIV {
+    position: absolute;
+    top: 70px;
+    width: 118px;
+    height: 16px;
+    font-size: 9px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.buttonleft_small {
+    position: absolute;
+    top: 375px;
+    left: 300px;
+    width: 40px;
+    height: 40px;
+    background: url(images/BTleft.png);
+    background-size: 100%;
+}
+
+.buttonright_small {
+    position: absolute;
+    top: 390px;
+    right: 95px;
+    width: 40px;
+    height: 40px;
+    background: url(images/BTright.png);
+    background-size: 100%;
+}

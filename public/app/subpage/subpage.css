@@ -1,0 +1,160 @@
+#main {
+    background: url(images/bgsubpage.jpg);
+    background-size: 100%;
+}
+
+.label_book {
+    position: absolute;
+    left: 345px;
+    width: 300px;
+    height: 100px;
+    background: url(images/labelebook.png);
+    background-size: 100%;
+}
+
+.search {
+    position: absolute;
+    top: 45px;
+    right: 340px;
+    width: 280px;
+    height: 50px;
+    background: url(images/search.png);
+    background-size: 100%;
+}
+
+.category {
+    position: absolute;
+    top: 40px;
+    left: 35px;
+    width: 300px;
+    height: 64px;
+    background: url(images/category.png);
+    background-size: 100%;
+}
+
+.back_home {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    background: url(images/backhome.png);
+    background-size: 100%;
+}
+
+.block_book {
+    position: absolute;
+    top: 117px;
+    left: 215px;
+    width: 575px;
+    height: 350px;
+}
+
+.magazine {
+    position: absolute;
+    top: 20px;
+    left: -55px;
+    width: 100px;
+    height: 122px;
+    background: url(images/Britny.png);
+    background-size: 100%;
+}
+
+.magazine2 {
+    position: absolute;
+    top: 20px;
+    left: 120px;
+    width: 100px;
+    height: 122px;
+    background: url(images/magazine.jpg);
+    background-size: 100%;
+}
+
+.magazine3 {
+    position: absolute;
+    top: 20px;
+    left: 300px;
+    width: 100px;
+    height: 122px;
+    background: url(images/Britny.png);
+    background-size: 100%;
+}
+
+.magazine4 {
+    position: absolute;
+    top: 20px;
+    left: 472px;
+    width: 100px;
+    height: 122px;
+    background: url(images/magazine.jpg);
+    background-size: 100%;
+}
+
+.magazine5 {
+    position: absolute;
+    top: 153px;
+    left: 30px;
+    width: 100px;
+    height: 122px;
+    background: url(images/Britny.png);
+    background-size: 100%;
+}
+
+.lbMg {
+    position: absolute;
+    top: 195px;
+    left: 150px;
+    width: 215px;
+    height: 52px;
+    background: url(images/mag.jpg);
+}
+
+.magazine6 {
+    position: absolute;
+    top: 153px;
+    left: 385px;
+    width: 100px;
+    height: 122px;
+    background: url(images/magazine.jpg);
+    background-size: 100%;
+}
+
+.magazine7 {
+    position: absolute;
+    top: 285px;
+    left: -55px;
+    width: 100px;
+    height: 122px;
+    background: url(images/Britny.png);
+    background-size: 100%;
+}
+
+.magazine8 {
+    position: absolute;
+    top: 285px;
+    left: 120px;
+    width: 100px;
+    height: 122px;
+    background: url(images/magazine.jpg);
+    background-size: 100%;
+}
+
+.magazine9 {
+    position: absolute;
+    top: 285px;
+    left: 300px;
+    width: 100px;
+    height: 122px;
+    background: url(images/Britny.png);
+    background-size: 100%;
+}
+
+.magazine10 {
+    position: absolute;
+    top: 285px;
+    left: 472px;
+    width: 100px;
+    height: 122px;
+    background: url(images/magazine.jpg);
+    background-size: 100%;
+}

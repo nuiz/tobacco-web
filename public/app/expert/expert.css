@@ -1,0 +1,61 @@
+#main {
+    background: url(images/BGexpert.jpg);
+    background-size: 100%;
+}
+
+.label_ep {
+    position: absolute;
+    top: 0;
+    left: 120px;
+    width: 273px;
+    height: 91px;
+    background: url(images/3.png);
+    background-size: 100%;
+}
+
+.circle {
+    position: absolute;
+    top: 4px;
+    left: 12px;
+    width: 965px;
+    height: 705px;
+    background: url(images/Expert.png);
+    background-size: 100%;
+}
+
+.back_home {
+    position: absolute;
+    bottom: 10px;
+    left: 17px;
+    width: 100px;
+    height: 100px;
+    background: url(images/backhome.png);
+    background-size: 100%;
+}
+
+.toggle{
+    display: block;
+    position: absolute;
+    top: 255px;
+    width: 200px;
+    right: 0;
+    height: 107px;
+}
+
+.circle2 {
+    position: absolute;
+    top: 4px;
+    left: 12px;
+    width: 965px;
+    height: 705px;
+    background: url(images/ExpertII.png);
+    background-size: 100%;
+}
+.toggle2{
+    display: block;
+    position: absolute;
+    top: 377px;
+    width: 200px;
+    right: 29px;
+    height: 107px;
+}

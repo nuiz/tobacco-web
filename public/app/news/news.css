@@ -1,0 +1,466 @@
+#main {
+    background: url(images/bgnews.jpg);
+    background-size: 100%;
+}
+.sum {
+    position: absolute;
+    top: 38px;
+    left: 140px;
+    width: 165px;
+    height: 52px;
+    background: url(images/sumnews.png);
+    background-size: 100%;
+}
+
+.newsday {
+    position: absolute;
+    top: 0;
+    left: 400px;
+    width: 300px;
+    height: 100px;
+    background: url(images/news.png);
+    background-size: 100%;
+}
+
+.blocksum {
+    position: absolute;
+    top: 115px;
+    left: 200px;
+    width: 700px;
+    height: 500px;
+
+}
+
+.blockyear {
+    position: absolute;
+    left: 10px;
+    width: 150px;
+    height: 60px;
+
+}
+
+.Bn_left {
+    position: absolute;
+    top: 18px;
+    left: -5px;
+    width: 50px;
+    height: 25px;
+    background: url(images/leftbutton.png);
+    background-size: 100%;
+}
+
+.txt_years {
+    position: absolute;
+    top: 15px;
+    left: 38px;
+    font-size: 38px;
+    color: #FFFFFF;
+}
+
+.Bn_right {
+    position: absolute;
+    top: 19px;
+    right: -20px;
+    width: 50px;
+    height: 25px;
+    background: url(images/rightbutton.png);
+    background-size: 100%;
+}
+
+.blockpic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700px;
+    height: 450px;
+}
+
+.PicLeft {
+    position: absolute;
+    top: 70px;
+    width: 200px;
+    height: 250px;
+    background: url(images/1104278-0016.jpg);
+    background-size: 100%;
+    opacity: 0.7;
+    z-index: 1;
+    border-radius: 40px;
+}
+
+.PicRight {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 200px;
+    height: 250px;
+    background: url(images/View2.jpg);
+    background-size: 100%;
+    opacity: 0.7;
+    z-index: 1;
+    border-radius: 40px;
+}
+
+.PicCenter {
+    position: absolute;
+    top: 10px;
+    left: 170px;
+    width: 340px;
+    height: 390px;
+    background: url(images/content3-1.jpg);
+    background-size: 100%;
+    z-index: 3;
+    border-radius: 50px;
+}
+
+.left {
+    position: absolute;
+    top: 355px;
+    left: 20px;
+    width: 120px;
+    height: 35px;
+    background: #ffffff;
+    text-align: center;
+    font-size: 32px;
+    opacity: 0.8;
+}
+
+.right {
+    position: absolute;
+    top: 355px;
+    right: 30px;
+    width: 120px;
+    height: 35px;
+    background: #ffffff;
+    text-align: center;
+    font-size: 32px;
+    opacity: 0.8;
+}
+
+.blockDM {
+    position: absolute;
+    top: 400px;
+    width: 700px;
+    height: 100px;
+}
+
+.blockDate {
+    position: absolute;
+    top: 0;
+    width: 700px;
+    height: 50px;
+}
+
+.BT_left {
+    margin-top: 15px;
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    background: #f5f5f5;
+    float: left;
+    text-align: center;
+}
+
+.I {
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 50px;
+    height: 20px;
+    font-size: 14px;
+    background: #f5f5f5;
+    text-align: center;
+    line-height: 2;
+}
+
+.II {
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 50px;
+    height: 20px;
+    font-size: 14px;
+    background: #f5f5f5;
+    text-align: center;
+    line-height: 2;
+}
+
+.III {
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 50px;
+    height: 20px;
+    font-size: 14px;
+    background: #f5f5f5;
+    text-align: center;
+    line-height: 2;
+}
+
+.IV {
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 50px;
+    height: 20px;
+    font-size: 14px;
+    background: #f5f5f5;
+    text-align: center;
+    line-height: 2;
+}
+
+.V {
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 50px;
+    height: 20px;
+    font-size: 14px;
+    background: #f5f5f5;
+    text-align: center;
+    line-height: 2;
+}
+
+.VI {
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 50px;
+    height: 20px;
+    font-size: 14px;
+    background: #f5f5f5;
+    text-align: center;
+    line-height: 2;
+}
+
+.VII {
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 50px;
+    height: 20px;
+    font-size: 14px;
+    background: #f5f5f5;
+    text-align: center;
+    line-height: 2;
+}
+
+.VIII {
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 50px;
+    height: 20px;
+    font-size: 14px;
+    background: #f5f5f5;
+    text-align: center;
+    line-height: 2;
+}
+
+.IX {
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 50px;
+    height: 20px;
+    font-size: 14px;
+    background: #f5f5f5;
+    text-align: center;
+    line-height: 2;
+}
+
+.X {
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 50px;
+    height: 20px;
+    font-size: 14px;
+    background: #f5f5f5;
+    text-align: center;
+    line-height: 2;
+}
+
+.BT_right {
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.blockMonth {
+    position: absolute;
+    top: 50px;
+    width: 700px;
+    height: 50px;
+}
+
+.JAN {
+    float: left;
+    margin-top: 0;
+    margin-left: 0;
+    width: 47px;
+    height: 50px;
+    text-align: center;;
+    color: #FFFFFF;
+    font-size: 26px;
+    border: 1px #FFF solid;
+    line-height: 2;
+}
+
+.FEB {
+    float: left;
+    margin-top: 0;
+    margin-left: 10px;
+    width: 47px;
+    height: 50px;
+    text-align: center;;
+    color: #FFFFFF;
+    font-size: 26px;
+    border: 1px #FFF solid;
+    line-height: 2;
+}
+
+.MAR {
+    float: left;
+    margin-top: 0;
+    margin-left: 10px;
+    width: 47px;
+    height: 50px;
+    text-align: center;;
+    color: #FFFFFF;
+    font-size: 26px;
+    border: 1px #FFF solid;
+    line-height: 2;
+}
+
+.APR {
+    float: left;
+    margin-top: 0;
+    margin-left: 10px;
+    width: 47px;
+    height: 50px;
+    text-align: center;;
+    color: #FFFFFF;
+    font-size: 26px;
+    border: 1px #FFF solid;
+    line-height: 2;
+}
+
+.MAY {
+    float: left;
+    margin-top: 0;
+    margin-left: 10px;
+    width: 47px;
+    height: 50px;
+    text-align: center;;
+    color: #FFFFFF;
+    font-size: 26px;
+    border: 1px #FFF solid;
+    line-height: 2;
+}
+
+.JUN {
+    float: left;
+    margin-top: 0;
+    margin-left: 10px;
+    width: 47px;
+    height: 50px;
+    text-align: center;;
+    color: #FFFFFF;
+    font-size: 26px;
+    border: 1px #FFF solid;
+    line-height: 2;
+}
+
+.JUL {
+    float: left;
+    margin-top: 0;
+    margin-left: 10px;
+    width: 47px;
+    height: 50px;
+    text-align: center;;
+    color: #FFFFFF;
+    font-size: 26px;
+    border: 1px #FFF solid;
+    line-height: 2;
+}
+
+.AUG {
+    float: left;
+    margin-top: 0;
+    margin-left: 10px;
+    width: 47px;
+    height: 50px;
+    text-align: center;;
+    color: #FFFFFF;
+    font-size: 26px;
+    border: 1px #FFF solid;
+    line-height: 2;
+}
+
+.SEP {
+    float: left;
+    margin-top: 0;
+    margin-left: 10px;
+    width: 47px;
+    height: 50px;
+    text-align: center;;
+    color: #FFFFFF;
+    font-size: 26px;
+    border: 1px #FFF solid;
+    line-height: 2;
+}
+
+.OCT {
+    float: left;
+    margin-top: 0;
+    margin-left: 10px;
+    width: 47px;
+    height: 50px;
+    text-align: center;;
+    color: #FFFFFF;
+    font-size: 26px;
+    border: 1px #FFF solid;
+    line-height: 2;
+}
+
+.NOV {
+    float: left;
+    margin-top: 0;
+    margin-left: 10px;
+    width: 47px;
+    height: 50px;
+    text-align: center;;
+    color: #FFFFFF;
+    font-size: 26px;
+    border: 1px #FFF solid;
+    line-height: 2;
+}
+
+.DEC {
+    float: left;
+    margin-top: 0;
+    margin-left: 10px;
+    width: 47px;
+    height: 50px;
+    text-align: center;;
+    color: #FFFFFF;
+    font-size: 26px;
+    border: 1px #FFF solid;
+    line-height: 2;
+}
+
+.backhome {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    background: url(images/backhome.png);
+    background-size: 100%;
+}

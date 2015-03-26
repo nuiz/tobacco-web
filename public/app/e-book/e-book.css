@@ -1,0 +1,319 @@
+#main {
+    background: url(images/bgebook.jpg);
+    background-size: 100%;
+}
+
+.magazine {
+    position: absolute;
+    top: 175px;
+    left: 80px;
+    width: 280px;
+    height: 450px;
+    background: url(images/books.png);
+    background-size: 100%;
+}
+
+.mag1 {
+    position: absolute;
+    top: 78px;
+    left: 55px;
+    width: 40px;
+    height: 53px;
+    background: url(images/britney.jpg);
+    background-size: 100%;
+}
+
+.mag2 {
+    position: absolute;
+    top: 78px;
+    left: 160px;
+    width: 40px;
+    height: 53px;
+    background: url(images/britney2.jpg);
+    background-size: 100%;
+}
+
+.mag3 {
+    position: absolute;
+    top: 140px;
+    left: 75px;
+    width: 40px;
+    height: 53px;
+    background: url(images/britney.jpg);
+    background-size: 100%;
+}
+
+.mag4 {
+    position: absolute;
+    top: 140px;
+    left: 142px;
+    width: 40px;
+    height: 53px;
+    background: url(images/britney2.jpg);
+    background-size: 100%;
+}
+
+.mag5 {
+    position: absolute;
+    top: 205px;
+    left: 55px;
+    width: 40px;
+    height: 53px;
+    background: url(images/britney.jpg);
+    background-size: 100%;
+}
+
+.mag6 {
+    position: absolute;
+    top: 205px;
+    left: 160px;
+    width: 40px;
+    height: 53px;
+    background: url(images/britney2.jpg);
+    background-size: 100%;
+}
+
+.mag7 {
+    position: absolute;
+    top: 268px;
+    left: 75px;
+    width: 40px;
+    height: 53px;
+    background: url(images/britney.jpg);
+    background-size: 100%;
+}
+
+.mag8 {
+    position: absolute;
+    top: 268px;
+    left: 142px;
+    width: 40px;
+    height: 53px;
+    background: url(images/britney2.jpg);
+    background-size: 100%;
+}
+
+.book_other {
+    position: absolute;
+    top: 175px;
+    right: 425px;
+    width: 280px;
+    height: 450px;
+    background: url(images/books.png);
+    background-size: 100%;
+}
+
+.book1 {
+    position: absolute;
+    top: 78px;
+    left: 55px;
+    width: 40px;
+    height: 53px;
+    background: url(images/britney2.jpg);
+    background-size: 100%;
+}
+
+.book2 {
+    position: absolute;
+    top: 78px;
+    left: 160px;
+    width: 40px;
+    height: 53px;
+    background: url(images/britney.jpg);
+    background-size: 100%;
+}
+
+.book3 {
+    position: absolute;
+    top: 140px;
+    left: 75px;
+    width: 40px;
+    height: 53px;
+    background: url(images/britney2.jpg);
+    background-size: 100%;
+}
+
+.book4 {
+    position: absolute;
+    top: 140px;
+    left: 142px;
+    width: 40px;
+    height: 53px;
+    background: url(images/britney.jpg);
+    background-size: 100%;
+}
+
+.book5 {
+    position: absolute;
+    top: 205px;
+    left: 55px;
+    width: 40px;
+    height: 53px;
+    background: url(images/britney2.jpg);
+    background-size: 100%;
+}
+
+.book6 {
+    position: absolute;
+    top: 205px;
+    left: 160px;
+    width: 40px;
+    height: 53px;
+    background: url(images/britney.jpg);
+    background-size: 100%;
+}
+
+.book7 {
+    position: absolute;
+    top: 268px;
+    left: 75px;
+    width: 40px;
+    height: 53px;
+    background: url(images/britney2.jpg);
+    background-size: 100%;
+}
+
+.book8 {
+    position: absolute;
+    top: 268px;
+    left: 142px;
+    width: 40px;
+    height: 53px;
+    background: url(images/britney.jpg);
+    background-size: 100%;
+}
+
+.magshf {
+    position: absolute;
+    top: 142px;
+    left: 95px;
+    width: 60px;
+    height: 80px;
+    background: url(images/Britny.png);
+    background-size: 100%;
+}
+
+.magshf2 {
+    position: absolute;
+    top: 261px;
+    left: 95px;
+    width: 60px;
+    height: 80px;
+    background: url(images/magazine.jpg);
+    background-size: 100%;
+}
+
+.b_shf {
+    position: absolute;
+    top: 125px;
+    left: 343px;
+    width: 250px;
+    height: 377px;
+}
+
+.shelf_smalls {
+    position: absolute;
+    top: 200px;
+    left: 30px;
+    width: 190px;
+    height: 35px;
+    background: url(images/shelfsmall.png);
+    background-size: 100%;
+}
+
+.shelf_small {
+    position: absolute;
+    top: 320px;
+    left: 30px;
+    width: 190px;
+    height: 35px;
+    background: url(images/shelfsmall.png);
+    background-size: 100%;
+}
+
+.shelf_book {
+    position: absolute;
+    left: 15px;
+    width: 220px;
+    height: 80px;
+    background: url(images/shelfbook.png);
+    background-size: 100%;
+}
+
+.label_book {
+    position: absolute;
+    left: 645px;
+    width: 300px;
+    height: 100px;
+    background: url(images/labelebook.png);
+    background-size: 100%;
+}
+
+.search {
+    position: absolute;
+    top: 40px;
+    left: 300px;
+    width: 275px;
+    height: 49px;
+    background: url(images/search.png);
+    background-size: 100%;
+}
+
+.lb_category {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 240px;
+    height: 50px;
+    background: url(images/category.png);
+    background-size: 100%;
+}
+
+.bg_black {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 970px;
+    height: 93px;
+    background: #000000;
+}
+
+.maz {
+    position: absolute;
+    top: -40%;
+    left: 170px;
+    width: 105px;
+    height: 128px;
+    background: url(images/britney.jpg);
+    background-size: 100%;
+}
+
+.maz2 {
+    position: absolute;
+    top: -40%;
+    left: 415px;
+    width: 105px;
+    height: 128px;
+    background: url(images/britney2.jpg);
+    background-size: 100%;
+}
+
+.maz3 {
+    position: absolute;
+    top: -40%;
+    right: 200px;
+    width: 105px;
+    height: 128px;
+    background: url(images/Britny.png);
+    background-size: 100%;
+}
+
+.back_home {
+    position: absolute;
+    bottom: -2px;
+    left: 5px;
+    width: 100px;
+    height: 100px;
+    background: url(images/backhome.png);
+    background-size: 100%;
+}
