@@ -2,3 +2,10 @@
     background-position: center;
     transition: background-image 3s;
 }
+
+.dateTime {
+    margin: 72px 26px;
+    font-size: 23px;
+    color: white;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.82);
+}
