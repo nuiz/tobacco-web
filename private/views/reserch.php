@@ -50,14 +50,12 @@
                title="Google.com opened at 100%">
             </a>
         </div>
-        <div class="CaptionNews">หัวข้อ
+        <div class="CaptionNews">
             <div class="PictureNews">
-                <div class="TextPN">รักษาการ</div>
             </div>
 
             <div class="other">
-                หัวข้อ
-                    <div class="Pic_other"ng-repeat="other in others | limitTo: 4"></div>
+                <div class="Pic_other" ng-repeat="other in others | limitTo: 4"></div>
                 </a>
             </div>
         </div>

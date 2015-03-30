@@ -5,6 +5,7 @@
 <div class="bg_faq"></div>
 <div class="LBfaq"></div>
 <div class="backH"></div>
+
 <div ng-app="faq" ng-controller="FaqListCtl">
     <div class="logo_leafFAQ" ng-show="!displayAns"></div>
     <div class="glassFAQ" ng-show="!displayAns"></div>
@@ -16,6 +17,7 @@
             </div>
         </div>
     </div>
+
     <div class="blkQ">
         <div class="LabelQ"
              ng-style="{'margin-top': $index==0? 0: '', 'z-index': faqs.length-$index}"

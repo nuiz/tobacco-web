@@ -1,6 +1,8 @@
+<script src="bower_components/angularjs/angular.min.js"></script>
 <link rel="stylesheet" href="public/app/e-book/e-book.css"/>
+<script src="public/app/e-book/ebook.js"></script>
 <div class="body">
-    <div class="book">
+    <div ng-app="ebook" ng-controller="EbookListCtl">
         <div class="magazine">
             <div class="mag1"></div>
             <div class="mag2"></div>
@@ -37,18 +39,39 @@
         </div>
         <div class="label_book"></div>
         <div class="search"></div>
-        <div class="lb_category"></div>
+
+        <div class="lb_category">
+            <a class="type" href="#"></a>
+        </div>
+        <div class="Ebooktype" style="display: none">
+            <div class="exit">x
+                <a class="exit1" href="#"></a>
+            </div>
+            <div class="booktype" ng-repeat="booktype in booktypes">
+                {{booktype.book_type_name}}
+            </div>
+        </div>
+
         <div class="bg_black">
-            <div class="maz"></div>
-            <div class="maz2"></div>
-            <div class="maz3"></div>
+            <div class="mag"></div>
+            <div class="mag"></div>
+            <div class="mag"></div>
         </div>
         <div class="back_home"></div>
     </div>
 </div>
-<script type="text/javascript" charset="utf-8">
-    $(document).ready(function () {
-        $("a[rel^='prettyPhoto']").prettyPhoto();
-
+<script>
+    $(function () {
+        var type = $('.type');
+        var typeEbook = $('.Ebooktype');
+        var exit1 = $('.exit1');
+        type.click(function (e) {
+            e.preventDefault();
+            typeEbook.show()
+        });
+        exit1.click(function (e) {
+            e.preventDefault();
+            typeEbook.hide()
+        });
     });
 </script>

@@ -3,6 +3,56 @@
     background-size: 100%;
 }
 
+.type {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 238px;
+    right: 0;
+    height: 48px;
+}
+
+.Ebooktype {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    width: 900px;
+    height: 440px;
+    background: url(images/popebook.png);
+    background-size: 100%;
+    z-index: 2;
+}
+
+.booktype {
+    float: left;
+    margin-top: 100px;
+    margin-left: 50px;
+    height: 45px;
+    width: 160px;
+    border-radius: 10px;
+    background-color: initial;
+    background: rgba(0, 0, 0, 0.36);
+    color: #fff;
+    font-size: 26px;
+    text-align: center;
+    line-height: 39px;
+}
+
+.exit {
+    position: absolute;
+    top: 28px;
+    right: 17px;
+    font-size: 28px;
+}
+
+.exit1 {
+    position: absolute;
+    top: 1px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+}
+
 .magazine {
     position: absolute;
     top: 175px;
@@ -242,9 +292,9 @@
 
 .label_book {
     position: absolute;
-    left: 645px;
-    width: 300px;
-    height: 100px;
+    left: 600px;
+    width: 320px;
+    height: 108px;
     background: url(images/labelebook.png);
     background-size: 100%;
 }
@@ -278,33 +328,13 @@
     background: #000000;
 }
 
-.maz {
-    position: absolute;
-    top: -40%;
-    left: 170px;
+.mag {
+    float: left;
+    margin-top: -20px;
+    margin-left: 150px;
     width: 105px;
     height: 128px;
     background: url(images/britney.jpg);
-    background-size: 100%;
-}
-
-.maz2 {
-    position: absolute;
-    top: -40%;
-    left: 415px;
-    width: 105px;
-    height: 128px;
-    background: url(images/britney2.jpg);
-    background-size: 100%;
-}
-
-.maz3 {
-    position: absolute;
-    top: -40%;
-    right: 200px;
-    width: 105px;
-    height: 128px;
-    background: url(images/Britny.png);
     background-size: 100%;
 }
 

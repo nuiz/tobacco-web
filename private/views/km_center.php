@@ -5,7 +5,7 @@
 <div class="bgcenter"></div>
 <div ng-app="center" ng-controller="CenterListCtl">
     <div class="LabelKM">
-        <div class="txtLabel">
+        <div class="txtLabel" ng-hide="itemshow">
             <div class="clickcenter">คลิกเพื่อส่งจดหมายหาศูนย์การเรียนรู้ KM</div>
             <div class="blockpic">
                 <a class="kmPic" ng-click="centershow(center)"
@@ -23,14 +23,15 @@
                         ng-click="currentPage=currentPage+1"></button>
             </div>
         </div>
-        <div class="location" style="display: none">
+        <div class="location" ng-show="itemshow">
             <div class="map"><img src="{{itemshow.kmcenter_map_pic_url}}" style="width: 325px; height: 435px;"></div>
-            <div class="data">
-                <input type="text" name="txtRec" ; style="height: 350px;
+            <div style="height: 350px;
                 width: 425px;
                 margin-top: 195px;
                 margin-left: 420px;
-                font-size: 14px;"></div>
+                font-size: 14px;">{{itemshow.kmcenter_description}}
+            </div>
+            <div class="back" ng-click="itemshow = false">< Back</div>
         </div>
     </div>
 </div>

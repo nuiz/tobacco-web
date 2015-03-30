@@ -6,9 +6,9 @@
 .label_ep {
     position: absolute;
     top: 0;
-    left: 120px;
-    width: 273px;
-    height: 91px;
+    left: 80px;
+    width: 300px;
+    height: 100px;
     background: url(images/3.png);
     background-size: 100%;
 }

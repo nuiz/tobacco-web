@@ -5,114 +5,24 @@
 
 .select {
     position: absolute;
-    top: 0px;
-    left: 200px;
-    width: 870px;
-    height: 230px;
-}
-
-.Krongthip {
-    position: absolute;
     top: 0;
-    left: -10px;
-    width: 160px;
-    height: 176px;
-    background: url(images/block.png);
-    background-size: 100%;
-}
-
-.TextKt {
-    position: absolute;
-    top: 127px;
-    left: 40px;
-    font-size: 20px;
-    color: #FFCEAC;
-}
-
-.ResCig {
-    position: absolute;
-    top: 0;
-    left: 170px;
-    width: 160px;
-    height: 176px;
-    background: url(images/block.png);
-    background-size: 100%;
-}
-
-.TextRc {
-    position: absolute;
-    top: 127px;
-    left: 43px;
-    font-size: 20px;
-    color: #FFCEAC;
-}
-
-.SaiFon {
-    position: absolute;
-    top: 0;
-    left: 350px;
-    width: 160px;
-    height: 176px;
-    background: url(images/block.png);
-    background-size: 100%;
-}
-
-.textSf {
-    position: absolute;
-    top: 127px;
-    left: 50px;
-    font-size: 20px;
-    color: #FFCEAC;
-}
-
-.DejaVu {
-    position: absolute;
-    top: 0;
-    right: 180px;
-    width: 160px;
-    height: 176px;
-    background: url(images/block.png);
-    background-size: 100%;
-}
-
-.TextDv {
-    position: absolute;
-    top: 127px;
-    left: 55px;
-    font-size: 20px;
-    color: #FFCEAC;
-}
-
-.develop {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 160px;
-    height: 176px;
-    background: url(images/block.png);
-    background-size: 100%;
-}
-
-.TextDl {
-    position: absolute;
-    top: 108px;
-    left: 35px;
-    font-size: 16px;
-    color: #FFCEAC;
+    width: 1250px;
+    height: 630px;
 }
 
 .line {
     position: absolute;
     top: 25px;
-    right: -125px;
-    width: 1118px;
-    height: 40px;
+    left: 0;
+    width: 1280px;
+    height: 44px;
     background: url(images/line.png);
     background-size: 100%;
 }
 
 .Textline {
     position: absolute;
+    top: 10px;
     left: 10px;
     font-size: 24px;
     color: #FFCEAC;
@@ -121,7 +31,7 @@
 .buttonleft {
     position: absolute;
     top: 117px;
-    left: -70px;
+    left: 25px;
     width: 45px;
     height: 45px;
     background: url(images/BTleft.png);
@@ -131,7 +41,7 @@
 .buttonright {
     position: absolute;
     top: 120px;
-    right: -60px;
+    right: 10px;
     width: 45px;
     height: 45px;
     background: url(images/BTright.png);
@@ -140,8 +50,8 @@
 
 .icon_grp {
     position: absolute;
-    bottom: -387px;
-    left: -108px;
+    top: 625px;
+    left: 15px;
     width: 80px;
     height: 78px;
     background: url(images/icongrp.png);
@@ -151,15 +61,15 @@
 .groups {
     position: absolute;
     top: 180px;
-    left: -109px;
-    width: 200px;
-    height: 320px;
+    left: 0;
+    width: 245px;
+    height: 390px;
 }
 
 .on {
     position: absolute;
-    top: 10px;
-    left: 80px;
+    top: 20px;
+    left: 125px;
     width: 30px;
     height: 18px;
     background: url(images/on.png);
@@ -168,154 +78,37 @@
 
 .grps {
     position: absolute;
-    top: 28px;
-    left: 20px;
+    top: 50px;
+    left: 50px;
     width: 200px;
     font-size: 17px;
     color: #DFBB9E;
 }
 
-.mass {
+.block_select {
     position: absolute;
-    top: 235px;
-    left: -96px;
-    width: 80px;
-    height: 47px;
-    text-align: center;
-    line-height: 47px;
-    color: #FFFFFF;
-    background-color: initial;
-    background: rgba(132, 37, 20, 0.36);
-    font-size: 14px;
-    border-width: 1px;
-    border-color: #CFA588;
-    border-style: solid;
+    top: 0;
+    left: 65px;
 }
 
-.pack {
-    position: absolute;
-    top: 235px;
-    left: -2px;
-    width: 80px;
-    height: 47px;
-    text-align: center;
-    line-height: 47px;
-    color: #FFFFFF;
-    background-color: initial;
-    background: rgba(132, 37, 20, 0.36);
-    font-size: 14px;
-    border: 1px #CFA588 solid;
+.label_select {
+    position: relative;
+    float: left;
+    top: -30px;
+    margin-left: 30px;
+    width: 190px;
+    height: 209px;
+    background: url(images/block.png);
+    background-size: 100%;
 }
 
-.tobacco {
-    position: absolute;
-    top: 290px;
-    left: -96px;
-    width: 80px;
-    height: 47px;
-    text-align: center;
-    line-height: 47px;
-    color: #FFFFFF;
-    background-color: initial;
-    background: rgba(132, 37, 20, 0.36);
-    font-size: 14px;
-    border: 1px #CFA588 solid;
-}
-
-.total {
-    position: absolute;
-    top: 290px;
-    left: -2px;
-    width: 80px;
-    height: 47px;
-    text-align: center;
-    line-height: 24px;
-    color: #FFFFFF;
-    background-color: initial;
-    background: rgba(132, 37, 20, 0.36);
-    font-size: 14px;
-    border: 1px #CFA588 solid;
-}
-
-.cigN {
-    position: absolute;
-    top: 345px;
-    left: -96px;
-    width: 80px;
-    height: 47px;
-    text-align: center;
-    line-height: 24px;
-    color: #FFFFFF;
-    background-color: initial;
-    background: rgba(132, 37, 20, 0.36);
-    font-size: 14px;
-    border: 1px #CFA588 solid;
-}
-
-.cigNe {
-    position: absolute;
-    top: 345px;
-    left: -2px;
-    width: 80px;
-    height: 47px;
-    text-align: center;
-    line-height: 24px;
-    color: #FFFFFF;
-    background-color: initial;
-    background: rgba(132, 37, 20, 0.36);
-    font-size: 14px;
-    border: 1px #CFA588 solid;
-}
-
-.cig {
-    position: absolute;
-    top: 400px;
-    left: -96px;
-    width: 80px;
-    height: 47px;
-    text-align: center;
-    line-height: 47px;
-    color: #FFFFFF;
-    background-color: initial;
-    background: rgba(132, 37, 20, 0.36);
-    font-size: 14px;
-    border: 1px #CFA588 solid;
-}
-
-.cigs {
-    position: absolute;
-    top: 400px;
-    left: -2px;
-    width: 80px;
-    height: 47px;
-    text-align: center;
-    line-height: 47px;
-    color: #FFFFFF;
-    background-color: initial;
-    background: rgba(132, 37, 20, 0.36);
-    font-size: 14px;
-    border: 1px #CFA588 solid;
-}
-
-.receipts {
-    position: absolute;
-    top: 455px;
-    left: -96px;
-    width: 80px;
-    height: 47px;
-    text-align: center;
-    line-height: 47px;
-    color: #FFFFFF;
-    background-color: initial;
-    background: rgba(132, 37, 20, 0.36);
-    font-size: 14px;
-    border: 1px #CFA588 solid;
-}
-
-.receiptsII {
-    position: absolute;
-    top: 455px;
-    left: -2px;
+.subtype {
+    position: relative;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    top: 70px;
+    left: 45px;
     width: 80px;
     height: 47px;
     text-align: center;
@@ -329,8 +122,8 @@
 
 .down {
     position: absolute;
-    bottom: -300px;
-    left: -32px;
+    bottom: 0;
+    left: 125px;
     width: 30px;
     height: 18px;
     background: url(images/down.png);
@@ -340,9 +133,9 @@
 .Tinews {
     position: absolute;
     top: 200px;
-    left: 350px;
-    width: 770px;
-    height: 380px;
+    left: 300px;
+    width: 900px;
+    height: 480px;
     z-index: 3;
     line-height: 47px;
     color: #FFFFFF;
@@ -353,9 +146,9 @@
 
 .sum {
     position: absolute;
-    top: 210px;
-    right: 160px;
-    width: 200px;
+    top: 20px;
+    right: 20px;
+    width: 240px;
     height: 45px;
     z-index: 3;
     line-height: 47px;
@@ -368,8 +161,8 @@
 .material {
     position: absolute;
     top: 4px;
-    right: 104px;
-    width: 90px;
+    left: 7px;
+    width: 105px;
     height: 35px;
     z-index: 3;
     line-height: 40px;
@@ -384,8 +177,8 @@
 .video {
     position: absolute;
     top: 4px;
-    right: 4px;
-    width: 90px;
+    right: 7px;
+    width: 105px;
     height: 35px;
     z-index: 3;
     line-height: 40px;
@@ -399,10 +192,10 @@
 
 .Caption {
     position: absolute;
-    top: 265px;
-    right: 160px;
-    width: 200px;
-    height: 185px;
+    top: 75px;
+    right: 15px;
+    width: 250px;
+    height: 245px;
     z-index: 3;
     color: #FFFFFF;
     background-color: initial;
@@ -415,10 +208,10 @@
 
 .Pic {
     position: absolute;
-    top: 290px;
-    right: 265px;
-    width: 85px;
-    height: 50px;
+    top: 35px;
+    left: 15px;
+    width: 100px;
+    height: 70px;
     background: url(images/Image.jpeg);
     background-size: 100%;
     z-index: 4;
@@ -429,9 +222,8 @@
 
 .TextPic {
     position: absolute;
-    top: 50px;
-    width: 80px;
-    height: 30px;
+    top: 55px;
+    left: 24px;
     font-size: 10px;
     text-align: center;
     color: #FFFFFF;
@@ -439,10 +231,10 @@
 
 .PicII {
     position: absolute;
-    top: 290px;
-    right: 170px;
-    width: 85px;
-    height: 50px;
+    top: 35px;
+    right: 15px;
+    width: 100px;
+    height: 70px;
     background: url(images/Image.jpeg);
     background-size: 100%;
     z-index: 4;
@@ -453,9 +245,8 @@
 
 .TextPicII {
     position: absolute;
-    top: 50px;
-    width: 80px;
-    height: 30px;
+    top: 55px;
+    left: 24px;
     font-size: 10px;
     text-align: center;
     color: #FFFFFF;
@@ -463,10 +254,10 @@
 
 .Pix {
     position: absolute;
-    top: 370px;
-    right: 265px;
-    width: 85px;
-    height: 50px;
+    top: 140px;
+    left: 15px;
+    width: 100px;
+    height: 70px;
     background: url(images/Image.jpeg);
     background-size: 100%;
     z-index: 4;
@@ -477,7 +268,7 @@
 
 .TextPix {
     position: absolute;
-    top: 50px;
+    top: 55px;
     width: 80px;
     height: 30px;
     font-size: 10px;
@@ -487,10 +278,10 @@
 
 .PixII {
     position: absolute;
-    top: 370px;
-    right: 170px;
-    width: 85px;
-    height: 50px;
+    top: 140px;
+    right: 15px;
+    width: 100px;
+    height: 70px;
     background: url(images/Image.jpeg);
     background-size: 100%;
     z-index: 4;
@@ -501,7 +292,7 @@
 
 .TextPixII {
     position: absolute;
-    top: 50px;
+    top: 55px;
     width: 80px;
     height: 30px;
     font-size: 10px;
@@ -511,10 +302,10 @@
 
 .CaptionII {
     position: absolute;
-    top: 460px;
-    right: 160px;
-    width: 200px;
-    height: 100px;
+    top: 340px;
+    right: 15px;
+    width: 250px;
+    height: 120px;
     z-index: 3;
     color: #FFFFFF;
     background-color: initial;
@@ -527,10 +318,10 @@
 
 .Picture {
     position: absolute;
-    top: 480px;
-    right: 265px;
-    width: 85px;
-    height: 50px;
+    top: 32px;
+    left: 15px;
+    width: 100px;
+    height: 70px;
     background: url(images/Image.jpeg);
     background-size: 100%;
     z-index: 4;
@@ -541,7 +332,7 @@
 
 .TextPicture {
     position: absolute;
-    top: 50px;
+    top: 55px;
     width: 80px;
     height: 30px;
     font-size: 10px;
@@ -551,10 +342,10 @@
 
 .PictureII {
     position: absolute;
-    top: 480px;
-    right: 170px;
-    width: 85px;
-    height: 50px;
+    top: 32px;
+    right: 15px;
+    width: 100px;
+    height: 70px;
     background: url(images/Image.jpeg);
     background-size: 100%;
     z-index: 4;
@@ -565,7 +356,7 @@
 
 .TextPictureII {
     position: absolute;
-    top: 50px;
+    top: 55px;
     width: 80px;
     height: 30px;
     font-size: 10px;
@@ -575,10 +366,10 @@
 
 .CaptionNews {
     position: absolute;
-    top: 215px;
-    Left: 375px;
-    width: 500px;
-    height: 235px;
+    top: 20px;
+    Left: 20px;
+    width: 590px;
+    height: 300px;
     z-index: 3;
     color: #FFFFFF;
     background-color: initial;
@@ -591,10 +382,10 @@
 
 .PictureNews {
     position: absolute;
-    top: 240px;
-    left: 485px;
-    width: 290px;
-    height: 192px;
+    top: 34px;
+    left: 30px;
+    width: 530px;
+    height: 235px;
     background: url(images/42585048.jpg);
     background-size: 100%;
     z-index: 4;
@@ -603,22 +394,11 @@
     color: #FFFFFF;
 }
 
-.TextPN {
+.other {
     position: absolute;
-    top: 192px;
-    width: 289px;
-    height: 20px;
-    font-size: 12px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-.CaptionOther {
-    position: absolute;
-    top: 460px;
-    Left: 375px;
-    width: 500px;
-    height: 115px;
+    top: 315px;
+    width: 590px;
+    height: 125px;
     z-index: 3;
     color: #FFFFFF;
     background-color: initial;
@@ -629,104 +409,23 @@
 }
 
 .Pic_other {
-    position: absolute;
-    top: 485px;
-    Left: 390px;
-    width: 105px;
-    height: 70px;
+    float: left;
+    margin-top: 25px;
+    margin-left: 15px;
+    width: 128px;
+    height: 80px;
     background: url(images/Tobaccoo.jpg);
     background-size: 100%;
     z-index: 4;
     text-align: center;
     font-size: 10px;
-    color: #FFFFFF;
-}
-
-.TextPicOther {
-    position: absolute;
-    top: 70px;
-    width: 118px;
-    height: 16px;
-    font-size: 9px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-.Pic_OtherII {
-    position: absolute;
-    top: 485px;
-    Left: 510px;
-    width: 105px;
-    height: 70px;
-    background: url(images/Tobaccoo.jpg);
-    background-size: 100%;
-    z-index: 4;
-    text-align: center;
-    font-size: 10px;
-    color: #FFFFFF;
-}
-
-.Text_POII {
-    position: absolute;
-    top: 70px;
-    width: 118px;
-    height: 16px;
-    font-size: 9px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-.Pic_OtherIII {
-    position: absolute;
-    top: 485px;
-    Left: 630px;
-    width: 105px;
-    height: 70px;
-    background: url(images/Tobaccoo.jpg);
-    background-size: 100%;
-    z-index: 4;
-    text-align: center;
-    font-size: 10px;
-    color: #FFFFFF;
-}
-
-.Text_POIII {
-    position: absolute;
-    top: 70px;
-    width: 118px;
-    height: 16px;
-    font-size: 9px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-.Pic_OtherIV {
-    position: absolute;
-    top: 485px;
-    Left: 750px;
-    width: 105px;
-    height: 70px;
-    background: url(images/Tobaccoo.jpg);
-    background-size: 100%;
-    z-index: 4;
-    font-size: 10px;
-    color: #FFFFFF;
-}
-
-.Text_POIV {
-    position: absolute;
-    top: 70px;
-    width: 118px;
-    height: 16px;
-    font-size: 9px;
-    text-align: center;
     color: #FFFFFF;
 }
 
 .buttonleft_small {
     position: absolute;
     top: 375px;
-    left: 300px;
+    left: 250px;
     width: 40px;
     height: 40px;
     background: url(images/BTleft.png);
@@ -736,7 +435,7 @@
 .buttonright_small {
     position: absolute;
     top: 390px;
-    right: 95px;
+    right: 25px;
     width: 40px;
     height: 40px;
     background: url(images/BTright.png);

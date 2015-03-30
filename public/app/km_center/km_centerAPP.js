@@ -10,12 +10,9 @@ centerapp.controller('CenterListCtl', ['$scope', '$http', function ($scope, $htt
     $http.get('http://192.168.100.26/tobacco/kmcenter').success(function (data) {
         $scope.centers = data.data;
     });
+    $scope.itemshow = false;
     $scope.centershow = function (item) {
         $scope.itemshow = item;
-        var location = $('.location');
-        var txtLabel = $('.txtLabel');
-        location.show();
-        txtLabel.hide()
     }
 }]);
 

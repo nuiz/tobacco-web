@@ -129,3 +129,15 @@
     height: 350px;
     border: #8F3D1A solid 1px;
 }
+.back{
+    position: absolute;
+    bottom: 20px;
+    right: 200px;
+    width: 100px;
+    height: 28px;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    background: #FC9E6C;
+    text-align: center;
+    border: 5px rgb(98, 38, 18) solid;
+}
