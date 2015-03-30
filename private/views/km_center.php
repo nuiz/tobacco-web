@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="location" ng-show="itemshow">
-            <div class="map"><img src="{{itemshow.kmcenter_map_pic_url}}" style="width: 325px; height: 435px;"></div>
+            <div class="map" style="background-size: cover;" ng-style="{'background-image': 'url('+itemshow.kmcenter_map_pic_url+')'}"></div>
             <div style="height: 350px;
                 width: 425px;
                 margin-top: 195px;

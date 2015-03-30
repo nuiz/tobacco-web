@@ -123,7 +123,7 @@
 
 .map{
     position: absolute;
-    top: 155px;
+    top: 200px;
     left: 65px;
     width: 300px;
     height: 350px;
@@ -140,4 +140,6 @@
     background: #FC9E6C;
     text-align: center;
     border: 5px rgb(98, 38, 18) solid;
+
+    cursor: pointer;
 }

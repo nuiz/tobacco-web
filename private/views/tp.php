@@ -22,12 +22,12 @@
         <div id="main-nav2">
             <img src="public/images/font.png" width="100%">
             <div id="nav-menu-list">
-                <a class="nav-menu" href="#">ข่าวสาร</a>
-                <a class="nav-menu" href="#">หมวดหมู่</a>
-                <a class="nav-menu" href="#">ผู้เชี่ยวชาญ</a>
-                <a class="nav-menu" href="#">E-Book</a>
-                <a class="nav-menu" href="#">ศูนย์ KM</a>
-                <a class="nav-menu" href="#">FAQ</a>
+                <a class="nav-menu" href="?view=news">ข่าวสาร</a>
+                <a class="nav-menu" href="?view=category">หมวดหมู่</a>
+                <a class="nav-menu" href="?view=expert">ผู้เชี่ยวชาญ</a>
+                <a class="nav-menu" href="?view=e-book">E-Book</a>
+                <a class="nav-menu" href="?view=km_center">ศูนย์ KM</a>
+                <a class="nav-menu" href="?view=faq">FAQ</a>
             </div>
         </div>
     </nav>
