@@ -77,7 +77,7 @@
 
         <div class="buttonleft"></div>
         <div class="buttonright"></div>
-        <div class="icon_grp"></div>
+        <div class="categoryBack" ng-click="backClick()"></div>
         <div class="groups">
             <div class="on"></div>
             <div class="grps">หมวดหมู่ย่อยกรองทิพย์</div>

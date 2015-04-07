@@ -3,7 +3,7 @@
     background-size: 100%;
 }
 
-.sum {
+.all {
     position: absolute;
     top: 38px;
     left: 65px;
@@ -11,6 +11,118 @@
     height: 52px;
     background: url(images/sumnews.png);
     background-size: 100%;
+}
+
+.allNews {
+    position: absolute;
+    width: 165px;
+    height: 52px;
+}
+
+.back {
+    position: absolute;
+    top: 35px;
+    right: 15px;
+    font-size: 18px;
+}
+
+.brief {
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    width: 1000px;
+    height: 575px;
+    background: url(images/brief.png);
+    background-size: 100%;
+    z-index: 4;
+}
+
+.text_caption {
+    text-align: center;
+    font-size: 42px;
+    margin-top: 51px;
+}
+
+.number {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.monthly {
+    position: absolute;
+    left: 5px;
+    top: 123px;
+    width: 920px;
+    height: 30px;
+    font-size: 28px;
+    line-height: 1;
+    text-align: center;
+    background: rgb(216, 216, 216);
+}
+
+.news-subtype {
+    position: absolute;
+    top: 155px;
+    left: 5px;
+    width: 920px;
+    height: 220px;
+}
+
+.news-item {
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 300px;
+    height: 100px;
+    background: rgba(216, 216, 216, 0.35);
+}
+
+.img {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 125px;
+    height: 90px;
+    background: url(images/pictureNews.jpg);
+    background-size: 100%;
+}
+
+.news-text {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 135px;
+    width: 140px;
+    height: 90px;
+    font-size: 12px;
+}
+
+.monthly-n {
+    position: absolute;
+    left: 5px;
+    top: 370px;
+    width: 920px;
+    height: 30px;
+    font-size: 28px;
+    line-height: 1;
+    text-align: center;
+    background: rgb(216, 216, 216);
+}
+
+.news-subtype-n {
+    position: absolute;
+    top: 405px;
+    left: 5px;
+    width: 920px;
+    height: 220px;
+}
+
+.news-item-n {
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 300px;
+    height: 100px;
+    background: rgba(216, 216, 216, 0.35);
 }
 
 .newsday {
@@ -116,7 +228,7 @@
     height: 35px;
     background: #ffffff;
     text-align: center;
-    font-size: 32px;
+    font-size: 48px;
     opacity: 0.8;
 }
 
@@ -128,7 +240,7 @@
     height: 35px;
     background: #ffffff;
     text-align: center;
-    font-size: 32px;
+    font-size: 48px;
     opacity: 0.8;
 }
 
@@ -191,7 +303,7 @@
     float: left;
     margin-top: 0;
     margin-left: 8px;
-    width: 47px;
+    width: 50px;
     height: 50px;
     text-align: center;;
     color: #FFFFFF;
@@ -236,11 +348,11 @@
     box-sizing: border-box;
     width: 100%;
 
-    background: rgba(255,255,255,0.65);
-    background: -moz-linear-gradient(top, rgba(255,255,255,0.65) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0.65)), color-stop(25%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
-    background: -webkit-linear-gradient(top, rgba(255,255,255,0.65) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%);
-    background: -o-linear-gradient(top, rgba(255,255,255,0.65) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%);
-    background: -ms-linear-gradient(top, rgba(255,255,255,0.65) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%);
-    background: linear-gradient(to bottom, rgba(255,255,255,0.65) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%);
+    background: rgba(255, 255, 255, 0.65);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.65)), color-stop(25%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 100%);
 }

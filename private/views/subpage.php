@@ -2,12 +2,11 @@
 <link rel="stylesheet" href="public/app/subpage/subpage.css"/>
 <script src="public/app/subpage/subpage.js"></script>
 
+<div ng-app="subpage" ng-controller="SubpageListCtl">
 <div class="bgSubPage"></div>
 <div class="label_book"></div>
 <div class="search"></div>
-<div class="back_home"></div>
-
-<div ng-app="subpage" ng-controller="SubpageListCtl">
+<div class="back_home" ng-click="subpageClick()"></div>
     <div class="category">
         <a class="type2" href="#"></a>
     </div>

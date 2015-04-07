@@ -34,11 +34,11 @@
 
 .back_home {
     position: absolute;
-    bottom: 15px;
-    left: 20px;
-    width: 100px;
-    height: 100px;
-    background: url(images/backhome.png);
+    bottom: 20px;
+    left: 30px;
+    width: 80px;
+    height: 80px;
+    background: url(images/backEbook.png);
     background-size: 100%;
 }
 

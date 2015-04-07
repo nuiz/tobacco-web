@@ -11,6 +11,14 @@
     height: 600px;
 }
 
+.icon2 {
+    position: absolute;
+    top: 80px;
+    left: 190px;
+    width: 700px;
+    height: 600px;
+}
+
 .icon1 {
     top: 20px;
     width: 95px;
@@ -49,10 +57,30 @@
 
 .bottom {
     position: absolute;
-    top: 335px;
-    right: 330px;
+    top: 270px;
+    right: -40px;
+    width: 50px;
+    height: 50px;
+    background: url(images/BTright.png);
+    background-size: 100%;
+}
+
+.bottomClick {
+    position: absolute;
     width: 60px;
     height: 60px;
-    background: url(images/buttom.png);
+}
+.bottomBack{
+    position: absolute;
+    top: 270px;
+    left: -40px;
+    width: 50px;
+    height: 50px;
+    background: url(images/BTleft.png);
     background-size: 100%;
+}
+.bottomBack2{
+    position: absolute;
+    width: 60px;
+    height: 60px;
 }

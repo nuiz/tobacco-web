@@ -67,5 +67,8 @@ reserchapp.controller('ReserchListCtl', ['$scope', '$http', function ($scope, $h
             other_name: "test"
         }
     ];
+    $scope.backClick = function () {
+        window.location.href = "?view=category";
+    }
 }]);
 

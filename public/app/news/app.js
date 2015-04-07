@@ -7,7 +7,7 @@ var app = angular.module('news-app', ['ionic']);
 app.controller('NewsController', ['$scope', '$http', function ($scope, $http) {
     $scope.currentNews = 0;
     $scope.news = [];
-    $http.get('http://localhost/tobacco/news').success(function (data) {
+    $http.get('http://192.168.100.9/tobacco/news').success(function (data) {
         $scope.news = data.data;
 
             $scope.initSuccess = true;

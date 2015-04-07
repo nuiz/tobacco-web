@@ -1,9 +1,10 @@
 <link rel="stylesheet" href="public/app/category/category.css"/>
-
 <div class="all"></div>
 <div class="backHm"></div>
-<div class="bottom"></div>
 <div class="icon">
+    <div class="bottom">
+        <a class="bottomClick" href="#"></a>
+    </div>
     <div class="icon1">
         <img src="public/app/category/images/1.png">
 
@@ -85,3 +86,39 @@
         <div>ความรู้ทั่วไป</div>
     </div>
 </div>
+<div class="icon2" style="display: none">
+    <div class="icon1">
+        <img src="public/app/category/images/1.png">
+
+        <div>กฎหมาย</div>
+    </div>
+    <div class="icon1">
+        <img src="public/app/category/images/1.png">
+
+        <div>กฎหมาย</div>
+    </div>
+    <div class="bottomBack">
+        <a class="bottomBack2" href="#"></a>
+    </div>
+</div>
+</div>
+<script>
+    $(function () {
+        var icon = $('.icon');
+        var bottomClick = $('.bottomClick');
+        var icon2 = $('.icon2');
+        var bottomBack2 = $('.bottomBack2');
+        bottomClick.click(function (e) {
+            e.preventDefault();
+            icon.hide();
+            icon2.show()
+        });
+        bottomBack2.click(function (e) {
+            e.preventDefault();
+            icon2.hide();
+            icon.show()
+        });
+    });
+</script>
+
+

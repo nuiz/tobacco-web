@@ -47,7 +47,7 @@
             <div class="exit">x
                 <a class="exit1" href="#"></a>
             </div>
-            <div class="booktype" ng-repeat="booktype in booktypes">
+            <div class="booktype" ng-click="bookClick(booktype.book_type_id)" ng-repeat="booktype in booktypes">
                 {{booktype.book_type_name}}
             </div>
         </div>
