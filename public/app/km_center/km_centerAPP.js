@@ -7,7 +7,7 @@ centerapp.controller('CenterListCtl', ['$scope', '$http', function ($scope, $htt
     $scope.currentPage = 0;
     $scope.pageSize = 4;
     $scope.centers = [];
-    $http.get('http://192.168.100.26/tobacco/kmcenter').success(function (data) {
+    $http.get('http://localhost/tobacco/kmcenter').success(function (data) {
         $scope.centers = data.data;
     });
     $scope.itemshow = false;

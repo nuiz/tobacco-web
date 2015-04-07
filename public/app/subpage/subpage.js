@@ -4,7 +4,7 @@
 "use strict";
 var subpageapp = angular.module('subpage', []);
 subpageapp.controller('SubpageListCtl', ['$scope', '$http', function ($scope, $http) {
-    $http.get('http://192.168.100.26/tobacco/book_type').success(function (data) {
+    $http.get('http://localhost/tobacco/book_type').success(function (data) {
         $scope.booktypes = data.data;
     });
 }]);
