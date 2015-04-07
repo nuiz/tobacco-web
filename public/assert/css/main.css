@@ -72,12 +72,12 @@ html, body {
 
 #main-nav {
     float: right;
-    width: 256px;
+    width: 300px;
     height: 100%;
 }
 
 #main-nav2 {
-    width: 230px;
+    width: 238px;
     height: 514px;
     float: right;
     margin-right: 20px;
@@ -85,6 +85,9 @@ html, body {
 
     background-image: url(images/nav/nav.png);
     background-size: 100%;
+
+    position: relative;
+    z-index: 1;
 }
 
 #nav-menu-list {
@@ -108,4 +111,25 @@ html, body {
 #main-body {
     width: 774px;
     height: 100%;
+}
+
+.nav3-menu {
+    width: 100px;
+    background: green;
+    display: block;
+}
+
+#nav3 {
+    position: absolute;
+    top: 125px;
+    z-index: 0;
+    width: 100px;
+}
+
+#login-btn {
+    height: 100px;
+    width: auto;
+    background: url(images/nav/login.png);
+    background-size: auto 100%;
+    background-position: left center;
 }
