@@ -1,14 +1,18 @@
 <link rel="stylesheet" href="public/app/expert/expert.css"/>
+<script src="bower_components/angularjs/angular.min.js"></script>
+<script src="public/app/expert/expert.js"></script>
 <div class="body">
-    <div class="bg_expert"></div>
-    <div class="label_ep"></div>
-    <div class="back_home"></div>
-
-    <div class="circle">
-        <a class="toggle" href="#"></a>
-    </div>
-    <div class="circle2" style="display: none">
-        <a class="toggle2" href="#"></a>
+    <div ng-app="expert"
+         ng-controller="ExpertListCtl">
+        <div class="bg_expert"></div>
+        <div class="label_ep"></div>
+        <div class="circle">
+            <a class="toggle" href="#"></a>
+        </div>
+        <div class="circle2" style="display: none">
+            <a class="toggle2" href="#"></a>
+        </div>
+        <div class="back_home" ng-click="homeClick()"></div>
     </div>
 </div>
 <script>

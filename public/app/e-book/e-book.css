@@ -53,7 +53,7 @@
     height: 20px;
 }
 
-.magazine {
+.book {
     position: absolute;
     top: 175px;
     left: 80px;
@@ -62,7 +62,17 @@
     background: url(images/books.png);
     background-size: 100%;
 }
-
+.booksClick{
+    position: absolute;
+    top: 220px;
+    left: 112px;
+    width: 40px;
+    height: 30px;
+    background: #BE7E4B;
+    font-size: 30px;
+    text-align: center;
+    border: 1px #000000 solid;
+}
 .mag1 {
     position: absolute;
     top: 78px;
@@ -346,4 +356,5 @@
     height: 100px;
     background: url(images/backhome.png);
     background-size: 100%;
+    z-index: 1;
 }

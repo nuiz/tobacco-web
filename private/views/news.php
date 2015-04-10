@@ -119,7 +119,7 @@
         <a class="back"> x </a>
     </div>
     <div class="newsday"></div>
-    <div class="backhome"></div>
+    <div class="backhome" ng-click="backClick()"></div>
     <div class="blockyear">
         <div class="Bn_left"></div>
         <div class="txt_years">2556</div>
@@ -138,6 +138,7 @@
             </div>
 
             <div class="newsMid news">
+                <div class="read-more" ng-click="readmoreClick()">อ่านต่อ</div>
                 <div class="news-cover" ng-style="{'background-image': 'url('+newsCur.news_image_url+')'}"></div>
                 <div class="news-body">
                     <h2 id="news-name">{{newsCur.news_name}}</h2>
@@ -155,24 +156,15 @@
                 </div>
             </div>
 
-            <div class="left" ng-click="prev()"> <</div>
-            <div class="right" ng-click="next()"> ></div>
+            <div class="prev" ng-click="prev()"> <</div>
+            <div class="next" ng-click="next()"> ></div>
         </div>
         <div class="blockDM">
             <div class="blockDate">
                 <div class="date">
-                    <div class="BT_left"> <</div>
-                    <div class="dates">1</div>
-                    <div class="dates">2</div>
-                    <div class="dates">3</div>
-                    <div class="dates">4</div>
-                    <div class="dates">5</div>
-                    <div class="dates">6</div>
-                    <div class="dates">7</div>
-                    <div class="dates">8</div>
-                    <div class="dates">9</div>
-                    <div class="dates">10</div>
-                    <div class="BT_right"> ></div>
+                    <div class="bt_left"> <</div>
+                    <div class="dates" ng-repeat="item in news" ng-click="setcurrentNews($index)">{{$index+1}}</div>
+                    <div class="bt_right"> ></div>
                 </div>
                 <div class="month">
                     <div class="months">ม.ค.</div>

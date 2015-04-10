@@ -7,6 +7,9 @@ faqapp.controller('FaqListCtl',['$scope', '$http' , function($scope, $http){
     $http.get('http://localhost/tobacco/faq').success(function(data) {
         $scope.faqs = data.data;
     });
+    $scope.backhomeClick = function(){
+        window.location.href = "?view=home";
+    };
     $scope.faqshow=function(index){
         $scope.displayAns=$scope.faqs[index].faq_answer;
     }

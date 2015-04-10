@@ -3,7 +3,9 @@
 <script src="public/app/e-book/ebook.js"></script>
 <div class="body">
     <div ng-app="ebook" ng-controller="EbookListCtl">
-        <div class="magazine">
+        <div class="back_home" ng-click="backhome()"></div>
+        <div class="book">
+            <div class="booksClick" ng-click="bookClick()"> > </div>
             <div class="mag1"></div>
             <div class="mag2"></div>
             <div class="mag3"></div>
@@ -14,6 +16,7 @@
             <div class="mag8"></div>
         </div>
         <div class="book_other">
+            <div class="booksClick" ng-click="bookClick()"> < </div>
             <div class="book1"></div>
             <div class="book2"></div>
             <div class="book3"></div>
@@ -57,7 +60,7 @@
             <div class="mag"></div>
             <div class="mag"></div>
         </div>
-        <div class="back_home"></div>
+
     </div>
 </div>
 <script>

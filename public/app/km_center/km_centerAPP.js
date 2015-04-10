@@ -13,6 +13,9 @@ centerapp.controller('CenterListCtl', ['$scope', '$http', function ($scope, $htt
     $scope.itemshow = false;
     $scope.centershow = function (item) {
         $scope.itemshow = item;
+    };
+    $scope.homeClick = function () {
+        window.location.href = "?view=home";
     }
 }]);
 

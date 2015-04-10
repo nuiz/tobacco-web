@@ -108,6 +108,19 @@
     background: rgb(216, 216, 216);
 }
 
+.read-more {
+    position: absolute;
+    top: 418px;
+    left: 170px;
+    width: 50px;
+    height: 20px;
+    border: 1px #000000 solid;
+    background: white;
+    font-size: 14px;
+    text-align: center;
+    z-index: 1;
+}
+
 .news-subtype-n {
     position: absolute;
     top: 405px;
@@ -220,7 +233,7 @@
     border-radius: 50px;
 }
 
-.left {
+.prev {
     position: absolute;
     top: 425px;
     left: 20px;
@@ -232,7 +245,7 @@
     opacity: 0.8;
 }
 
-.right {
+.next {
     position: absolute;
     top: 425px;
     right: 30px;
@@ -251,7 +264,7 @@
     height: 100px;
 }
 
-.BT_left {
+.bt_left {
     margin-top: 15px;
     margin-left: 20px;
     width: 20px;
@@ -281,7 +294,7 @@
     line-height: 2;
 }
 
-.BT_right {
+.bt_right {
     float: left;
     margin-top: 15px;
     margin-left: 10px;

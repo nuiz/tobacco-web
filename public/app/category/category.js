@@ -7,4 +7,7 @@ categoryapp.controller('CategorysListCtl', ['$scope', '$http', function ($scope,
     $http.get('http://192.168.100.26/tobacco').success(function (data) {
         $scope.category = data.data;
     });
+    $scope.backClick = function(){
+        window.location.href = "?view=home";
+    }
 }]);

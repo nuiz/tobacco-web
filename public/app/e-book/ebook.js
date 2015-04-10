@@ -7,4 +7,10 @@ ebookapp.controller('EbookListCtl', ['$scope', '$http', function ($scope, $http)
     $http.get('http://localhost/tobacco/book_type').success(function (data) {
         $scope.booktypes = data.data;
     });
+    $scope.bookClick = function(){
+        window.location.href = "?view=subpage";
+    };
+    $scope.backhome = function(){
+        window.location.href = "?view=home";
+    }
 }]);

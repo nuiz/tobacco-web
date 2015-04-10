@@ -34,7 +34,7 @@
             <div class="back" ng-click="itemshow = false">< Back</div>
         </div>
     </div>
+    <div class="backHM" ng-click="homeClick()"></div>
 </div>
 
-<div class="backHM"></div>
 <div class="centerKM"></div>

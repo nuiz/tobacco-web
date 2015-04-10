@@ -10,34 +10,46 @@ app.controller('NewsController', ['$scope', '$http', function ($scope, $http) {
     $http.get('http://192.168.100.9/tobacco/news').success(function (data) {
         $scope.news = data.data;
 
-            $scope.initSuccess = true;
-            $scope.fetchDisplay();
-            $scope.$apply();
+        $scope.initSuccess = true;
+        $scope.fetchDisplay();
+        $scope.$apply();
     });
 
-    $scope.prev = function(){
+    $scope.prev = function () {
         $scope.currentNews--;
-        if($scope.currentNews < 0){
-            $scope.currentNews = $scope.news.length-1;
+        if ($scope.currentNews < 0) {
+            $scope.currentNews = $scope.news.length - 1;
         }
 
         $scope.fetchDisplay();
     };
 
-    $scope.next = function(){
+    $scope.next = function () {
         $scope.currentNews++;
-        if($scope.currentNews >= $scope.news.length){
+        if ($scope.currentNews >= $scope.news.length) {
             $scope.currentNews = 0;
         }
 
         $scope.fetchDisplay();
     };
 
-    $scope.fetchDisplay = function(){
-        $scope.newsPrev = $scope.news[$scope.currentNews-1] || $scope.news[$scope.news.length-1];
+    $scope.fetchDisplay = function () {
+        $scope.newsPrev = $scope.news[$scope.currentNews - 1] || $scope.news[$scope.news.length - 1];
         $scope.newsCur = $scope.news[$scope.currentNews];
-        $scope.newsNext = $scope.news[$scope.currentNews+1] || $scope.news[0];
+        $scope.newsNext = $scope.news[$scope.currentNews + 1] || $scope.news[0];
     };
+
+    $scope.setcurrentNews = function (currentNews) {
+        $scope.currentNews = currentNews;
+        $scope.fetchDisplay();
+    };
+
+    $scope.readmoreClick = function () {
+        window.location.href = "?view=news-subtype";
+    };
+    $scope.backClick = function () {
+        window.location.href = "?view=home";
+    }
 }]);
 
 app.filter('startFrom', function () {

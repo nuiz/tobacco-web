@@ -7,4 +7,7 @@ subpageapp.controller('SubpageListCtl', ['$scope', '$http', function ($scope, $h
     $http.get('http://localhost/tobacco/book_type').success(function (data) {
         $scope.booktypes = data.data;
     });
+    $scope.subpageClick = function(){
+        window.location.href = "?view=e-book";
+    }
 }]);
