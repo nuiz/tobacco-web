@@ -34,9 +34,9 @@
 </style>
 
 <div ng-app="news-app" ng-controller="NewsController">
-    <div class="loading-lightbox" ng-hide="initSuccess">
-        <ion-spinner icon="android" class="loading-btn"></ion-spinner>
-    </div>
+<!--    <div class="loading-lightbox" ng-hide="initSuccess">-->
+<!--        <ion-spinner icon="android" class="loading-btn"></ion-spinner>-->
+<!--    </div>-->
 
     <div class="all">
         <a class="allNews" href="#"></a>
@@ -121,38 +121,38 @@
     <div class="newsday"></div>
     <div class="backhome" ng-click="backClick()"></div>
     <div class="blockyear">
-        <div class="Bn_left"></div>
-        <div class="txt_years">2556</div>
-        <div class="Bn_right"></div>
+        <div class="Bn_left" ng-click="prevYear()"></div>
+        <div class="txt_years">{{date.getFullYear()+543}}</div>
+        <div class="Bn_right" ng-click="nextYear()"></div>
     </div>
     <div class="blocksum">
         <div class="blockpic">
 
-            <div class="newsLeft news">
+            <div class="newsLeft news" ng-show="news.length >= 3">
                 <div class="news-cover" ng-style="{'background-image': 'url('+newsPrev.news_image_url+')'}"></div>
                 <div class="news-body">
                     <h2 id="news-name">{{newsPrev.news_name}}</h2>
 
-                    <p id="news-description">{{newsPrev.news_description}}</p>
+                    <p id="news-description">{{(newsPrev.news_description.length > 10) ? newsPrev.news_description.substring(0,160)+"...": newsPrev.news_description;}}</p>
                 </div>
             </div>
 
-            <div class="newsMid news">
-                <div class="read-more" ng-click="readmoreClick()">อ่านต่อ</div>
+            <div class="newsMid news" ng-show="news.length >= 1">
+                <div class="read-more" ng-click="readmoreClick(newsCur.news_id)">อ่านต่อ</div>
                 <div class="news-cover" ng-style="{'background-image': 'url('+newsCur.news_image_url+')'}"></div>
                 <div class="news-body">
                     <h2 id="news-name">{{newsCur.news_name}}</h2>
 
-                    <p id="news-description">{{newsCur.news_description}}</p>
+                    <p id="news-description">{{(newsCur.news_description.length > 10) ? newsCur.news_description.substring(0,255)+"...": newsCur.news_description;}}</p>
                 </div>
             </div>
 
-            <div class="newsRight news">
+            <div class="newsRight news" ng-show="news.length >= 2">
                 <div class="news-cover" ng-style="{'background-image': 'url('+newsNext.news_image_url+')'}"></div>
                 <div class="news-body">
                     <h2 id="news-name">{{newsNext.news_name}}</h2>
 
-                    <p id="news-description">{{newsNext.news_description}}</p>
+                    <p id="news-description">{{(newsNext.news_description.length > 10) ? newsNext.news_description.substring(0,160)+"...": newsNext.news_description;}}</p>
                 </div>
             </div>
 
@@ -162,23 +162,23 @@
         <div class="blockDM">
             <div class="blockDate">
                 <div class="date">
-                    <div class="bt_left"> <</div>
-                    <div class="dates" ng-repeat="item in news" ng-click="setcurrentNews($index)">{{$index+1}}</div>
-                    <div class="bt_right"> ></div>
+                    <div class="bt_left" ng-show="pagingStart > 0" ng-click="pagingPrev()"> <</div>
+                    <div class="dates" ng-repeat="item in news" ng-click="setcurrentNews($index)" ng-show="$index >= pagingStart && $index < pagingStart + pagingLimit">{{$index+1}}</div>
+                    <div class="bt_right" ng-show="news.length > pagingStart + pagingLimit" ng-click="pagingNext()"> ></div>
                 </div>
                 <div class="month">
-                    <div class="months">ม.ค.</div>
-                    <div class="months">ก.พ.</div>
-                    <div class="months">มี.ค.</div>
-                    <div class="months">เม.ย.</div>
-                    <div class="months">พ.ค.</div>
-                    <div class="months">มิ.ย.</div>
-                    <div class="months">ก.ค.</div>
-                    <div class="months">ส.ค.</div>
-                    <div class="months">ก.ย.</div>
-                    <div class="months">ต.ค.</div>
-                    <div class="months">พ.ย.</div>
-                    <div class="months">ธ.ค.</div>
+                    <div class="months" ng-click="setMonth(0)">ม.ค.</div>
+                    <div class="months" ng-click="setMonth(1)">ก.พ.</div>
+                    <div class="months" ng-click="setMonth(2)">มี.ค.</div>
+                    <div class="months" ng-click="setMonth(3)">เม.ย.</div>
+                    <div class="months" ng-click="setMonth(4)">พ.ค.</div>
+                    <div class="months" ng-click="setMonth(5)">มิ.ย.</div>
+                    <div class="months" ng-click="setMonth(6)">ก.ค.</div>
+                    <div class="months" ng-click="setMonth(7)">ส.ค.</div>
+                    <div class="months" ng-click="setMonth(8)">ก.ย.</div>
+                    <div class="months" ng-click="setMonth(9)">ต.ค.</div>
+                    <div class="months" ng-click="setMonth(10)">พ.ย.</div>
+                    <div class="months" ng-click="setMonth(11)">ธ.ค.</div>
                 </div>
             </div>
         </div>

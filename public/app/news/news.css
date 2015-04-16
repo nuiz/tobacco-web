@@ -119,6 +119,7 @@
     font-size: 14px;
     text-align: center;
     z-index: 1;
+    cursor: pointer;
 }
 
 .news-subtype-n {
@@ -163,7 +164,7 @@
     left: 60px;
     width: 150px;
     height: 60px;
-
+    z-index: 1;
 }
 
 .Bn_left {
@@ -174,6 +175,7 @@
     height: 25px;
     background: url(images/leftbutton.png);
     background-size: 100%;
+    cursor: pointer;
 }
 
 .txt_years {
@@ -192,6 +194,7 @@
     height: 25px;
     background: url(images/rightbutton.png);
     background-size: 100%;
+    cursor: pointer;
 }
 
 .blockpic {
@@ -243,6 +246,7 @@
     text-align: center;
     font-size: 48px;
     opacity: 0.8;
+    cursor: pointer;
 }
 
 .next {
@@ -255,6 +259,7 @@
     text-align: center;
     font-size: 48px;
     opacity: 0.8;
+    cursor: pointer;
 }
 
 .blockDM {
@@ -266,13 +271,14 @@
 
 .bt_left {
     margin-top: 15px;
-    margin-left: 20px;
+    margin-left: 8px;
     width: 20px;
     height: 20px;
     font-size: 20px;
     background: #f5f5f5;
     float: left;
     text-align: center;
+    cursor: pointer;
 }
 
 .date {
@@ -280,6 +286,7 @@
     top: 0;
     width: 700px;
     height: 50px;
+    cursor: pointer;
 }
 
 .dates {
@@ -292,6 +299,7 @@
     background: #f5f5f5;
     text-align: center;
     line-height: 2;
+    cursor: pointer;
 }
 
 .bt_right {
@@ -303,6 +311,7 @@
     font-size: 20px;
     background: #f5f5f5;
     text-align: center;
+    cursor: pointer;
 }
 
 .month {
@@ -323,6 +332,7 @@
     font-size: 26px;
     border: 1px #FFF solid;
     line-height: 2;
+    cursor: pointer;
 }
 
 .backhome {

@@ -5,15 +5,54 @@
 "use strict";
 var app = angular.module('news-app', ['ionic']);
 app.controller('NewsController', ['$scope', '$http', function ($scope, $http) {
-    $scope.currentNews = 0;
-    $scope.news = [];
-    $http.get('http://192.168.100.9/tobacco/news').success(function (data) {
-        $scope.news = data.data;
+    $scope.date = new Date();
+    $scope.setMonth = function(month){
+        $scope.date.setMonth(month);
 
-        $scope.initSuccess = true;
-        $scope.fetchDisplay();
-        $scope.$apply();
-    });
+        $scope.getNews();
+    };
+    $scope.prevYear = function(){
+        var year = parseInt($scope.date.getFullYear()) - 1;
+        $scope.date.setYear(year);
+
+        $scope.getNews();
+    };
+    $scope.nextYear = function(){
+        var year = parseInt($scope.date.getFullYear()) + 1;
+        $scope.date.setYear(year);
+
+        $scope.getNews();
+    };
+
+    $scope.pagingLimit = 1; // set size of page limit
+
+    $scope.currentNews = 0;
+    $scope.pagingStart = 0;
+    $scope.news = [];
+
+    $scope.getNews = function(){
+        var url = 'http://localhost/tobacco/news?';
+        var date = $scope.date.getFullYear();
+        date += '-';
+        date += $scope.date.getMonth()+1 < 10 ? '0'+($scope.date.getMonth()+1): ($scope.date.getMonth()+1);
+        date += '-';
+        //date += $scope.date.getDate() < 10 ? '0'+$scope.date.getDate(): $scope.date.getDate();
+        date += '01';
+
+        url += $.param({
+            "date": date
+        });
+
+        $http.get(url).success(function (data) {
+            $scope.pagingStart = 0;
+            $scope.currentNews = 0;
+            $scope.news = data.data;
+
+            $scope.initSuccess = true;
+            $scope.fetchDisplay();
+        });
+    };
+    $scope.getNews();
 
     $scope.prev = function () {
         $scope.currentNews--;
@@ -44,12 +83,21 @@ app.controller('NewsController', ['$scope', '$http', function ($scope, $http) {
         $scope.fetchDisplay();
     };
 
-    $scope.readmoreClick = function () {
-        window.location.href = "?view=news-subtype";
+    $scope.readmoreClick = function (id) {
+        window.location.href = "?view=news-subtype&tp=tp-blank&id="+id;
     };
     $scope.backClick = function () {
         window.location.href = "?view=home";
-    }
+    };
+
+    $scope.pagingStart = 0;
+    $scope.pagingNext = function(){
+        $scope.pagingStart += $scope.pagingLimit;
+    };
+
+    $scope.pagingPrev = function(){
+        $scope.pagingStart -= $scope.pagingLimit;
+    };
 }]);
 
 app.filter('startFrom', function () {

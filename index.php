@@ -6,4 +6,9 @@
  * Time: 14:23
  */
 
-include("private/views/tp.php");
+$tp = "tp.php";
+if(!empty($_GET['tp'])){
+    $tp = $_GET['tp'].".php";
+}
+$tp = "private/views/".$tp;
+include($tp);
