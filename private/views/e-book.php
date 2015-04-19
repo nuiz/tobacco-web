@@ -41,7 +41,7 @@
             </a>
         </div>
         <div class="label_book"></div>
-        <div class="search"></div>
+<!--        <div class="search"></div>-->
 
         <div class="lb_category">
             <a class="type" href="#"></a>

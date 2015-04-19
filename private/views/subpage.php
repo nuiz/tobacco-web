@@ -5,7 +5,7 @@
 <div ng-app="subpage" ng-controller="SubpageListCtl">
 <div class="bgSubPage"></div>
 <div class="label_book"></div>
-<div class="search"></div>
+<!--<div class="search"></div>-->
 <div class="back_home" ng-click="subpageClick()"></div>
     <div class="category">
         <a class="type2" href="#"></a>
@@ -44,7 +44,7 @@
     </a>
     <a href="test.pdf?iframe=true&width=100%&height=100%" rel="prettyPhoto[iframes]"
        title="Google.com opened at 100%">
-        <div class="lbMg"></div>
+<!--        <div class="lbMg"></div>-->
     </a>
     <a href="test.pdf?iframe=true&width=100%&height=100%" rel="prettyPhoto[iframes]"
        title="Google.com opened at 100%">

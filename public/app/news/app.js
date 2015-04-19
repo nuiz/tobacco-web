@@ -84,7 +84,7 @@ app.controller('NewsController', ['$scope', '$http', function ($scope, $http) {
     };
 
     $scope.readmoreClick = function (id) {
-        window.location.href = "?view=news-subtype&tp=tp-blank&id="+id;
+        window.location.href = "?view=news-subtype&id="+id;
     };
     $scope.backClick = function () {
         window.location.href = "?view=home";

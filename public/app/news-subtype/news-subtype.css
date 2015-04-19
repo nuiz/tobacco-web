@@ -1,7 +1,8 @@
 .blcType{
     position: absolute;
     top: 0;
-    left: 180px;
+    /*left: 180px;*/
+    left: 97px;
     width: 900px;
     height: 1000px;
     z-index: 1;
@@ -29,4 +30,8 @@
     left: 100px;
     line-height: 20px;
     width: 700px;
+}
+
+#main-body {
+    width: 100%;
 }
