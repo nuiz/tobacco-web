@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
 <head>
@@ -28,6 +27,10 @@
             margin: 0;
             padding: 0;
             overflow:auto !important;
+        }
+
+        #fb5 .fb5-bcg-book {
+            background-image: url(../public/images/home/bg2.jpg);
         }
     </style>
 
@@ -97,15 +100,17 @@
 
             <!-- BEGIN ABOUT -->
             <section id="fb5-about">
-                <h3>How to read a book?</h3>
-                <p>Nulla congue pulvinar pharetra. Cras sed malesuada arcu. Duis eleifend nunc laoreet odio dapibus ac convallis sapien ornare. Nullam a est id diam elementum rhoncus.Ad dicam diceret pri. Cu animal eligendi eam, nam ea alia oratio constituam, ad elit dolore possim est. Usu in nostro delectus, ne definitionem delicatissimi has. Cu sea iriure vivendum dignissim, choro nonumy philosophia ex mea. In usu reque liber fabellas, omnes omittam te per, ei novum percipitur cum. An eum erat facer, persius delectus ei vis.</p>
-                <p>&nbsp;</p>
-                <h3>Short description</h3>
-                <p>Nulla congue pulvinar pharetra. Cras sed malesuada arcu. Duis eleifend nunc laoreet odio dapibus ac convallis sapien ornare. Nullam a est id diam elementum rhoncus.Te amet disputando vel. Cu vim persius consequat consetetur, eam id melius fuisset principes. Clita habemus et vix, ius doming philosophia et. Eos mutat luptatum ad. Ad iudico repudiandae nec, mel an tempor accusata eloquentiam, choro forensibus et eam.</p>
-                <p>&nbsp;</p>
-                <h3>Start reading!</h3>
-                <p>Nulla congue pulvinar pharetra. Cras sed malesuada arcu. Duis eleifend nunc laoreet odio dapibus ac convallis sapien ornare. Nullam a est id diam elementum <a href="javascript:setPage(2)">rhoncus</a>.Te amet disputando vel. Cu vim persius consequat consetetur, eam id melius fuisset principes. Clita habemus et vix, ius doming philosophia et. Eos mutat luptatum ad. Ad iudico repudiandae nec, mel an tempor accusata eloquentiam, choro forensibus et eam.</p>
-                <p>&nbsp;</p>
+                <div style="padding: 10px 30px; background: rgba(0, 0, 0, 0.258824); height: 100%;">
+                    <h3>ชื่อหนังสือ</h3>
+                    <p>ชื่อหนังสือ</p>
+                    <p>&nbsp;</p>
+                    <h3>ชื่อผู้แต่ง</h3>
+                    <p>ชื่อผู้แต่ง</p>
+                    <p>&nbsp;</p>
+                    <h3>วันที่เผยแพร่</h3>
+                    <p>วันที่เผยแพร่</p>
+                    <p>&nbsp;</p>
+                </div>
             </section>
             <!-- END ABOUT -->
 
@@ -115,32 +120,24 @@
 
 
                 <!-- BEGIN PAGE 1-->
-                <div data-background-image="" class="">
+                <div data-background-image="pages/preview/13326831.jpg" class="">
 
-                    <!-- begin container page book -->
+                    <!-- container page book -->
                     <div class="fb5-cont-page-book">
 
-                        <!-- description for page  -->
+                        <!-- description for page from  -->
                         <div class="fb5-page-book">
-                            <div id="fb5-cover">
-                                <ul>
-<!--                                    <li><a href="javascript:setPage(2)"><img data-src="pages/preview/cover.jpg"></a></li>-->
-<!--                                    <li><a href="javascript:youtube('zWzRrqEvfPU','560','315')"><img data-src="pages/preview/cover.jpg"></a></li>-->
-<!--                                    <li><a href="javascript:youtube('48I0IHmsuOE','560','315')"><img data-src="pages/preview/cover.jpg"></a></li>-->
-                                </ul>
-                                <img data-src="img/logo-on-book.png" id="fb5-logo-cover">
-                            </div>
-                        </div>
-                        <!-- end description for page  -->
 
-                        <!-- number page and title -->
-                        <div class="fb5-meta">
-                            <span class="fb5-description"></span>
-                            <span class="fb5-num"></span>
                         </div>
-                        <!-- end number page and title  -->
-                    </div>
-                    <!-- end container page book -->
+
+                        <!-- number page and title for page -->
+                        <div class="fb5-meta">
+                            <span class="fb5-num">1</span>
+                            <!--                            <span class="fb5-description">Collection 2014</span>-->
+                        </div>
+
+
+                    </div> <!-- end container page book -->
 
                 </div>
                 <!-- END PAGE 1 -->
@@ -149,39 +146,21 @@
 
 
                 <!-- BEGIN PAGE 2-->
-                <div data-background-image="" class="">
+                <div data-background-image="img/page-1.png" class="">
 
-                    <!-- begin container page book -->
+                    <!-- container page book -->
                     <div class="fb5-cont-page-book">
 
                         <!-- description for page from  -->
                         <div class="fb5-page-book">
-                            <h1>Title Page</h1>
-                            <p>Lorem ipsum dolor sit amet, et pro sumo abhorreant definiebas. In mea assum ignota, duo id vero laudem, mel tantas epicuri cotidieque et. Malis choro solet cu nam. Magna option menandri ei usu. Nonumy luptatum et nec.</p>
-                            <h3>Table of Contents:</h3>
-                            <ul>
-                                <li><a href="javascript:setPage(1)">Nec ex paulo tollit</a></li>
-                                <li><a href="javascript:setPage(4)">Posse nulla cu eam</a></li>
-                                <li><a href="javascript:setPage(6)">Mea quaeque accusamus</a></li>
-                                <li><a href="javascript:setPage(9)">Vidit electram ex usu</a></li>
-                                <li><a href="javascript:setPage(10)">Detracto reformidans ius in</a></li>
-                                <li><a href="javascript:setPage(1)">Porro posidonium</a></li>
-                            </ul>
-                            <h3>Normal list:</h3>
-                            <ul>
-                                <li>Nec ex paulo tollit</li>
-                                <li>Nso atomorum assentior</li>
-                            </ul>
-                            <p>Nec ex paulo tollit, <a href="javascript:youtube('bgEaCWmbQdI','560','315')">youtube video</a>. Iuvaret ornatus sed ei, vim in sumo probo quaestio. Sed soleat maiestatis ne, te mel solet soluta maiestatis. Vix no labore graecis.</p>
-                            <p><a href="javascript:youtube('oJXpmlhqWzU','560','315')"><img width="130" height="130" data-src="pages/preview/cover.jpg" alt="cover-photo1" class="wp-image-59 alignleft"></a> Nostrud probatus ea mea, te homero possit suscipit qui, no atomorum assentior nec. Iuvaret ornatus sed ei, vim in sumo probo quaestio. Te homero possit suscipit qui, no atomorum assentior nec. Lorem ipsum dolor sit amet, et pro sumo abhorreant definiebas.Nostrud probatus ea mea, te homero possit suscipit qui, no atomorum assentior nec. Iuvaret ornatus sed ei, vim in.</p>
 
                         </div>
 
                         <!-- number page and title for page -->
                         <div class="fb5-meta">
                             <span class="fb5-num">2</span>
-                            <span class="fb5-description">Collection 2014</span>
-                        </div><!-- END number page and title for page -->
+                            <!--                            <span class="fb5-description">Collection 2014</span>-->
+                        </div>
 
 
                     </div> <!-- end container page book -->
@@ -192,20 +171,20 @@
 
 
                 <!-- BEGIN PAGE 3 -->
-                <div data-background-image="pages/preview/cover.jpg" class="">
+                <div data-background-image="img/page-1.png" class="">
 
                     <!-- container page book -->
                     <div class="fb5-cont-page-book">
 
-                        <!-- description for page -->
+                        <!-- description for page from  -->
                         <div class="fb5-page-book">
 
                         </div>
 
-                        <!-- number page and title  -->
+                        <!-- number page and title for page -->
                         <div class="fb5-meta">
-                            <span class="fb5-description">Collection 2014</span>
                             <span class="fb5-num">3</span>
+<!--                            <span class="fb5-description">Collection 2014</span>-->
                         </div>
 
 
@@ -217,7 +196,7 @@
 
 
                 <!-- BEGIN PAGE 4 -->
-                <div data-background-image="pages/preview/cover.jpg" class="">
+                <div data-background-image="img/page-1.png" class="">
 
                     <!-- container page book -->
                     <div class="fb5-cont-page-book">
@@ -243,7 +222,7 @@
 
 
                 <!-- BEGIN PAGE 5 -->
-                <div data-background-image="pages/preview/cover.jpg" class="">
+                <div data-background-image="img/page-1.png" class="">
 
                     <!-- container page book -->
                     <div class="fb5-cont-page-book">
@@ -269,7 +248,7 @@
 
 
                 <!-- BEGIN PAGE 6 -->
-                <div data-background-image="pages/preview/cover.jpg" class="">
+                <div data-background-image="img/page-1.png" class="">
 
                     <!-- container page book -->
                     <div class="fb5-cont-page-book">
@@ -293,78 +272,7 @@
 
 
                 <!-- BEGIN PAGE 7 -->
-                <div data-background-image="" class="">
-
-                    <!-- container page book -->
-                    <div class="fb5-cont-page-book">
-
-                        <!-- description for page from -->
-                        <div class="fb5-page-book">
-                            <h1>Heading 1</h1>
-                            <p>Usu at nominavi partiendo aliquando. Sit eu sumo tempor scribentur. Everti latine eu mei, no vis posse mazim oblique, liber delectus dissentiunt sit ex. Ea vix graeco saperet gubergren, facete antiopam ei his. Eos ad utamur definitionem.</p>
-                            <h2>Heading 2</h2>
-                            <p>Per ex dicat utroque. Ex erat audiam vivendo mei, his vide duis forensibus at, malis omnes vocibus pro ne. Ei alterum dolores electram nec.</p>
-                            <h3>Heading 3</h3>
-                            <p>Nam habemus argumentum ad. Te nam soluta conceptam, at per dictas laoreet constituto. Te nam dicam adipiscing, ne has denique moderatius.</p>
-                            <h4>Heading 4</h4>
-                            <p>Eleifend honestatis cotidieque sed ne. Pri id paulo audire urbanitas, cu erat veniam consul sit. Quo at nihil dicunt animal, tation inciderint philosophia vim ei. Movet laudem mentitum id mel.</p>
-                            <h5>Heading 5</h5>
-                            <p>Eam nobis solet singulis id. At eam idque scribentur. Has ad detraxit vituperatoribus, invidunt evertitur consectetuer vel no. Quo id dolorum partiendo assentior, inani prompta vis eu.</p>
-                            <h6>Heading 6</h6>
-                            <p>Et molestiae vituperata mei, numquam corpora sapientem at his. Iudico eirmod referrentur duo ex, no sed soleat petentium honestatis. Cu mel melius laboramus, sit stet omnis mollis cu, regione labitur at usu.</p>
-                        </div>
-
-                        <!-- number page and title for page -->
-                        <div class="fb5-meta">
-                            <span class="fb5-description">Collection 2014</span>
-                            <span class="fb5-num">7</span>
-                        </div>
-
-
-                    </div> <!-- end container page book -->
-
-                </div>
-                <!-- END PAGE 7-->
-
-
-
-
-                <!-- BEGIN PAGE 8 -->
-                <div data-background-image="" class="">
-
-                    <!-- container page book -->
-                    <div class="fb5-cont-page-book">
-
-                        <!-- description for page  -->
-                        <div class="fb5-page-book">
-                            <h4></h4>
-                            <h4>Te graeco nonumes</h4>
-                            <p><a href="javascript:youtube('oJXpmlhqWzU','560','315')"><img width="130" height="130" data-src="pages/preview/cover.jpg" alt="cover-photo3" class="alignleft size-full wp-image-61"></a>Malorum blandit reprimique, torquatos complectitur usu ex. Feugiat erroribus te eos. Ea eum tota rationibus instructior. Te eos suas scripta comprehensam.Modus decore commune nam at. Sed ea scripta principes, has vocibus aliquando reformidans ne. Sale iuvaret ad per. Assum diceret te pri, cum quod lorem oratio no. Nonumy volutpat similique qui ei, ad tollit dolores invidunt pri, no vix duis volumus voluptaria. Pri reque homero pertinacia in, sea te scripserit liberavisse.Lorem ipsum dolor sit amet, quo ex tamquam quaerendum persequeris, et vel aliquam sadipscing, no ipsum facilis nam. Appellantur dissentiunt cum in. Dicta albucius dignissim cu ius.</p>
-                            <h4>Te graeco nonumes</h4>
-                            <p><a href="javascript:youtube('48I0IHmsuOE','560','315')"><img width="130" height="130" data-src="pages/preview/cover.jpg" alt="cover-photo2" class="size-full wp-image-60 alignright"></a>Eu usu aperiam euripidis, ut vix iusto ocurreret principes. Timeam mandamus pro ut, agam illud cu cum, mei assum semper rationibus in. Ridens facete regione pro an. Laudem reprimique an his, et oratio hendrerit eos, est oratio ullamcorper voluptatibus in. Ut sea assum eirmod explicari. Mel <a href="javascript:setPage(1)">melius legimus</a> id, et nam error laudem atomorum.Cu semper accommodare ius.</p>
-                            <p><strong>Eam ut facilisi dissentiunt.</strong></p>
-                            <p><strong></strong> Appellantur dissentiunt cum in. Dicta albucius dignissim cu ius. Per eu autem graeco, vide minim persequeris his in, solum rebum ipsum in sed.Ei eum possim prompta, purto fabellas mei ad. Ex sed veri idque facilis. Facer intellegam reprehendunt vim no, sit id aperiam bonorum. Aeque populo disputationi ut pri, no harum fabulas cum, eu solet propriae mei.</p>
-                            <p>&nbsp;</p>
-                            <p>&nbsp;</p>
-                        </div>
-                        <!-- end description for page  -->
-
-                        <!-- number page and title for page -->
-                        <div class="fb5-meta">
-                            <span class="fb5-num">8</span>
-                            <span class="fb5-description">Collection 2014</span>
-                        </div>
-
-
-                    </div> <!-- end container page book -->
-
-                </div>
-                <!-- END PAGE 8 -->
-
-
-
-                <!-- BEGIN PAGE 9 -->
-                <div data-background-image="pages/preview/cover.jpg" class="">
+                <div data-background-image="img/page-1.png" class="">
 
                     <!-- container page book -->
                     <div class="fb5-cont-page-book">
@@ -376,7 +284,58 @@
 
                         <!-- number page and title for page -->
                         <div class="fb5-meta">
-                            <span class="fb5-description">Collection 2014</span>
+<!--                            <span class="fb5-description">Collection 2014</span>-->
+                            <span class="fb5-num">7</span>
+                        </div>
+
+                    </div>
+                    <!-- end container page book -->
+
+                </div>
+                <!-- END PAGE 7-->
+
+
+
+
+                <!-- BEGIN PAGE 8 -->
+                <div data-background-image="img/page-1.png" class="">
+
+                    <!-- container page book -->
+                    <div class="fb5-cont-page-book">
+
+                        <!-- description for page from  -->
+                        <div class="fb5-page-book">
+
+                        </div>
+
+                        <!-- number page and title for page -->
+                        <div class="fb5-meta">
+<!--                            <span class="fb5-description"></span>-->
+                            <span class="fb5-num">8</span>
+                        </div>
+
+                    </div>
+                    <!-- end container page book -->
+
+                </div>
+                <!-- END PAGE 8 -->
+
+
+
+                <!-- BEGIN PAGE 9 -->
+                <div data-background-image="img/page-1.png" class="">
+
+                    <!-- container page book -->
+                    <div class="fb5-cont-page-book">
+
+                        <!-- description for page from  -->
+                        <div class="fb5-page-book">
+
+                        </div>
+
+                        <!-- number page and title for page -->
+                        <div class="fb5-meta">
+<!--                            <span class="fb5-description">Collection 2014</span>-->
                             <span class="fb5-num">9</span>
                         </div>
 
@@ -389,7 +348,7 @@
 
 
                 <!-- BEGIN PAGE 10 -->
-                <div data-background-image="pages/preview/cover.jpg" class="fb5-double fb5-first">
+                <div data-background-image="img/page-1.png" class="">
 
                     <!-- container page book -->
                     <div class="fb5-cont-page-book">
@@ -414,7 +373,7 @@
 
 
                 <!-- BEGIN PAGE 11 -->
-                <div data-background-image="pages/preview/cover.jpg" class="fb5-double fb5-second">
+                <div data-background-image="img/page-1.png" class="">
 
                     <!-- container page book -->
                     <div class="fb5-cont-page-book">
@@ -438,7 +397,7 @@
 
 
                 <!-- BEGIN PAGE 12 -->
-                <div data-background-image="pages/preview/cover.jpg" class="">
+                <div data-background-image="img/page-1.png" class="">
 
                     <!-- container page book -->
                     <div class="fb5-cont-page-book">
@@ -479,8 +438,8 @@
 
             <div class="fb5-bcg-tools"></div>
 
-            <a id="fb5-logo" target="_blank" href="http://codecanyon.net/user/flashmaniac?ref=flashmaniac">
-                <img alt="" src="img/logo.png">
+            <a id="fb5-logo" target="_blank" href="">
+<!--                <img alt="" src="img/logo.png">-->
             </a>
 
             <div class="fb5-menu" id="fb5-center">
@@ -538,9 +497,9 @@
                     </li>
 
                     <!-- icon contact form -->
-                    <li>
-                        <a title="SEND MESSAGE" class="contact"></a>
-                    </li>
+<!--                    <li>-->
+<!--                        <a title="SEND MESSAGE" class="contact"></a>-->
+<!--                    </li>-->
 
                     <!-- icon fullscreen -->
                     <li>
@@ -671,7 +630,9 @@
             'full_area':'true',
             'lazy_loading_thumbs':'false',
             'lazy_loading_pages':'false'
-        })
+        });
+
+    $.loadBook();
 </script>
 
 

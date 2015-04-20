@@ -5,26 +5,16 @@
     <div ng-app="ebook" ng-controller="EbookListCtl">
         <div class="back_home" ng-click="backhome()"></div>
         <div class="book">
-            <div class="booksClick" ng-click="bookClick()"> > </div>
-            <div class="mag1"></div>
-            <div class="mag2"></div>
-            <div class="mag3"></div>
-            <div class="mag4"></div>
-            <div class="mag5"></div>
-            <div class="mag6"></div>
-            <div class="mag7"></div>
-            <div class="mag8"></div>
+            <div class="booksClick"> > </div>
+            <div ng-class="'mag'+($index+1)"
+                 ng-click="read(item.content_id)"
+                 ng-style="{'background-image': 'url('+item.book_cover_url+')'}"
+                 ng-repeat="item in books_group[0]"></div>
         </div>
-        <div class="book_other">
-            <div class="booksClick" ng-click="bookClick()"> < </div>
-            <div class="book1"></div>
-            <div class="book2"></div>
-            <div class="book3"></div>
-            <div class="book4"></div>
-            <div class="book5"></div>
-            <div class="book6"></div>
-            <div class="book7"></div>
-            <div class="book8"></div>
+        <div class="book_2" ng-click="bookClick(1)">
+            <div class="booksClick"> < </div>
+            <div ng-class="'book'+($index+1)" ng-style="{'background-image': 'url('+item.book_cover_url+')'}" ng-repeat="item in books_group[1]"></div>
+<!--            <div class="book1"></div>-->
         </div>
         <div class="b_shf">
             <div class="shelf_smalls"></div>

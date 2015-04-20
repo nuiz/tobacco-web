@@ -61,6 +61,8 @@
     height: 450px;
     background: url(images/books.png);
     background-size: 100%;
+
+    cursor: pointer;
 }
 .booksClick{
     position: absolute;
@@ -72,6 +74,8 @@
     font-size: 30px;
     text-align: center;
     border: 1px #000000 solid;
+
+    display: none;
 }
 .mag1 {
     position: absolute;
@@ -153,7 +157,7 @@
     background-size: 100%;
 }
 
-.book_other {
+.book_2 {
     position: absolute;
     top: 175px;
     right: 425px;
@@ -161,6 +165,8 @@
     height: 450px;
     background: url(images/books.png);
     background-size: 100%;
+
+    cursor: pointer;
 }
 
 .book1 {
