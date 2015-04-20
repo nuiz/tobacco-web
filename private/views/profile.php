@@ -4,7 +4,7 @@
 <div ng-app="profile" ng-controller="ProfileListCtl">
     <div class="tab">
         <div class="logo"></div>
-        <div class="search">ค้นหาเพื่อน</div>
+<!--        <div class="search">ค้นหาเพื่อน</div>-->
         <div class="status">
             <div class="image"></div>
             <div class="tus">ADMIN |</div>
