@@ -9,5 +9,8 @@ categoryapp.controller('CategorysListCtl', ['$scope', '$http', function ($scope,
     });
     $scope.backClick = function(){
         window.location.href = "?view=home";
+    };
+    $scope.readmoreClick = function (id) {
+        window.location.href = "?view=reserch&id="+id;
     }
 }]);

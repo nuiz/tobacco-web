@@ -60,21 +60,21 @@
             </div>
         </div>
     </div>
-
     <div class="buttonleft_small"></div>
     <div class="buttonright_small"></div>
 
     <div class="select">
         <div class="block_select">
             <div class="label_select"
+                 ng-click="readmoreClick(reserch.parent_id)"
                  ng-style="{'margin-top': reserchs.length-$index}"
                  ng-repeat="reserch in reserchs | limitTo: 5">
+                {{reserch.category_name}}
             </div>
         </div>
         <div class="line">
             <div class="Textline">หมวดหมู่การวิจัย</div>
         </div>
-
         <div class="buttonleft"></div>
         <div class="buttonright"></div>
         <div class="categoryBack" ng-click="backClick()"></div>
