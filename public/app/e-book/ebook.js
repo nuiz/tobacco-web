@@ -31,8 +31,8 @@ ebookapp.controller('EbookListCtl', ['$scope', '$http', function ($scope, $http)
         });
     }
 
-    $scope.bookClick = function(){
-        window.location.href = "?view=subpage";
+    $scope.bookClick = function(id){
+        window.location.href = "?view=subpage&book_type_id="+id;
     };
     $scope.backhome = function(){
         window.location.href = "?view=home";

@@ -4,10 +4,9 @@
 <div class="body">
     <div ng-app="ebook" ng-controller="EbookListCtl">
         <div class="back_home" ng-click="backhome()"></div>
-        <div class="book">
+        <div class="book" ng-click="bookClick(2)">
             <div class="booksClick"> > </div>
             <div ng-class="'mag'+($index+1)"
-                 ng-click="read(item.content_id)"
                  ng-style="{'background-image': 'url('+item.book_cover_url+')'}"
                  ng-repeat="item in books_group[0]"></div>
         </div>
