@@ -9,5 +9,18 @@ subpageapp.controller('SubpageListCtl', ['$scope', '$http', function ($scope, $h
     });
     $scope.subpageClick = function(){
         window.location.href = "?view=e-book";
+    };
+
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
+
+    $scope.books = [];
+    var url = "http://localhost/tobacco/ebook?book_type_id="+getParameterByName('book_type_id');
+    $http.get(url).success(function (data) {
+        $scope.books = data.data;
+    });
 }]);
