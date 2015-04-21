@@ -77,9 +77,8 @@
 }
 
 .grps {
-    position: absolute;
-    top: 50px;
-    left: 50px;
+    margin-top: 50px;
+    margin-left: 50px;
     width: 200px;
     font-size: 17px;
     color: #DFBB9E;
@@ -93,18 +92,19 @@
 
 .label_select {
     position: relative;
-    padding-top: 160px;
+    padding-top: 144px;
     float: left;
     top: -30px;
     margin-left: 30px;
     width: 190px;
-    height: 49px;
+    height: 209px;
     background: url(images/block.png);
     background-size: 100%;
     color: #FEE5B1;
     font-size: 22px;
     line-height: 1;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .subtype {
@@ -112,12 +112,10 @@
     float: left;
     margin-top: 10px;
     margin-left: 10px;
-    top: 70px;
     left: 45px;
     width: 80px;
     height: 47px;
     text-align: center;
-    line-height: 47px;
     color: #FFFFFF;
     background-color: initial;
     background: rgba(132, 37, 20, 0.36);

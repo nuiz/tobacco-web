@@ -11,6 +11,6 @@ categoryapp.controller('CategorysListCtl', ['$scope', '$http', function ($scope,
         window.location.href = "?view=home";
     };
     $scope.readmoreClick = function (id) {
-        window.location.href = "?view=reserch&id="+id;
+        window.location.href = "?view=reserch&tp=tp-blank&id="+id;
     }
 }]);

@@ -56,51 +56,43 @@
 
             <div class="other">
                 <div class="Pic_other" ng-repeat="other in others | limitTo: 4"></div>
-                </a>
             </div>
         </div>
     </div>
-    <div class="buttonleft_small"></div>
-    <div class="buttonright_small"></div>
+<!--    <div class="buttonleft_small"></div>-->
+<!--    <div class="buttonright_small"></div>-->
 
     <div class="select">
         <div class="block_select">
             <div class="label_select"
-                 ng-click="readmoreClick(reserch.parent_id)"
+                 ng-click="lv2Click(item)"
                  ng-style="{'margin-top': reserchs.length-$index}"
-                 ng-repeat="reserch in reserchs | limitTo: 5">
-                {{reserch.category_name}}
+                 ng-repeat="item in lv2_categories | startFrom:lv2_page*5 | limitTo: 5">
+                {{item.category_name}}
             </div>
         </div>
         <div class="line">
-            <div class="Textline">หมวดหมู่การวิจัย</div>
+            <div class="Textline">หมวดหมู่ {{main_category.category_name}}</div>
         </div>
-        <div class="buttonleft"></div>
-        <div class="buttonright"></div>
+<!--        <div class="buttonleft"></div>-->
+<!--        <div class="buttonright"></div>-->
         <div class="categoryBack" ng-click="backClick()"></div>
         <div class="groups">
-            <div class="on"></div>
-            <div class="grps">หมวดหมู่ย่อยกรองทิพย์</div>
+<!--            <div class="on"></div>-->
+            <div class="grps">หมวดหมู่ย่อย {{lv2_category.category_name}}</div>
             <div class="subtype"
-                 ng-repeat="subtype in subtypes | limitTo: 10">
+                 ng-click="lv3Click(item)"
+                 ng-repeat="item in lv3_categories | limitTo: 10">
+                <table style="height: 100%;">
+                    <tr>
+                        <td style="vertical-align: middle;">{{item.category_name}}</td>
+                    </tr>
+                </table>
             </div>
-            <div class="down"></div>
+<!--            <div class="down"></div>-->
         </div>
     </div>
     <div ng-app="reserch"
          ng-controller="ReserchListCtl">
     </div>
 </div>
-<script type="text/javascript" charset="utf-8">
-    $(document).ready(function () {
-        $("a[rel^='prettyPhoto']").prettyPhoto();
-
-
-        $('.mass').click(function () {
-            alert("มวลบุหรี่");
-        });
-
-
-    });
-
-</script>
