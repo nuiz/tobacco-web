@@ -107,6 +107,9 @@ html, body {
     text-align: center;
     font-size: 22px;
 }
+.nav-menu:hover {
+    color: #ff9600;
+}
 
 #main-body {
     width: 774px;
