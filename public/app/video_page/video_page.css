@@ -1,0 +1,112 @@
+#main-body {
+    width: 100%;
+}
+
+#main {
+    background: url(images/bggroup.png);
+    background-size: 100%;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+
+}
+
+.blockleft {
+    width: 700px;
+    height: 620px;
+    background: #dacaa1;
+    float: left;
+}
+
+.video {
+    width: 690px;
+    height: 350px;
+    background: #000000;
+}
+
+.block_admin {
+    width: 690px;
+    height: 255px;
+    color: #ffffff;
+
+}
+
+.leaflogo {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 90px;
+    height: 50px;
+    background: url(images/logo1.png);
+    background-size: 100%;
+
+}
+
+.leftlogoII {
+    margin-top: -37px;
+    margin-left: 15px;
+    width: 20px;
+    height: 13px;
+    background: url(images/logo2.png);
+    background-size: 100%;
+}
+
+.txt_admin {
+    margin-left: 65px;
+    font-size: 20px;
+    color: #35300A;
+}
+
+.txt_report {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #35300A;
+}
+
+.txt_grp {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #35300A;
+}
+
+.txt_other {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #35300A;
+}
+
+.blockright {
+    width: 280px;
+    height: 620px;
+    background: #826933;
+    float: left;
+}
+
+.share {
+    margin-top: 5px;
+    width: 350px;
+    height: 28px;
+    background: #ffffff;
+    font-size: 16px;
+    line-height: 2;
+
+}
+
+.list_video {
+    margin: 5px 0;
+    height: 80px;
+}
+
+.thumb {
+    width: 120px;
+    float: left;
+}
+
+.text {
+    width: 160px;
+    float: left;
+}

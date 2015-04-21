@@ -8,6 +8,8 @@ reserchapp.controller('ReserchListCtl', ['$scope', '$http', function ($scope, $h
     $scope.lv2_category = null;
     $scope.lv3_category = null;
 
+    $scope.category = null;
+
     $scope.lv2_page = 0;
     $scope.lv3_page = 0;
 
@@ -24,33 +26,59 @@ reserchapp.controller('ReserchListCtl', ['$scope', '$http', function ($scope, $h
         return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
 
-    var url = "http://localhost/tobacco/category/" + getParameterByName('id');
-    $http.get(url).success(function (data) {
-        $scope.main_category = data;
-    });
+    $scope.clickMain = function(){
+        var url = "http://localhost/tobacco/category/" + getParameterByName('id');
+        $http.get(url).success(function (data) {
+            $scope.main_category = data;
+            $scope.category = data;
+            $scope.fetchContents();
+        });
 
-    url = "http://localhost/tobacco/category?parent_id=" + getParameterByName('id');
-    $http.get(url).success(function (data) {
-        $scope.lv2_page = 0;
-        $scope.lv2_categories = data.data;
-    });
+        url = "http://localhost/tobacco/category?parent_id=" + getParameterByName('id');
+        $http.get(url).success(function (data) {
+            $scope.lv2_page = 0;
+            $scope.lv2_categories = data.data;
+        });
+    };
+    $scope.clickMain();
 
     $scope.lv2Click = function(lv2){
         $scope.lv2_category = lv2;
+        $scope.category = lv2;
         var url = "http://localhost/tobacco/category?parent_id=" + lv2.category_id;
         $http.get(url).success(function (data) {
             $scope.lv3_page = 0;
             $scope.lv3_categories = data.data;
         });
+        $scope.fetchContents();
     };
 
     $scope.lv3Click = function(lv3){
         $scope.lv3_category = lv3;
-        var url = "http://localhost/tobacco/category?parent_id=" + lv3.category_id;
-        $http.get(url).success(function (data) {
-            $scope.lv3_page = 0;
-            $scope.lv3_categories = data.data;
+        $scope.category = lv3;
+        $scope.fetchContents();
+    };
+
+    $scope.contents = [];
+    $scope.fetchContents = function(){
+        var url = "http://localhost/tobacco/content/by_category?category_id="+$scope.category.category_id;
+        $http.get(url).success(function(data){
+            console.log(data);
+            $scope.contents = data.data;
         });
+    };
+
+    $scope.contentClick = function(item){
+        if(item.content_type=='video'){
+            window.location.href = "?view=video_page&content_id="+item.content_id;
+        }
+        else {
+            window.location.href = "?view=book-reader&tp=tp-none&content_id="+item.content_id;
+        }
+    };
+
+    $scope.displayVideo = function(video){
+
     };
 }]);
 
