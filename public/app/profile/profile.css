@@ -32,7 +32,7 @@
 .status{
     position: absolute;
     top: 10px;
-    right: 160px;
+    right: 80px;
     width: 150px;
     height: 40px;
 }
@@ -88,8 +88,14 @@
     left: 100px;
     width: 850px;
     height: 100%;
-    background: #ffffff;
+    background: #623010;
+    color: white;
 }
+
+.data a {
+    color: white;
+}
+
 .homepage{
     position: absolute;
     bottom: 15px;

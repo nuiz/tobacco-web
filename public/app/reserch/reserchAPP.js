@@ -38,6 +38,7 @@ reserchapp.controller('ReserchListCtl', ['$scope', '$http', function ($scope, $h
         $http.get(url).success(function (data) {
             $scope.lv2_page = 0;
             $scope.lv2_categories = data.data;
+            $scope.lv3_categories = [];
         });
     };
     $scope.clickMain();
@@ -77,8 +78,9 @@ reserchapp.controller('ReserchListCtl', ['$scope', '$http', function ($scope, $h
         }
     };
 
-    $scope.displayVideo = function(video){
-
+    $scope.filterType = false;
+    $scope.clickFilter = function(type){
+        $scope.filterType = type;
     };
 }]);
 
@@ -86,5 +88,17 @@ reserchapp.filter('startFrom', function () {
     return function (input, start) {
         start = +start; //parse to int
         return input.slice(start);
+    }
+});
+
+reserchapp.filter('filterType', function () {
+    return function (input, type) {
+        var list = type?
+            input.filter(function(item){
+                return item.content_type == type;
+            })
+            : input;
+
+        return list;
     }
 });

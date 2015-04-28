@@ -55,7 +55,7 @@
 <!--                <div class="Pic_other" ng-repeat="other in others | limitTo: 4"></div>-->
 <!--            </div>-->
 
-            <div class="Pic_other" ng-repeat="item in contents | limitTo: 4" ng-click="contentClick(item)">
+            <div class="Pic_other" ng-repeat="item in contents | filterType:filterType | limitTo: 12" ng-click="contentClick(item)">
                 <div ng-if="item.content_type=='video'" style="width: width: 136px; height: 136px; background-size: cover;"
                      ng-style="{'background-image': 'url('+item.videos[0].video_thumb_url+')'}">
                 </div>
@@ -71,6 +71,11 @@
 <!--    <div class="buttonleft_small"></div>-->
 <!--    <div class="buttonright_small"></div>-->
 
+    <style>
+        button.active {
+            background: gray;
+        }
+    </style>
     <div class="select">
         <div class="block_select">
             <div class="label_select"
@@ -82,11 +87,16 @@
         </div>
         <div class="line">
             <div class="Textline" ng-click="clickMain()">หมวดหมู่ {{main_category.category_name}}</div>
+            <div style="float: right; margin: 10px 10px 0 0;">
+                <button ng-click="clickFilter('video')" ng-class="{'active': filterType=='video'}">แสดงเฉพาะ video</button>
+                <button ng-click="clickFilter('book')" ng-class="{'active': filterType=='book'}">แสดงเฉพาะ e-book</button>
+                <button ng-click="clickFilter(false)" ng-class="{'active': filterType==false}">แสดงทั้งหมด</button>
+            </div>
         </div>
 <!--        <div class="buttonleft"></div>-->
 <!--        <div class="buttonright"></div>-->
         <div class="categoryBack" ng-click="backClick()"></div>
-        <div class="groups">
+        <div class="groups" ng-show="lv3_categories.length > 0">
 <!--            <div class="on"></div>-->
             <div class="grps">หมวดหมู่ย่อย {{lv2_category.category_name}}</div>
             <div class="subtype"

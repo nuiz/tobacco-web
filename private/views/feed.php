@@ -10,11 +10,13 @@
             <div class="tus">ADMIN |</div>
         </div>
         <div class="icon">
-            <div class="icon-later"></div>
-            <div class="icon-alert"></div>
+<!--            <div class="icon-later"></div>-->
+<!--            <div class="icon-alert"></div>-->
             <div class="icon-setting"></div>
         </div>
     </div>
-    <div class="data"></div>
+    <div class="data">
+        Test
+    </div>
     <div class="homepage" ng-click="homeClick()"></div>
 </div>
