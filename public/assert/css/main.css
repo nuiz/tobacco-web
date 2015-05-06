@@ -99,7 +99,7 @@ html, body {
 }
 
 .nav-menu {
-    padding: 10px;
+    padding: 12px;
     margin: 5px 0;
     display: block;
     color: white;
@@ -107,7 +107,7 @@ html, body {
     text-align: center;
     font-size: 22px;
 }
-.nav-menu:hover {
+.nav-menu:hover, .nav-menu.active {
     color: #ff9600;
 }
 
@@ -140,4 +140,26 @@ html, body {
     background: url(images/nav/login.png);
     background-size: auto 100%;
     background-position: left center;
+}
+
+.active-icon {
+    width: 22px;
+    height: 26px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: -2px;
+    display: inline-block;
+    visibility: hidden;
+}
+
+.nav-menu:hover .active-icon,.active .active-icon {
+    visibility: visible;
+}
+
+.active-icon.active-left {
+    background-image: url(images/nav/active-left.png);
+}
+
+.active-icon.active-right {
+    background-image: url(images/nav/active-right.png);
 }

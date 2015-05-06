@@ -2,9 +2,6 @@
 <script src="bower_components/angularjs/angular.min.js"></script>
 <script src="public/app/news/app.js"></script>
 
-<link href="public/assert/ionic/ionic.css" rel="stylesheet">
-<script src="public/assert/ionic/ionic.bundle.js"></script>
-
 <style>
     .loading-lightbox {
         width: 100%;
@@ -34,10 +31,6 @@
 </style>
 
 <div ng-app="news-app" ng-controller="NewsController">
-<!--    <div class="loading-lightbox" ng-hide="initSuccess">-->
-<!--        <ion-spinner icon="android" class="loading-btn"></ion-spinner>-->
-<!--    </div>-->
-
     <div class="all">
         <a class="allNews" href="#"></a>
     </div>
@@ -166,18 +159,18 @@
                     <div class="bt_right" ng-show="news.length > pagingStart + pagingLimit" ng-click="pagingNext()"> ></div>
                 </div>
                 <div class="month">
-                    <div class="months" ng-click="setMonth(0)">ม.ค.</div>
-                    <div class="months" ng-click="setMonth(1)">ก.พ.</div>
-                    <div class="months" ng-click="setMonth(2)">มี.ค.</div>
-                    <div class="months" ng-click="setMonth(3)">เม.ย.</div>
-                    <div class="months" ng-click="setMonth(4)">พ.ค.</div>
-                    <div class="months" ng-click="setMonth(5)">มิ.ย.</div>
-                    <div class="months" ng-click="setMonth(6)">ก.ค.</div>
-                    <div class="months" ng-click="setMonth(7)">ส.ค.</div>
-                    <div class="months" ng-click="setMonth(8)">ก.ย.</div>
-                    <div class="months" ng-click="setMonth(9)">ต.ค.</div>
-                    <div class="months" ng-click="setMonth(10)">พ.ย.</div>
-                    <div class="months" ng-click="setMonth(11)">ธ.ค.</div>
+                    <div class="months" ng-click="setMonth(0)" ng-class="{active: date.getMonth()==0}">ม.ค.</div>
+                    <div class="months" ng-click="setMonth(1)" ng-class="{active: date.getMonth()==1}">ก.พ.</div>
+                    <div class="months" ng-click="setMonth(2)" ng-class="{active: date.getMonth()==2}">มี.ค.</div>
+                    <div class="months" ng-click="setMonth(3)" ng-class="{active: date.getMonth()==3}">เม.ย.</div>
+                    <div class="months" ng-click="setMonth(4)" ng-class="{active: date.getMonth()==4}">พ.ค.</div>
+                    <div class="months" ng-click="setMonth(5)" ng-class="{active: date.getMonth()==5}">มิ.ย.</div>
+                    <div class="months" ng-click="setMonth(6)" ng-class="{active: date.getMonth()==6}">ก.ค.</div>
+                    <div class="months" ng-click="setMonth(7)" ng-class="{active: date.getMonth()==7}">ส.ค.</div>
+                    <div class="months" ng-click="setMonth(8)" ng-class="{active: date.getMonth()==8}">ก.ย.</div>
+                    <div class="months" ng-click="setMonth(9)" ng-class="{active: date.getMonth()==9}">ต.ค.</div>
+                    <div class="months" ng-click="setMonth(10)" ng-class="{active: date.getMonth()==10}">พ.ย.</div>
+                    <div class="months" ng-click="setMonth(11)" ng-class="{active: date.getMonth()==11}">ธ.ค.</div>
                 </div>
             </div>
         </div>

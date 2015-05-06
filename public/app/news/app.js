@@ -3,7 +3,7 @@
  */
 
 "use strict";
-var app = angular.module('news-app', ['ionic']);
+var app = angular.module('news-app', []);
 app.controller('NewsController', ['$scope', '$http', function ($scope, $http) {
     $scope.date = new Date();
     $scope.setMonth = function(month){
