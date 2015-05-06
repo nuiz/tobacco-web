@@ -324,7 +324,7 @@
 .months {
     float: left;
     margin-top: 0;
-    margin-left: 8px;
+    margin-left: 6px;
     width: 50px;
     height: 50px;
     text-align: center;;
@@ -333,6 +333,9 @@
     border: 1px #FFF solid;
     line-height: 2;
     cursor: pointer;
+}
+.months.active {
+    background: rgba(255,255,255,0.4);
 }
 
 .backhome {

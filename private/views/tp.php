@@ -18,16 +18,34 @@
 </head>
 <body>
 <div id="main">
+    <?php
+    $fnActivePage = function($page){
+        $curPage = isset($_GET['view'])? $_GET['view']: "home";
+        if($page==$curPage) echo "active";
+    };
+    ?>
     <nav id="main-nav" class="nav">
         <div id="main-nav2">
             <img src="public/images/font.png" width="100%">
             <div id="nav-menu-list">
-                <a class="nav-menu" href="?view=news">ข่าวสาร</a>
-                <a class="nav-menu" href="?view=category">หมวดหมู่</a>
-                <a class="nav-menu" href="?view=expert">ผู้เชี่ยวชาญ</a>
-                <a class="nav-menu" href="?view=e-book">E-Book</a>
-                <a class="nav-menu" href="?view=km_center">ศูนย์ KM</a>
-                <a class="nav-menu" href="?view=faq">FAQ</a>
+                <a class="nav-menu <?php $fnActivePage("news");?>" href="?view=news">
+                    <i class="active-icon active-left"></i> ข่าวสาร <i class="active-icon active-right"></i>
+                </a>
+                <a class="nav-menu <?php $fnActivePage("category");?>" href="?view=category">
+                    <i class="active-icon active-left"></i> หมวดหมู่ <i class="active-icon active-right"></i>
+                </a>
+                <a class="nav-menu <?php $fnActivePage("expert");?>" href="?view=expert">
+                    <i class="active-icon active-left"></i> ผู้เชี่ยวชาญ <i class="active-icon active-right"></i>
+                </a>
+                <a class="nav-menu <?php $fnActivePage("e-book");?>" href="?view=e-book">
+                    <i class="active-icon active-left"></i> E-Book <i class="active-icon active-right"></i>
+                </a>
+                <a class="nav-menu <?php $fnActivePage("km_center");?>" href="?view=km_center">
+                    <i class="active-icon active-left"></i> ศูนย์ KM <i class="active-icon active-right"></i>
+                </a>
+                <a class="nav-menu <?php $fnActivePage("faq");?>" href="?view=faq">
+                    <i class="active-icon active-left"></i> FAQ <i class="active-icon active-right"></i>
+                </a>
             </div>
         </div>
     </nav>
