@@ -3,6 +3,12 @@
     background-size: 100%;
 }
 
+.expert-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 .label_ep {
     position: absolute;
     top: 0;
@@ -14,48 +20,168 @@
 }
 
 .circle {
-    position: absolute;
-    top: 4px;
-    left: 12px;
-    width: 965px;
-    height: 705px;
-    background: url(images/Expert.png);
+    background-image: url(images/2.png);
+    height: 510px;
     background-size: 100%;
+    position: absolute;
+    top: 160px;
+    left: 203px;
+    width: 520px;
 }
 
-.back_home {
+.cat-icon {
     position: absolute;
-    bottom: 10px;
-    left: 17px;
-    width: 100px;
-    height: 100px;
-    background: url(images/backhome.png);
     background-size: 100%;
+    width: 56px;
+    height: 56px;
+    background-repeat: no-repeat;
+    border-radius: 56px;
 }
 
-.toggle{
-    display: block;
-    position: absolute;
-    top: 255px;
-    width: 200px;
-    right: 0;
-    height: 107px;
+.cat-1 {
+    left: 146px;
+    top: 50px;
+    background-image: url(images/icon/01.png);
 }
 
-.circle2 {
+.cat-icon .yellow-line {
+    border-bottom: 1px solid #ffe1a1;
     position: absolute;
-    top: 4px;
-    left: 12px;
-    width: 965px;
-    height: 705px;
-    background: url(images/ExpertII.png);
-    background-size: 100%;
 }
-.toggle2{
-    display: block;
-    position: absolute;
-    top: 377px;
-    width: 200px;
-    right: 29px;
-    height: 107px;
+
+.cat-1 .yellow-line {
+    width: 83px;
+    transform: rotate(42deg);
+    top: -15px;
+    left: -67px;
+}
+
+.cat-2 {
+    left: 264px;
+    top: 29px;
+    background-image: url(images/icon/02.png);
+}
+
+.cat-2 .yellow-line {
+    width: 118px;
+    transform: rotate(90deg);
+    top: -57px;
+    left: -31px;
+}
+
+.cat-3 {
+    left: 364px;
+    top: 75px;
+    background-image: url(images/icon/03.png);
+}
+
+.cat-3 .yellow-line {
+    width: 145px;
+    transform: rotate(128deg);
+    top: -53px;
+    left: 13px;
+}
+
+.cat-4 {
+    left: 423px;
+    top: 158px;
+    background-image: url(images/icon/04.png);
+}
+
+.cat-4 .yellow-line {
+    width: 117px;
+    transform: rotate(148deg);
+    top: -23px;
+    left: 38px;
+}
+
+.cat-5 {
+    left: 429px;
+    top: 268px;
+    background-image: url(images/icon/05.png);
+}
+
+.cat-5 .yellow-line {
+    width: 130px;
+    transform: rotate(36deg);
+    top: 80px;
+    left: 37px;
+}
+
+.cat-6 {
+    left: 372px;
+    top: 374px;
+    background-image: url(images/icon/06.png);
+}
+
+.cat-6 .yellow-line {
+    width: 130px;
+    transform: rotate(36deg);
+    top: 80px;
+    left: 37px;
+}
+
+.cat-7 {
+    left: 246px;
+    top: 420px;
+    background-image: url(images/icon/07.png);
+}
+
+.cat-7 .yellow-line {
+    width: 75px;
+    transform: rotate(36deg);
+    top: 67px;
+    left: 40px;
+}
+
+.cat-8 {
+    left: 138px;
+    top: 397px;
+    background-image: url(images/icon/08.png);
+}
+
+.cat-8 .yellow-line {
+    width: 130px;
+    transform: rotate(36deg);
+    top: 80px;
+    left: 37px;
+}
+
+.cat-9 {
+    left: 57px;
+    top: 316px;
+    background-image: url(images/icon/09.png);
+}
+
+.cat-9 .yellow-line {
+    width: 130px;
+    transform: rotate(36deg);
+    top: 80px;
+    left: 37px;
+}
+
+.cat-10 {
+    left: 34px;
+    top: 215px;
+    background-image: url(images/icon/10.png);
+}
+
+.cat-10 .yellow-line {
+    width: 130px;
+    transform: rotate(36deg);
+    top: 80px;
+    left: 37px;
+}
+
+.cat-11 {
+    left: 70px;
+    top: 111px;
+    background-image: url(images/icon/11.png);
+}
+
+.cat-11 .yellow-line {
+    width: 130px;
+    transform: rotate(36deg);
+    top: 80px;
+    left: 37px;
 }
