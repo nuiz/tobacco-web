@@ -29,6 +29,21 @@
     width: 520px;
 }
 
+.lever {
+
+}
+
+.circle .circle-grow {
+    background: rgba(0, 0, 0, 0.32);
+    width: 100%;
+    height: 100%;
+    border-radius: 520px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
 .cat-icon {
     position: absolute;
     background-size: 100%;
@@ -36,6 +51,11 @@
     height: 56px;
     background-repeat: no-repeat;
     border-radius: 56px;
+    cursor: pointer;
+}
+
+.cat-icon.selected {
+    z-index: 2;
 }
 
 .cat-1 {
@@ -49,11 +69,36 @@
     position: absolute;
 }
 
+.cat-icon .name {
+    border: 1px solid #ffe1a1;
+    color: #ffe1a1;
+    position: absolute;
+    font-size: 16px;
+    white-space: nowrap;
+    padding: 7px 15px;
+    background: rgba(255, 225, 161, 0.09);
+}
+
+.cat-icon .selected-grow {
+    background: rgba(187, 107, 6, 0.45);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 56px;
+    display: none;
+}
+
 .cat-1 .yellow-line {
     width: 83px;
     transform: rotate(42deg);
     top: -15px;
     left: -67px;
+}
+
+.cat-1 .name {
+    bottom: 98px;
+    right: 46px;
+    text-align: right;
 }
 
 .cat-2 {
@@ -69,6 +114,12 @@
     left: -31px;
 }
 
+.cat-2 .name {
+    bottom: 173px;
+    left: -60px;
+    text-align: left;
+}
+
 .cat-3 {
     left: 364px;
     top: 75px;
@@ -80,6 +131,12 @@
     transform: rotate(128deg);
     top: -53px;
     left: 13px;
+}
+
+.cat-3 .name {
+    bottom: 166px;
+    left: 46px;
+    text-align: left;
 }
 
 .cat-4 {
@@ -95,6 +152,12 @@
     left: 38px;
 }
 
+.cat-4 .name {
+    bottom: 110px;
+    left: 100px;
+    text-align: left;
+}
+
 .cat-5 {
     left: 429px;
     top: 268px;
@@ -106,6 +169,12 @@
     transform: rotate(36deg);
     top: 80px;
     left: 37px;
+}
+
+.cat-5 .name {
+    top: 104px;
+    left: 154px;
+    text-align: left;
 }
 
 .cat-6 {
@@ -121,6 +190,12 @@
     left: 37px;
 }
 
+.cat-6 .name {
+    top: 119px;
+    left: 100px;
+    text-align: left;
+}
+
 .cat-7 {
     left: 246px;
     top: 420px;
@@ -128,10 +203,16 @@
 }
 
 .cat-7 .yellow-line {
-    width: 75px;
+    width: 92px;
     transform: rotate(36deg);
-    top: 67px;
-    left: 40px;
+    top: 72px;
+    left: 39px;
+}
+
+.cat-7 .name {
+    top: 99px;
+    right: -135px;
+    text-align: right;
 }
 
 .cat-8 {
@@ -141,10 +222,16 @@
 }
 
 .cat-8 .yellow-line {
-    width: 130px;
-    transform: rotate(36deg);
-    top: 80px;
-    left: 37px;
+    width: 96px;
+    transform: rotate(143deg);
+    top: 75px;
+    left: -77px;
+}
+
+.cat-8 .name {
+    top: 104px;
+    right: 46px;
+    text-align: right;
 }
 
 .cat-9 {
@@ -154,10 +241,16 @@
 }
 
 .cat-9 .yellow-line {
-    width: 130px;
-    transform: rotate(36deg);
-    top: 80px;
-    left: 37px;
+    width: 65px;
+    transform: rotate(143deg);
+    top: 59px;
+    left: -56px;
+}
+
+.cat-9 .name {
+    top: 64px;
+    right: 105px;
+    text-align: right;
 }
 
 .cat-10 {
@@ -167,10 +260,16 @@
 }
 
 .cat-10 .yellow-line {
-    width: 130px;
-    transform: rotate(36deg);
-    top: 80px;
-    left: 37px;
+    width: 51px;
+    transform: rotate(199deg);
+    top: 7px;
+    left: -47px;
+}
+
+.cat-10 .name {
+    bottom: 42px;
+    right: 101px;
+    text-align: right;
 }
 
 .cat-11 {
@@ -180,8 +279,14 @@
 }
 
 .cat-11 .yellow-line {
-    width: 130px;
-    transform: rotate(36deg);
-    top: 80px;
-    left: 37px;
+    width: 83px;
+    transform: rotate(206deg);
+    top: -8px;
+    left: -72px;
+}
+
+.cat-11 .name {
+    bottom: 66px;
+    right: 124px;
+    text-align: right;
 }
