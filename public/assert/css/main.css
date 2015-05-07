@@ -90,6 +90,45 @@ html, body {
     z-index: 1;
 }
 
+#main-nav2 .profile-btn {
+    display: block;
+    background-image: url(images/nav/profile-icon.png);
+    width: 44px;
+    height: 92px;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    left: -39px;
+    top: 152px;
+    cursor: pointer;
+}
+
+#main-nav2 .login-btn {
+    display: block;
+    background-image: url(images/nav/login-btn.png);
+    width: 44px;
+    height: 92px;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    left: -39px;
+    top: 152px;
+    cursor: pointer;
+}
+
+#main-nav2 .logout-btn {
+    display: block;
+    background-image: url(images/nav/logout.png);
+    width: 43px;
+    height: 97px;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    left: -39px;
+    top: 253px;
+    cursor: pointer;
+}
+
 #nav-menu-list {
     padding: 0 10px;
     background-image: url(images/nav/logo.png);

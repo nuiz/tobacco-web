@@ -5,6 +5,7 @@
  * Date: 23/3/2558
  * Time: 10:10
  */
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,6 +27,12 @@
     ?>
     <nav id="main-nav" class="nav">
         <div id="main-nav2">
+            <?php if(@$_SESSION['user']){?>
+            <a class="profile-btn" href="?view=feed"></a>
+            <a class="logout-btn" href="?view=logout&tp=tp-none"></a>
+            <?php }else {?>
+            <a class="login-btn" href="?view=login"></a>
+            <?php }?>
             <img src="public/images/font.png" width="100%">
             <div id="nav-menu-list">
                 <a class="nav-menu <?php $fnActivePage("news");?>" href="?view=news">

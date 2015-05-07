@@ -6,51 +6,33 @@
     <div class="label_ep"></div>
     <div class="circle">
         <div class="circle-grow" ng-hide="selectedCat==null"></div>
-        <div class="lever" ng-click="clickLever()"></div>
+        <div class="lever" ng-class="{down: catPage==1}" ng-click="clickLever()" ng-hide="selectedCat!=null"></div>
+        <div class="close-cat" ng-hide="selectedCat==null" ng-click="selectedCat=null"></div>
 
-        <div class="cat-icon cat-1" ng-click="clickCat(0)">
-            <div class="yellow-line"></div>
-            <div class="name">ผู้เชี่ยวชาญกฎหมาย</div>
+        <div class="guru-chose-block" ng-hide="selectedGuru==null">
+            <div class="history-btn"></div>
+            <div class="blog-btn"></div>
+            <div class="phone-btn"></div>
+            <div class="content-btn"></div>
+            <div class="display-picture"></div>
+            <div class="name">{{selectedGuru.firstname}} {{selectedGuru.lastname}}</div>
+            <div class="cat_name">{{selectedGuru.guru_cat_name}}</div>
+            <div style="text-align: center"><div class="leaf"></div></div>
         </div>
-        <div class="cat-icon cat-2" ng-click="clickCat(1)">
-            <div class="yellow-line"></div>
-            <div class="name">ผู้เชี่ยวชาญด้านการผลิต</div>
+
+        <div class="guru"
+             ng-repeat="item in gurus"
+             ng-class="'guru-'+($index+1)"
+             ng-hide="selectedCat==null"
+             ng-click="clickGuru(item)">
         </div>
-        <div class="cat-icon cat-3" ng-click="clickCat(2)">
-            <div class="yellow-line"></div>
-            <div class="name">ผู้เชี่ยวชาญการพิมพ์</div>
-        </div>
-        <div class="cat-icon cat-4" ng-click="clickCat(3)">
-            <div class="yellow-line"></div>
-            <div class="name">ผู้เชี่ยวชาญการแพทย์</div>
-        </div>
-        <div class="cat-icon cat-5" ng-click="clickCat(4)">
-            <div class="yellow-line"></div>
-            <div class="name">ผู้เชี่ยวชาญการช่าง</div>
-        </div>
-        <div class="cat-icon cat-6" ng-click="clickCat(5)">
-            <div class="yellow-line"></div>
-            <div class="name">ผู้เชี่ยวชาญการวิจัย</div>
-        </div>
-        <div class="cat-icon cat-7" ng-click="clickCat(6)">
-            <div class="yellow-line"></div>
-            <div class="name">ผู้เชี่ยวชาญบัญชีและงบประมาน</div>
-        </div>
-        <div class="cat-icon cat-8" ng-click="clickCat(7)">
-            <div class="yellow-line"></div>
-            <div class="name">ผู้เชี่ยวชาญผลิตภัณฑ์</div>
-        </div>
-        <div class="cat-icon cat-9" ng-click="clickCat(8)">
-            <div class="yellow-line"></div>
-            <div class="name">ผู้เชี่ยวชาญบริหาร</div>
-        </div>
-        <div class="cat-icon cat-10" ng-click="clickCat(9)">
-            <div class="yellow-line"></div>
-            <div class="name">ผู้เชี่ยวชาญเทคโนโลยี</div>
-        </div>
-        <div class="cat-icon cat-11" ng-click="clickCat(10)">
-            <div class="yellow-line"></div>
-            <div class="name">ผู้เชี่ยวชาญการ</div>
+
+        <div class="cat-icon"
+            ng-repeat="item in cats | startFrom:catPage*11 | limitTo: 11"
+            ng-class="'cat-'+($index+1)"
+            ng-click="clickCat($index)">
+            <div class="yellow-line" ng-show="selectedCat==null"></div>
+            <div class="name" ng-show="selectedCat==null">{{item.guru_cat_name}}</div>
         </div>
     </div>
 </div>

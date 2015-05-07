@@ -18,7 +18,5 @@ class App {
     public static function start(){
         date_default_timezone_set('Asia/Bangkok');
         session_start();
-
-//        if(isset($_SESSION['']))
     }
 }

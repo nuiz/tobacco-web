@@ -1,0 +1,62 @@
+
+#main {
+    background: url(images/bgnews.jpg);
+    background-size: 100%;
+}
+
+#loginform {
+    background-image: url(images/loginform.png);
+    width: 569px;
+    height: 481px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#username-input {
+    left: 266px;
+    top: 244px;
+    position: absolute;
+    width: 255px;
+    height: 45px;
+    line-height: 45px;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    background: none;
+    box-shadow: none;
+    color: rgb(255, 212, 170);
+    font-size: 24px;
+    padding: 5px;
+}
+
+#password-input {
+    left: 266px;
+    top: 313px;
+    position: absolute;
+    width: 255px;
+    height: 45px;
+    line-height: 45px;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    background: none;
+    box-shadow: none;
+    color: rgb(255, 212, 170);
+    font-size: 24px;
+    padding: 5px;
+}
+
+#submit-btn {
+    left: 324px;
+    top: 385px;
+    position: absolute;
+    width: 130px;
+    height: 37px;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    background: none;
+    box-shadow: none;
+    opacity: 0;
+    cursor: pointer;
+}

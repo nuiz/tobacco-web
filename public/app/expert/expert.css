@@ -29,8 +29,133 @@
     width: 520px;
 }
 
-.lever {
+.close-cat {
+    background-image: url(images/back.png);
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 580px;
+    top: -10px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
 
+
+/**** guru block *****/
+.guru-chose-block {
+    width: 305px;
+    height: 298px;
+    background: rgba(255, 221, 131, 1);
+    border-radius: 1000px;
+    position: absolute;
+    top: 105px;
+    left: 109px;
+    z-index: 2;
+}
+
+.guru-chose-block .name {
+    text-align: center;
+    margin-top: 167px;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.guru-chose-block .cat_name {
+    text-align: center;
+    font-size: 16px;
+}
+
+.guru-chose-block .leaf {
+    background-image: url(images/sub-icon/leaf.png);
+    width: 102px;
+    height: 26px;
+    display: inline-block;
+    background-size: 100%;
+    margin-top: 14px;
+}
+
+.history-btn {
+    background-image: url(images/sub-icon/history.png);
+    height: 40px;
+    width: 40px;
+    background-size: 100%;
+
+    position: absolute;
+    left: 44px;
+    top: 70px;
+}
+
+.blog-btn {
+    background-image: url(images/sub-icon/blog.png);
+    height: 40px;
+    width: 40px;
+    background-size: 100%;
+
+    position: absolute;
+    left: 90px;
+    top: 20px;
+}
+
+.phone-btn {
+    background-image: url(images/sub-icon/phone.png);
+    height: 40px;
+    width: 40px;
+    background-size: 100%;
+
+    position: absolute;
+    left: 167px;
+    top: 20px;
+}
+
+.content-btn {
+    background-image: url(images/sub-icon/content.png);
+    height: 40px;
+    width: 40px;
+    background-size: 100%;
+
+    position: absolute;
+    left: 216px;
+    top: 70px;
+}
+
+.display-picture {
+    border: 6px solid #ffe1a1;
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    background-color: white;
+    background-image: url(images/profile-default.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 103px;
+    top: 60px;
+}
+
+/** end guru chose block **/
+
+
+
+.lever {
+    background-image: url(images/lever.png);
+    width: 200px;
+    height: 111px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    left: 511px;
+    top: 170px;
+    transform: rotate(-7deg);
+
+    cursor: pointer;
+}
+
+.lever.down {
+    top: 249px;
+    transform: rotate(7deg);
 }
 
 .circle .circle-grow {
@@ -58,12 +183,6 @@
     z-index: 2;
 }
 
-.cat-1 {
-    left: 146px;
-    top: 50px;
-    background-image: url(images/icon/01.png);
-}
-
 .cat-icon .yellow-line {
     border-bottom: 1px solid #ffe1a1;
     position: absolute;
@@ -88,109 +207,115 @@
     display: none;
 }
 
-.cat-1 .yellow-line {
+.cat-2 {
+    left: 146px;
+    top: 50px;
+    background-image: url(images/icon/01.png);
+}
+
+.cat-2 .yellow-line {
     width: 83px;
     transform: rotate(42deg);
     top: -15px;
     left: -67px;
 }
 
-.cat-1 .name {
+.cat-2 .name {
     bottom: 98px;
     right: 46px;
     text-align: right;
 }
 
-.cat-2 {
+.cat-1 {
     left: 264px;
     top: 29px;
     background-image: url(images/icon/02.png);
 }
 
-.cat-2 .yellow-line {
+.cat-1 .yellow-line {
     width: 118px;
     transform: rotate(90deg);
     top: -57px;
     left: -31px;
 }
 
-.cat-2 .name {
+.cat-1 .name {
     bottom: 173px;
     left: -60px;
     text-align: left;
 }
 
-.cat-3 {
+.cat-11 {
     left: 364px;
     top: 75px;
     background-image: url(images/icon/03.png);
 }
 
-.cat-3 .yellow-line {
+.cat-11 .yellow-line {
     width: 145px;
     transform: rotate(128deg);
     top: -53px;
     left: 13px;
 }
 
-.cat-3 .name {
+.cat-11 .name {
     bottom: 166px;
     left: 46px;
     text-align: left;
 }
 
-.cat-4 {
+.cat-10 {
     left: 423px;
     top: 158px;
     background-image: url(images/icon/04.png);
 }
 
-.cat-4 .yellow-line {
+.cat-10 .yellow-line {
     width: 117px;
     transform: rotate(148deg);
     top: -23px;
     left: 38px;
 }
 
-.cat-4 .name {
+.cat-10 .name {
     bottom: 110px;
     left: 100px;
     text-align: left;
 }
 
-.cat-5 {
+.cat-9 {
     left: 429px;
     top: 268px;
     background-image: url(images/icon/05.png);
 }
 
-.cat-5 .yellow-line {
+.cat-9 .yellow-line {
     width: 130px;
     transform: rotate(36deg);
     top: 80px;
     left: 37px;
 }
 
-.cat-5 .name {
+.cat-9 .name {
     top: 104px;
     left: 154px;
     text-align: left;
 }
 
-.cat-6 {
+.cat-8 {
     left: 372px;
     top: 374px;
     background-image: url(images/icon/06.png);
 }
 
-.cat-6 .yellow-line {
+.cat-8 .yellow-line {
     width: 130px;
     transform: rotate(36deg);
     top: 80px;
     left: 37px;
 }
 
-.cat-6 .name {
+.cat-8 .name {
     top: 119px;
     left: 100px;
     text-align: left;
@@ -215,78 +340,135 @@
     text-align: right;
 }
 
-.cat-8 {
+.cat-6 {
     left: 138px;
     top: 397px;
     background-image: url(images/icon/08.png);
 }
 
-.cat-8 .yellow-line {
+.cat-6 .yellow-line {
     width: 96px;
     transform: rotate(143deg);
     top: 75px;
     left: -77px;
 }
 
-.cat-8 .name {
+.cat-6 .name {
     top: 104px;
     right: 46px;
     text-align: right;
 }
 
-.cat-9 {
+.cat-5 {
     left: 57px;
     top: 316px;
     background-image: url(images/icon/09.png);
 }
 
-.cat-9 .yellow-line {
+.cat-5 .yellow-line {
     width: 65px;
     transform: rotate(143deg);
     top: 59px;
     left: -56px;
 }
 
-.cat-9 .name {
+.cat-5 .name {
     top: 64px;
     right: 105px;
     text-align: right;
 }
 
-.cat-10 {
+.cat-4 {
     left: 34px;
     top: 215px;
     background-image: url(images/icon/10.png);
 }
 
-.cat-10 .yellow-line {
+.cat-4 .yellow-line {
     width: 51px;
     transform: rotate(199deg);
     top: 7px;
     left: -47px;
 }
 
-.cat-10 .name {
+.cat-4 .name {
     bottom: 42px;
     right: 101px;
     text-align: right;
 }
 
-.cat-11 {
+.cat-3 {
     left: 70px;
     top: 111px;
     background-image: url(images/icon/11.png);
 }
 
-.cat-11 .yellow-line {
+.cat-3 .yellow-line {
     width: 83px;
     transform: rotate(206deg);
     top: -8px;
     left: -72px;
 }
 
-.cat-11 .name {
+.cat-3 .name {
     bottom: 66px;
     right: 124px;
     text-align: right;
 }
+
+
+
+.guru {
+    border: 6px solid #ffe1a1;
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    background-color: white;
+    background-image: url(images/profile-default.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    cursor: pointer;
+}
+
+.guru-1 {
+    left: -40px;
+    top: -20px;
+}
+
+.guru-2 {
+    left: -122px;
+    top: 120px;
+}
+
+.guru-3 {
+    left: -122px;
+    top: 270px;
+}
+
+.guru-4 {
+    left: -60px;
+    top: 410px;
+}
+
+.guru-5 {
+    right: -40px;
+    top: -20px;
+}
+
+.guru-6 {
+    right: -122px;
+    top: 120px;
+}
+
+.guru-7 {
+    right: -122px;
+    top: 270px;
+}
+
+.guru-8 {
+    right: -60px;
+    top: 410px;
+}
+

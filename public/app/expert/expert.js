@@ -8,10 +8,18 @@ expertapp.controller('ExpertListCtl', ['$scope', '$http', function ($scope, $htt
         window.location.href = "?view=home";
     };
 
+    $scope.gurus = [];
     $scope.cats = [];
     $http.get("http://localhost/tobacco/guru/category").success(function(data){
+        data.data = data.data.reverse();
         $scope.cats = data.data;
     });
+
+    $scope.selectedGuru = null;
+    $scope.clickGuru = function(item){
+        $scope.selectedGuru = item;
+        console.log(item);
+    };
 
     $scope.catPage = 0;
     $scope.clickLever = function(){
@@ -26,5 +34,19 @@ expertapp.controller('ExpertListCtl', ['$scope', '$http', function ($scope, $htt
         $scope.selectedCat = index;
         $('.cat-icon').removeClass('selected');
         $('.cat-icon').eq(index).addClass('selected');
+
+        var cat = $scope.cats[($scope.catPage*11)+index];
+
+        $scope.gurus = [];
+        $http.get("http://localhost/tobacco/guru?guru_cat_id=" + cat.guru_cat_id).success(function(data){
+            $scope.gurus = data.data;
+        });
     };
 }]);
+
+expertapp.filter('startFrom', function () {
+    return function (input, start) {
+        start = +start; //parse to int
+        return input.slice(start);
+    }
+});
