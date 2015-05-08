@@ -7,7 +7,7 @@
 <!--        <div class="search">ค้นหาเพื่อน</div>-->
         <div class="status">
             <div class="image"></div>
-            <div class="tus">ADMIN |</div>
+            <div class="tus"><?php echo $_SESSION['user']['firstname']; ?>|</div>
         </div>
         <div class="icon">
 <!--            <div class="icon-later"></div>-->
