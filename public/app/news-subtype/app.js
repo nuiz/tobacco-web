@@ -18,6 +18,12 @@ app.controller('NewsController', ['$scope', '$http', '$location', function ($sco
     $scope.news = {};
     $http.get(url).success(function (data) {
         $scope.news = data;
+        setTimeout(function(){
+            $("a[rel^='prettyPhoto']").prettyPhoto({
+                custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+                social_tools: false
+            });
+        }, 100);
     });
 }]);
 

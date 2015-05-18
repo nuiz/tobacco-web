@@ -1,11 +1,20 @@
 .blcType{
     position: absolute;
     top: 0;
-    /*left: 180px;*/
-    left: 97px;
+    left: 52px;
     width: 900px;
-    height: 1000px;
+    height: 90%;
     z-index: 1;
+    background: url(images/bg-block.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: 37px;
+    border-radius: 26px;
+    box-shadow: 0px 1px 6px 2px rgba(0,0,0,0.4);
+
+    overflow: auto;
+    padding-bottom: 20px;
+    box-sizing: border-box;
 }
 
 .blcType-bg {
@@ -25,11 +34,12 @@
 }
 
 .txtType{
-    position: absolute;
-    top: 390px;
-    left: 100px;
+    /*position: absolute;*/
+    bottom: 40px;
     line-height: 20px;
-    width: 700px;
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
 }
 
 #main-body {

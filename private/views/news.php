@@ -121,7 +121,7 @@
         <div class="blockpic">
 
             <div class="newsLeft news" ng-show="news.length >= 3">
-                <div class="news-cover" ng-style="{'background-image': 'url('+newsPrev.news_image_url+')'}"></div>
+                <div class="news-cover" ng-style="{'background-image': 'url('+newsPrev.news_cover_url+')'}"></div>
                 <div class="news-body">
                     <h2 id="news-name">{{newsPrev.news_name}}</h2>
 
@@ -131,7 +131,7 @@
 
             <div class="newsMid news" ng-show="news.length >= 1">
                 <div class="read-more" ng-click="readmoreClick(newsCur.news_id)">อ่านต่อ</div>
-                <div class="news-cover" ng-style="{'background-image': 'url('+newsCur.news_image_url+')'}"></div>
+                <div class="news-cover" ng-style="{'background-image': 'url('+newsCur.news_cover_url+')'}"></div>
                 <div class="news-body">
                     <h2 id="news-name">{{newsCur.news_name}}</h2>
 
@@ -140,7 +140,7 @@
             </div>
 
             <div class="newsRight news" ng-show="news.length >= 2">
-                <div class="news-cover" ng-style="{'background-image': 'url('+newsNext.news_image_url+')'}"></div>
+                <div class="news-cover" ng-style="{'background-image': 'url('+newsNext.news_cover_url+')'}"></div>
                 <div class="news-body">
                     <h2 id="news-name">{{newsNext.news_name}}</h2>
 
