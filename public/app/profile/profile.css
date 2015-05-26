@@ -4,7 +4,7 @@
 }
 .tab{
     position: absolute;
-    width: 1030px;
+    width: 950px;
     height: 60px;
     background: url(images/dest2.png);
     background-size: 100%;
@@ -84,12 +84,16 @@
 }
 .data{
     position: absolute;
-    top: 60px;
+    top: 80px;
     left: 100px;
     width: 850px;
-    height: 100%;
-    background: #623010;
-    color: white;
+    height: 640px;
+    background: url(images/block.jpg);
+    color: #141823;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75) inset;
+    box-sizing: border-box;
+    padding: 20px;
+    overflow: auto;
 }
 
 .data a {
@@ -103,4 +107,38 @@
     height: 100px;
     background: url(images/backhome.png);
     background-size: 100%;
+}
+
+.post {
+    margin: 40px 0 0 0;
+}
+
+.post .user-des {
+    height: 50px;
+}
+
+.post .user-img {
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+
+.post .user-name a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.post .post-time small {
+    margin-left: 8px;
+    font-size: 11px;
+}
+
+.video-player {
+    /*margin: 0 auto;*/
+}
+
+.post-image-list {
+    margin-top: 10px; padding: 0 25px;
 }
