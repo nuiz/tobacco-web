@@ -111,6 +111,8 @@
 
 .post {
     margin: 40px 0 0 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #461a08;
 }
 
 .post .user-des {
@@ -133,6 +135,7 @@
 .post .post-time small {
     margin-left: 8px;
     font-size: 11px;
+    line-height: 25px;
 }
 
 .video-player {
@@ -140,5 +143,59 @@
 }
 
 .post-image-list {
-    margin-top: 10px; padding: 0 25px;
+    margin-top: 10px;
+    /*padding: 0 25px;*/
+}
+
+.post-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin: 5px 5px 0 0;
+}
+
+.post .description {
+    margin-top: 10px;
+    color: rgb(87, 29, 29);
+    font-size: 12px;
+}
+
+.video-wrap {
+    margin: 10px auto 0 auto;
+    text-align: center;
+    width: 540px;
+}
+
+.wood-bg-btn {
+    border-radius: 6px;
+    background: url(images/wood-bg-btn.jpg);
+    background-position: center;
+    display: inline-block;
+    padding: 10px 15px;
+    box-shadow: 1px 1px 1px 0 rgba(92, 68, 36, 0.8) inset;
+    cursor: pointer;
+    color: white;
+
+    outline: none;
+    border: none;
+}
+
+a.add-comment {
+    color: rgb(47, 54, 108);
+    text-decoration: none;
+}
+
+.form-post-section {
+    margin-top: 10px;
+}
+
+.form-post-text {
+
+}
+
+.post-textarea {
+    background: rgba(115, 47, 11, 0.39);
+    width: 100%;
+    height: 80px;
+    resize: none;
 }
