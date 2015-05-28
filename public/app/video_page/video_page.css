@@ -15,22 +15,24 @@
 
 .blockleft {
     width: 700px;
-    height: 620px;
-    background: #dacaa1;
+    height: 710px;
+    /*background: #dacaa1;*/
     float: left;
+    padding-top: 22px;
 }
 
 .video {
-    width: 690px;
+    width: 680px;
     height: 350px;
     background: #000000;
+    margin: 0 auto;
 }
 
 .block_admin {
     width: 690px;
     height: 255px;
     color: #ffffff;
-
+    padding-top: 20px;
 }
 
 .leaflogo {
@@ -53,7 +55,7 @@
 }
 
 .txt_admin {
-    margin-left: 65px;
+    margin-left: 21px;
     font-size: 20px;
     color: #35300A;
 }
@@ -81,9 +83,10 @@
 
 .blockright {
     width: 280px;
-    height: 620px;
-    background: #826933;
+    height: 710px;
+    /*background: #826933;*/
     float: left;
+    padding-top: 22px;
 }
 
 .share {
@@ -99,6 +102,7 @@
 .list_video {
     margin: 5px 0;
     height: 80px;
+    overflow: hidden;
 }
 
 .thumb {
@@ -107,6 +111,28 @@
 }
 
 .text {
-    width: 160px;
+    width: 140px;
     float: left;
+    padding-left: 10px;
+    word-wrap: break-word;
+}
+
+#video-page {
+    height: 100%;
+    background: url(images/block.jpg);
+    width: 980px;
+}
+
+.wood-bg-btn {
+    border-radius: 6px;
+    background: url(images/wood-bg-btn.jpg);
+    background-position: center;
+    display: inline-block;
+    padding: 10px 15px;
+    box-shadow: 1px 1px 1px 0 rgba(92, 68, 36, 0.8) inset;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border: none;
+    text-decoration: none;
 }
