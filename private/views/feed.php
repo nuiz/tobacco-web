@@ -5,11 +5,11 @@
 <script src="public/app/profile/profile.js"></script>
 <div ng-app="profile" ng-controller="ProfileCtl">
     <div class="tab">
-        <div class="logo"></div>
-        <div class="search">ค้นหา</div>
+        <a class="logo" href="?view=feed"></a>
+<!--        <div class="search">ค้นหา</div>-->
         <div class="status">
             <div class="tus">
-                <a href="?view=feed-user" style="color: white; text-decoration: none;">
+                <a href="?view=feed-user&account_id={{user.account_id}}" style="color: white; text-decoration: none;">
                     <img src="http://placehold.it/40x40" class="profile-image">
                     <?php //echo $_SESSION['user']['firstname']; ?>
                     {{user.firstname}}
@@ -62,6 +62,7 @@
             </form>
         </div>
         <div class="paging-list">
+            หน้าที่
             <a ng-repeat="item in paging"
                class="paging"
                ng-class="{'active': item.current}"
@@ -72,7 +73,7 @@
              ng-class="{'post-text': item.post_type=='text', 'post-video': item.post_type=='video', 'post-video': item.post_type=='image'}">
             <div class="user-des">
                 <div class="user-img"><img src="http://placehold.it/40x40"></div>
-                <div class="user-name"><a href="#">{{item.user.firstname + ' ' + item.user.lastname}}</a></div>
+                <div class="user-name"><a href="?view=feed-user&account_id={{item.user.account_id}}">{{item.user.firstname + ' ' + item.user.lastname}}</a></div>
                 <div class="post-time"><small>17 พย. 2558 เวลา 15:00 น.</small></div>
             </div>
             <div class="content">
@@ -90,9 +91,20 @@
                 </div>
             </div>
             <div class="description">
-                <span>{{item.like_count}} ถูกใจ {{item.comment_count}} ความคิดเห็น</span>
-                <a class="add-comment" href="">แสดงความคิดเห็น</a>
+                <div>
+                    <a class="like-btn" href="" ng-click="like(item)" ng-hide="item.liked">ถูกใจ</a>
+                    <a class="unlike-btn" href="" ng-click="unlike(item)" ng-show="item.liked">เลิกถูกใจ</a>
+                    <a class="add-comment" href="?view=post&post_id={{item.post_id}}">แสดงความคิดเห็น</a>
+                </div>
+                <div style="margin-top: 5px;">{{item.like_count}} คนถูกใจสิ่งนี้ {{item.comment_count}} ความคิดเห็น</div>
             </div>
+        </div>
+        <div class="paging-list">
+            หน้าที่
+            <a ng-repeat="item in paging"
+               class="paging"
+               ng-class="{'active': item.current}"
+               ng-click="setCurrentPage(item.page)">{{item.page}}</a>
         </div>
     </div>
     <div class="homepage" ng-click="homeClick()"></div>

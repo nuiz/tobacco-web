@@ -5,11 +5,11 @@
 
 window.userlogin = null;
 var profileapp = angular.module('profile', []);
-profileapp.config(['$httpProvider', function ($httpProvider) {
-    //Reset headers to avoid OPTIONS request (aka preflight)   $httpProvider.defaults.headers.common = {};
-    $httpProvider.defaults.headers.post = {};
-    $httpProvider.defaults.headers.put = {};
-    $httpProvider.defaults.headers.patch = {};
+profileapp.config(['$sceDelegateProvider', function ($sceDelegateProvider) {
+    $sceDelegateProvider.resourceUrlWhitelist([
+        'self',
+        window.config.api_url+'/**'
+    ]);
 }]);
 
 profileapp.controller('ProfileCtl', ['$scope', '$http', function ($scope, $http) {
@@ -23,6 +23,17 @@ profileapp.controller('ProfileCtl', ['$scope', '$http', function ($scope, $http)
     });
 }]);
 
+function onUserReady(cb){
+    if(window.userlogin == null){
+        setTimeout(function(){
+            onUserReady(cb);
+        }, 100);
+    }
+    else {
+        cb();
+    }
+};
+
 profileapp.controller('FeedListCtl', ['$scope', '$http', function ($scope, $http) {
     $scope.limit = 15;
     $scope.currentPage = 1;
@@ -33,7 +44,8 @@ profileapp.controller('FeedListCtl', ['$scope', '$http', function ($scope, $http
     $scope.pageLength = 0;
     $scope.paging = [];
     function refreshPage(){
-        $http.get(window.config.api_url+"/blog/feed?"+ $.param({page: $scope.currentPage, limit: $scope.limit}), {cache: false})
+        var paramStr = $.param({page: $scope.currentPage, limit: $scope.limit, auth_token: window.userlogin.auth_token});
+        $http.get(window.config.api_url+"/blog/feed?"+ paramStr)
             .success(function(data){
                 $scope.posts = data.data;
                 $scope.total = data.total;
@@ -47,22 +59,27 @@ profileapp.controller('FeedListCtl', ['$scope', '$http', function ($scope, $http
                 console.log($scope.paging, $scope.total);
             });
     }
-    refreshPage();
+    onUserReady(refreshPage);
+
     $scope.setCurrentPage = function(cur){
         $scope.currentPage = cur;
-        $http.get(window.config.api_url+"/blog/feed?"+ $.param({page: $scope.currentPage, limit: $scope.limit}), {cache: false})
-            .success(function(data){
-                $scope.posts = data.data;
-                $scope.total = data.total;
-                $scope.pageLength = parseInt($scope.total/$scope.limit);
-                if($scope.total%$scope.limit != 0) $scope.pageLength++;
+        refreshPage();
+    };
 
-                $scope.paging = [];
-                for(var i = 0; i < $scope.pageLength; i++){
-                    $scope.paging.push({page: i+1, current: $scope.currentPage==i+1});
-                }
-                console.log($scope.paging, $scope.total);
-            });
+    $scope.like = function(item){
+        var url = window.config.api_url+"/blog/post/like/"+item.post_id+"?auth_token="+window.userlogin.auth_token;
+        $http.post(url).success(function(data){
+            item.like_count=data.like_count;
+            item.liked = data.liked;
+        });
+    };
+
+    $scope.unlike = function(item){
+        var url = window.config.api_url+"/blog/post/unlike/"+item.post_id+"?auth_token="+window.userlogin.auth_token;
+        $http.post(url).success(function(data){
+            item.like_count=data.like_count;
+            item.liked = data.liked;
+        });
     };
 
     $scope.form = {};
@@ -84,10 +101,9 @@ profileapp.controller('FeedListCtl', ['$scope', '$http', function ($scope, $http
         }
 
         this.ajaxReq = true;
-        $http.post(window.config.api_url+"/blog/post?auth_token="+window.userlogin.auth_token, this.formText).
-            success(function(data){
+        $.post(window.config.api_url+"/blog/post?auth_token="+window.userlogin.auth_token, this.formText, function(data){
                 window.location.reload();
-            });
+            }, 'json');
     };
     PostForm.prototype.images = [];
     PostForm.prototype.browseImage = function(images){

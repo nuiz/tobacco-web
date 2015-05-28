@@ -16,6 +16,7 @@
     height: 50px;
     background: url(images/logo.png);
     background-size: 100%;
+    display: block;
 }
 .search{
     position: absolute;
@@ -39,13 +40,7 @@
 .profile-image {
     vertical-align: middle;
 }
-.image{
-    position: absolute;
-    width: 50px;
-    height: 37px;
-    background: url(images/200.jpg);
-    background-size: 100%;
-}
+
 .tus{
     font-size: 22px;
     color: #ffffff;
@@ -58,23 +53,7 @@
     height: 40px;
     width: 46px;
 }
-.icon-later{
-    position: absolute;
-    top: 5px;
-    width: 35px;
-    height: 35px;
-    background: url(images/email.png);
-    background-size: 100%;
-}
-.icon-alert{
-    position: absolute;
-    top: 7px;
-    left: 51px;
-    width: 30px;
-    height: 30px;
-    background: url(images/icon-world.png);
-    background-size: 100%;
-}
+
 .icon-setting{
     position: absolute;
     top: 5px;
@@ -101,15 +80,6 @@
 
 .data a {
     color: white;
-}
-
-.homepage{
-    position: absolute;
-    bottom: 15px;
-    width: 100px;
-    height: 100px;
-    background: url(images/backhome.png);
-    background-size: 100%;
 }
 
 .post {
@@ -183,7 +153,7 @@
     border: none;
 }
 
-a.add-comment {
+a.add-comment, a.like-btn, a.unlike-btn {
     color: rgb(47, 54, 108);
     text-decoration: none;
 }
@@ -227,4 +197,8 @@ a.paging.active {
     background-color: #c16e26;
     border-color: rgb(158, 93, 30);
     color: white;
+}
+
+.paging-list {
+    margin-top: 20px;
 }
