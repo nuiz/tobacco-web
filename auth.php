@@ -18,3 +18,9 @@ if($_GET['action']=="logout"){
 if($_GET['action']=="login"){
     $_SESSION['user'] = $_POST["user"];
 }
+
+if($_GET['action']=="get"){
+    $user = $_SESSION['user'];
+    unset($user["password"]);
+    echo json_encode($user);
+}

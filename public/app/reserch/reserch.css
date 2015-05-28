@@ -411,7 +411,7 @@
 .Pic_other {
     float: left;
     margin-top: 25px;
-    margin-left: 15px;
+    margin-left: 25px;
     width: 128px;
     height: 177px;
     z-index: 4;
@@ -438,4 +438,11 @@
     height: 40px;
     background: url(images/BTright.png);
     background-size: 100%;
+}
+
+.content-thumb {
+    border-radius: 7px;
+    width: 136px;
+    height: 136px;
+    background-size: cover;
 }

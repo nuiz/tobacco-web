@@ -16,6 +16,7 @@ session_start();
     <link rel="stylesheet" href="bower_components/open-sans-fontface/open-sans.css"/>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="public/assert/js/main.js"></script>
+    <script src="public/app/config.js"></script>
 </head>
 <body>
 <div id="main">

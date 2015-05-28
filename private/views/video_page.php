@@ -11,11 +11,11 @@
             <video width="100%" height="100%" id="videoPlayer" controls=""></video>
         </div>
         <div class="block_admin">
-            <a href="text" class="wood-bg-btn" href="?view=exam" style="float: right;">ทำแบบทดสอบ</a>
+            <a ng-show="content.question_count!=0" class="wood-bg-btn" href="?view=exam&content_id=<?php echo $_GET['content_id'];?>" style="float: right;">ทำแบบทดสอบ</a>
             <div class="txt_admin">{{content.content_name}} ({{videoShow.video_name}})</div>
+<!--            <div class="txt_grp">หมวดหมู่ ความรู้ทั่วไป</div>-->
+            <div class="txt_other">2 ก.พ. 58</div>
             <div class="txt_report">{{content.content_description}}</div>
-<!--            <div class="txt_grp">หมวดหมู่ ความรู้ทั่วไป <br> :</div>-->
-<!--            <div class="txt_other">2 ก.พ. 58 ประเภท: บทความและคู่มือ รยส. รูปแบบ: วีดีโอ(High | Low)</div>-->
         </div>
 
     </div>
