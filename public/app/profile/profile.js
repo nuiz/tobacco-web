@@ -5,6 +5,13 @@
 
 window.userlogin = null;
 var profileapp = angular.module('profile', []);
+profileapp.config(['$httpProvider', function ($httpProvider) {
+    //Reset headers to avoid OPTIONS request (aka preflight)   $httpProvider.defaults.headers.common = {};
+    $httpProvider.defaults.headers.post = {};
+    $httpProvider.defaults.headers.put = {};
+    $httpProvider.defaults.headers.patch = {};
+}]);
+
 profileapp.controller('ProfileCtl', ['$scope', '$http', function ($scope, $http) {
     $scope.homeClick = function(){
         window.location.href = "?view=home";
@@ -16,7 +23,6 @@ profileapp.controller('ProfileCtl', ['$scope', '$http', function ($scope, $http)
     });
 }]);
 
-
 profileapp.controller('FeedListCtl', ['$scope', '$http', function ($scope, $http) {
     $scope.limit = 15;
     $scope.currentPage = 1;
@@ -27,26 +33,37 @@ profileapp.controller('FeedListCtl', ['$scope', '$http', function ($scope, $http
     $scope.pageLength = 0;
     $scope.paging = [];
     function refreshPage(){
-        $http.get(window.config.api_url+"/blog/feed?"+ $.param({page: $scope.currentPage, limit: $scope.limit})).success(function(data){
-            $scope.posts = data.data;
-            $scope.total = data.total;
-            $scope.pageLength = parseInt($scope.total/$scope.limit);
-            if($scope.total%$scope.limit != 0) $scope.pageLength++;
+        $http.get(window.config.api_url+"/blog/feed?"+ $.param({page: $scope.currentPage, limit: $scope.limit}), {cache: false})
+            .success(function(data){
+                $scope.posts = data.data;
+                $scope.total = data.total;
+                $scope.pageLength = parseInt($scope.total/$scope.limit);
+                if($scope.total%$scope.limit != 0) $scope.pageLength++;
 
-            $scope.paging = [];
-            for(var i = 0; i < $scope.pageLength; i++){
-                $scope.paging.push({page: i+1, current: $scope.currentPage==i+1});
-            }
-            console.log($scope.paging, $scope.total);
-        });
+                $scope.paging = [];
+                for(var i = 0; i < $scope.pageLength; i++){
+                    $scope.paging.push({page: i+1, current: $scope.currentPage==i+1});
+                }
+                console.log($scope.paging, $scope.total);
+            });
     }
     refreshPage();
     $scope.setCurrentPage = function(cur){
         $scope.currentPage = cur;
-        refreshPage();
-    };
+        $http.get(window.config.api_url+"/blog/feed?"+ $.param({page: $scope.currentPage, limit: $scope.limit}), {cache: false})
+            .success(function(data){
+                $scope.posts = data.data;
+                $scope.total = data.total;
+                $scope.pageLength = parseInt($scope.total/$scope.limit);
+                if($scope.total%$scope.limit != 0) $scope.pageLength++;
 
-    setInterval(function(){ $scope.currentPage++; if($scope.currentPage>$scope.pageLength)$scope.currentPage=1; refreshPage(); }, 10000);
+                $scope.paging = [];
+                for(var i = 0; i < $scope.pageLength; i++){
+                    $scope.paging.push({page: i+1, current: $scope.currentPage==i+1});
+                }
+                console.log($scope.paging, $scope.total);
+            });
+    };
 
     $scope.form = {};
     function PostForm(){}
