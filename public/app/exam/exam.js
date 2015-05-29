@@ -36,11 +36,11 @@ app.controller("ExamCtrl", ['$scope', '$http', function($scope, $http){
     var questions = $scope.questions = [];
     var index = 0;
 
-    $http.get('http://localhost/tobacco/content/' + getParameterByName('content_id')).success(function (data) {
+    $http.get(window.config.api_url+'/content/' + getParameterByName('content_id')).success(function (data) {
         $scope.content = data;
     });
 
-    $http.get('http://localhost/tobacco/content/exam/' + getParameterByName('content_id')).success(function (data) {
+    $http.get(window.config.api_url+'/content/exam/' + getParameterByName('content_id')).success(function (data) {
         questions = $scope.questions = data;
         $scope.q = $scope.questions[index];
         $scope.q.choices = shuffle($scope.q.choices);

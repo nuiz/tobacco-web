@@ -42,7 +42,7 @@ ebookapp.controller('ReaderCtl', ['$scope', '$http', function ($scope, $http) {
     $scope.book = {};
     $scope.pages = [];
 
-    $http.get('http://localhost/tobacco/content/' + getParameterByName('content_id')).success(function (data) {
+    $http.get(window.config.api_url+'/content/' + getParameterByName('content_id')).success(function (data) {
         $scope.book = data;
         fetchBook();
     });

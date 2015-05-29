@@ -10,7 +10,7 @@ expertapp.controller('ExpertListCtl', ['$scope', '$http', function ($scope, $htt
 
     $scope.gurus = [];
     $scope.cats = [];
-    $http.get("http://localhost/tobacco/guru/category").success(function(data){
+    $http.get(window.config.api_url+"/guru/category").success(function(data){
         data.data = data.data.reverse();
         $scope.cats = data.data;
     });
@@ -38,7 +38,7 @@ expertapp.controller('ExpertListCtl', ['$scope', '$http', function ($scope, $htt
         var cat = $scope.cats[($scope.catPage*11)+index];
 
         $scope.gurus = [];
-        $http.get("http://localhost/tobacco/guru?guru_cat_id=" + cat.guru_cat_id).success(function(data){
+        $http.get(window.config.api_url+"/guru?guru_cat_id=" + cat.guru_cat_id).success(function(data){
             $scope.gurus = data.data;
         });
     };

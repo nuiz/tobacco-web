@@ -13,7 +13,7 @@ app.controller('NewsController', ['$scope', '$http', '$location', function ($sco
     }
 
     var id = $location.search().id;
-    var url = 'http://localhost/tobacco/news/'+getParameterByName('id');
+    var url = window.config.api_url+'/news/'+getParameterByName('id');
 
     $scope.news = {};
     $http.get(url).success(function (data) {

@@ -27,14 +27,14 @@ reserchapp.controller('ReserchListCtl', ['$scope', '$http', function ($scope, $h
     }
 
     $scope.clickMain = function(){
-        var url = "http://localhost/tobacco/category/" + getParameterByName('id');
+        var url = window.config.api_url+"/category/" + getParameterByName('id');
         $http.get(url).success(function (data) {
             $scope.main_category = data;
             $scope.category = data;
             $scope.fetchContents();
         });
 
-        url = "http://localhost/tobacco/category?parent_id=" + getParameterByName('id');
+        url = window.config.api_url+"/category?parent_id=" + getParameterByName('id');
         $http.get(url).success(function (data) {
             $scope.lv2_page = 0;
             $scope.lv2_categories = data.data;
@@ -46,7 +46,7 @@ reserchapp.controller('ReserchListCtl', ['$scope', '$http', function ($scope, $h
     $scope.lv2Click = function(lv2){
         $scope.lv2_category = lv2;
         $scope.category = lv2;
-        var url = "http://localhost/tobacco/category?parent_id=" + lv2.category_id;
+        var url = window.config.api_url+"/category?parent_id=" + lv2.category_id;
         $http.get(url).success(function (data) {
             $scope.lv3_page = 0;
             $scope.lv3_categories = data.data;
@@ -62,7 +62,7 @@ reserchapp.controller('ReserchListCtl', ['$scope', '$http', function ($scope, $h
 
     $scope.contents = [];
     $scope.fetchContents = function(){
-        var url = "http://localhost/tobacco/content/by_category?category_id="+$scope.category.category_id;
+        var url = window.config.api_url+"/content/by_category?category_id="+$scope.category.category_id;
         $http.get(url).success(function(data){
             console.log(data);
             $scope.contents = data.data;

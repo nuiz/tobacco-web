@@ -31,7 +31,7 @@ app.controller('NewsController', ['$scope', '$http', function ($scope, $http) {
     $scope.news = [];
 
     $scope.getNews = function(){
-        var url = 'http://localhost/tobacco/news?';
+        var url = window.config.api_url+'/news?';
         var date = $scope.date.getFullYear();
         date += '-';
         date += $scope.date.getMonth()+1 < 10 ? '0'+($scope.date.getMonth()+1): ($scope.date.getMonth()+1);

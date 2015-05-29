@@ -6,7 +6,7 @@ loginapp.controller('LoginCTL', ['$scope', '$http', function ($scope, $http) {
     $scope.submitLogin = function(){
         var req1 = {
             method: 'POST',
-            url: 'http://localhost/tobacco/login',
+            url: window.config.api_url+'/login',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },

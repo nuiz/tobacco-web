@@ -4,7 +4,7 @@
 "use strict";
 var faqapp=angular.module('faq',[]);
 faqapp.controller('FaqListCtl',['$scope', '$http' , function($scope, $http){
-    $http.get('http://localhost/tobacco/faq').success(function(data) {
+    $http.get(window.config.api_url+'/faq').success(function(data) {
         $scope.faqs = data.data;
     });
     $scope.backhomeClick = function(){

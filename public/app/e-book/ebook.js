@@ -8,13 +8,13 @@ ebookapp.controller('EbookListCtl', ['$scope', '$http', function ($scope, $http)
     $scope.books_group = [
         [],[]
     ];
-    $http.get('http://localhost/tobacco/book_type').success(function (data) {
+    $http.get(window.config.api_url+'/book_type').success(function (data) {
         $scope.booktypes = data.data;
         fetchBook();
     });
 
     function fetchBook(){
-        var url = 'http://localhost/tobacco/ebook?';
+        var url = window.config.api_url+'/ebook?';
         url += $.param({
             "book_type_id": $scope.booktypes[0].book_type_id
         });
@@ -22,7 +22,7 @@ ebookapp.controller('EbookListCtl', ['$scope', '$http', function ($scope, $http)
             $scope.books_group[0] = data.data;
         });
 
-        url = 'http://localhost/tobacco/ebook?';
+        url = window.config.api_url+'/ebook?';
         url += $.param({
             "book_type_id": $scope.booktypes[1].book_type_id
         });
