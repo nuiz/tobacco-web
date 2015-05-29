@@ -180,14 +180,17 @@ profileapp.controller('FeedListCtl', ['$scope', '$http', function ($scope, $http
 }]);
 
 var videojs_id = 0;
-profileapp.directive('videojs', function () {
+profileapp.directive('myPlayer', function () {
     var linker = function (scope, element, attrs){
         videojs_id++;
         var id = "videojs_" + videojs_id;
-        element.attr("id", id);
-        setTimeout(function(){
-            videojs(id, {}, function(){}) ;
-        }, 100);
+        //element.attr("id", id);
+        //setTimeout(function(){
+        //    videojs(id, {}, function(){});
+        //}, 1);
+        //element[0].oncanplay = function() {
+        //    videojs(element[0], {}, function(){});
+        //};
     };
     return {
         restrict : 'A',

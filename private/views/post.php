@@ -1,5 +1,5 @@
 <link href="public/assert/video-js/video-js.min.css" rel="stylesheet">
-<script src="public/assert/video-js/video.js"></script>
+<!--<script src="public/assert/video-js/video.js"></script>-->
 <script src="bower_components/angularjs/angular.min.js"></script>
 <link rel="stylesheet" href="public/app/post/post.css"/>
 <script src="public/app/post/post.js"></script>

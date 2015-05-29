@@ -1,5 +1,5 @@
 <link href="public/assert/video-js/video-js.min.css" rel="stylesheet">
-<script src="public/assert/video-js/video.js"></script>
+<!--<script src="public/assert/video-js/video.js"></script>-->
 <script src="bower_components/angularjs/angular.min.js"></script>
 <link rel="stylesheet" href="public/app/profile/profile.css"/>
 <script src="public/app/profile/profile.js"></script>
@@ -82,8 +82,8 @@
                     <img ng-repeat="img in item.images" src="{{img.image_url}}" class="post-img" />
                 </div>
                 <div ng-if="item.post_type=='video'" class="video-wrap">
-                    <video videojs class="video-js vjs-default-skin vjs-big-play-centered video-player" controls
-                           preload="auto" width="540" height="303"
+                    <video my-player class="video-js vjs-default-skin vjs-big-play-centered" controls
+                           preload width="540" height="303"
                            data-setup="{}">
                         <source src="{{item.video_url}}" type='video/mp4'>
                         <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
