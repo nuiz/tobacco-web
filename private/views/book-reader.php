@@ -21,6 +21,7 @@
     <script src="pdfjs/src/display/font_loader.js"></script>
     <script src="pdfjs/src/display/annotation_helper.js"></script>
 
+    <script src="public/app/config.js"></script>
     <link rel="stylesheet" href="public/app/book-reader/book-reader.css"/>
     <script src="public/app/book-reader/book-reader.js"></script>
 
