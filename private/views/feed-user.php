@@ -1,5 +1,8 @@
 <link href="public/assert/video-js/video-js.min.css" rel="stylesheet">
 <!--<script src="public/assert/video-js/video.js"></script>-->
+<script src="public/assert/customScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<link rel="stylesheet" href="public/assert/customScrollbar/jquery.mCustomScrollbar.min.css"/>
+
 <script src="bower_components/angularjs/angular.min.js"></script>
 <link rel="stylesheet" href="public/app/feed-user/feed-user.css"/>
 <script src="public/app/feed-user/feed-user.js"></script>
@@ -20,7 +23,7 @@
             <div class="icon-setting"></div>
         </div>
     </div>
-    <div class="data" ng-controller="FeedListCtl">
+    <div class="mCustomScrollbar data" ng-controller="FeedListCtl">
         <div class="paging-list">
             หน้าที่
             <a ng-repeat="item in paging"

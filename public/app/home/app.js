@@ -27,7 +27,7 @@ homeApp.controller("HomeCTL", ['$scope', function($scope){
     setDate();
     setInterval(function(){
         setDate();
-        $scope.apply();
+        $scope.$apply();
     }, 1000);
 
     var bgAll = [

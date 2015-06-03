@@ -83,13 +83,23 @@
 }
 
 .post {
-    margin: 40px 0 0 0;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #461a08;
+    margin: 30px 0 0 0;
+    /*border-bottom: 1px solid #461a08;*/
+    box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.42) inset;
+    padding: 10px;
+    background-color: rgba(203, 95, 17, 0.32);
 }
 
 .post .user-des {
+    background-image: url(images/wg-1048-sq.jpg);
+    padding: 12px 12px 0 12px;
+    border-radius: 0 12px 12px 0;
+    color: whitesmoke;
     height: 50px;
+}
+
+.post .content {
+    margin-top: 10px;
 }
 
 .post .user-img {
@@ -201,4 +211,16 @@ a.paging.active {
 
 .paging-list {
     margin-top: 20px;
+}
+
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    /*background-color: #fff;*/
+    /*background-color: rgba(255,255,255,.75);*/
+    /*filter: "alpha(opacity=75)";*/
+    /*-ms-filter: "alpha(opacity=75)";*/
+
+    line-height: 30px;
+    background-image: url(images/wg-1048-sq.jpg);
+    width: 6px;
 }

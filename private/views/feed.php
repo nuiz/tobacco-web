@@ -1,8 +1,12 @@
 <link href="public/assert/video-js/video-js.min.css" rel="stylesheet">
 <!--<script src="public/assert/video-js/video.js"></script>-->
+<script src="public/assert/customScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<link rel="stylesheet" href="public/assert/customScrollbar/jquery.mCustomScrollbar.min.css"/>
+
 <script src="bower_components/angularjs/angular.min.js"></script>
 <link rel="stylesheet" href="public/app/profile/profile.css"/>
 <script src="public/app/profile/profile.js"></script>
+
 <div ng-app="profile" ng-controller="ProfileCtl">
     <div class="tab">
         <a class="logo" href="?view=feed"></a>
@@ -20,7 +24,7 @@
             <div class="icon-setting"></div>
         </div>
     </div>
-    <div class="data" ng-controller="FeedListCtl">
+    <div class="mCustomScrollbar data" ng-controller="FeedListCtl">
         <div>
             <a class="wood-bg-btn" ng-click="form.vm.setFormshow('text')">โพสต์ข้อความ</a>
             <a class="wood-bg-btn" ng-click="form.vm.setFormshow('image')">โพสต์รูปภาพ</a>

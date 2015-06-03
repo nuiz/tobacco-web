@@ -6,6 +6,11 @@
  * Time: 10:10
  */
 session_start();
+if(isset($_GET["kiosk_id"])){
+    $cookie_name = "kiosk_id";
+    $cookie_value = $_GET["kiosk_id"];
+    setcookie($cookie_name, $cookie_value, time() + 2000000000);
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,6 +20,7 @@ session_start();
     <link rel="stylesheet" href="public/assert/css/main.css"/>
     <link rel="stylesheet" href="bower_components/open-sans-fontface/open-sans.css"/>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="public/assert/js/socket.io.js"></script>
     <script src="public/assert/js/main.js"></script>
     <script src="public/app/config.js"></script>
 </head>
