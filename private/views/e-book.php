@@ -19,15 +19,14 @@
             <div class="shelf_smalls"></div>
             <div class="shelf_book"></div>
             <div class="shelf_small"></div>
-            <a href="test.pdf?iframe=true&width=100%&height=100%" rel="prettyPhoto[iframes]"
-               title="Google.com opened at 100%">
-                <div class="magshf"></div>
-            </a>
-
-            <a href="test.pdf?iframe=true&width=100%&height=100%" rel="prettyPhoto[iframes]"
-               title="Google.com opened at 100%">
-                <div class="magshf2"></div>
-            </a>
+                <div class="centerbook-wrap">
+                    <a
+                        ng-repeat="b in randomBooks"
+                        href="?view=book-reader&tp=tp-none&content_id={{b.content_id}}">
+                        <div class="magshf"
+                             ng-style="{'background-image': 'url('+b.book_cover_url+')'}"></div>
+                    </a>
+                </div>
         </div>
         <div class="label_book"></div>
 <!--        <div class="search"></div>-->
@@ -45,9 +44,12 @@
         </div>
 
         <div class="bg_black">
-            <div class="mag"></div>
-            <div class="mag"></div>
-            <div class="mag"></div>
+            <a
+                ng-repeat="b in randomBooks"
+                href="?view=book-reader&tp=tp-none&content_id={{b.content_id}}">
+            <div class="mag"
+                ng-style="{'background-image': 'url('+b.book_cover_url+')'}"></div>
+            </a>
         </div>
 
     </div>

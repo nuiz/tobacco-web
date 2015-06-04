@@ -16,12 +16,14 @@ app.controller('NewsController', ['$scope', '$http', function ($scope, $http) {
         $scope.date.setYear(year);
 
         $scope.getNews();
+        $scope.getList2();
     };
     $scope.nextYear = function(){
         var year = parseInt($scope.date.getFullYear()) + 1;
         $scope.date.setYear(year);
 
         $scope.getNews();
+        $scope.getList2();
     };
 
     $scope.pagingLimit = 1; // set size of page limit
@@ -98,6 +100,41 @@ app.controller('NewsController', ['$scope', '$http', function ($scope, $http) {
     $scope.pagingPrev = function(){
         $scope.pagingStart -= $scope.pagingLimit;
     };
+
+    $scope.list2 = [];
+    $scope.getList2 = function(){
+        var url = window.config.api_url+'/news/by_year?';
+        var date = $scope.date.getFullYear();
+        date += '-';
+        date += $scope.date.getMonth()+1 < 10 ? '0'+($scope.date.getMonth()+1): ($scope.date.getMonth()+1);
+        date += '-';
+        //date += $scope.date.getDate() < 10 ? '0'+$scope.date.getDate(): $scope.date.getDate();
+        date += '01';
+
+        url += $.param({
+            "year": date
+        });
+
+        $http.get(url).success(function (data) {
+            $scope.list2 = data;
+        });
+    };
+    $scope.getList2();
+
+    $scope.thMonth = [
+        "มกราคม",
+        "กุมภาพันธ์",
+        "มีนาคม",
+        "เมษายน",
+        "พฤษภาคม",
+        "มิถุนายน",
+        "กรกฎาคม",
+        "สิงหาคม",
+        "กันยายนน",
+        "ตุลาคม",
+        "พฤจิกายน",
+        "ธันวาคม"
+    ];
 }]);
 
 app.filter('startFrom', function () {

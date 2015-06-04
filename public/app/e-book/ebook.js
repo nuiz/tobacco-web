@@ -31,6 +31,13 @@ ebookapp.controller('EbookListCtl', ['$scope', '$http', function ($scope, $http)
         });
     }
 
+    var url = window.config.api_url+'/ebook/random';
+
+    $scope.randomBooks = [];
+    $http.get(url).success(function (data) {
+        $scope.randomBooks = data.data;
+    });
+
     $scope.bookClick = function(id){
         window.location.href = "?view=subpage&book_type_id="+id;
     };

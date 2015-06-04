@@ -34,77 +34,52 @@
     <div class="all">
         <a class="allNews" href="#"></a>
     </div>
-    <div class="brief" style="display: none">
-        <div class="text_caption"> ข่าวประจำปี 2557</div>
-        <div class="text_caption number"> ทั้งหมด (1200)</div>
-        <div class="monthly">ข่าวประจำเดือนตุลาคม (180)</div>
-        <div class="news-subtype">
-            <div class="news-item">
-                <div class="img"></div>
-                <div class="news-text">
-                    "มาริโอ้ เมาเร่อ" เป็นอีกหนึ่งดาราหนุ่มที่ถูกจับตามองอย่างมาก
-                    ช่วงฤดูกาลคัดเลือกทหารเกณฑ์ประจำปี
+    <div class="brief" style="display: none; padding-top: 46px;">
+        <div style="overflow: auto; height: 488px;">
+            <div class="text_caption"> ข่าวประจำปี {{date.getFullYear()+543}}</div>
+            <div class="text_caption number"> ทั้งหมด ({{list2.length}})</div>
+            <div
+                ng-repeat="m in list2.data"
+                ng-show="m.length > 0"
+                >
+                <div class="monthly">ข่าวประจำเดือน{{thMonth[$index]}} ({{m.length}})</div>
+                <div class="news-subtype">
+                    <div
+                        class="news-item"
+                        ng-repeat="news in m.data"
+                        ng-click="readmoreClick(news.news_id)"
+                        >
+                        <div class="img"
+                             ng-style="{'background-image': 'url('+news.news_cover_url+')'}"></div>
+                        <div class="news-text">
+                            {{(news.news_description.length > 160) ? news.news_description.substring(0,160)+"...": news.news_description}}
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
                 </div>
+                <div style="clear: both;"></div>
             </div>
-            <div class="news-item">
-                <div class="img"></div>
-                <div class="news-text">
-                    "มาริโอ้ เมาเร่อ" เป็นอีกหนึ่งดาราหนุ่มที่ถูกจับตามองอย่างมาก
-                    ช่วงฤดูกาลคัดเลือกทหารเกณฑ์ประจำปี
-                </div>
-            </div>
-            <div class="news-item">
-                <div class="img"></div>
-                <div class="news-text">
-                    "มาริโอ้ เมาเร่อ" เป็นอีกหนึ่งดาราหนุ่มที่ถูกจับตามองอย่างมาก
-                    ช่วงฤดูกาลคัดเลือกทหารเกณฑ์ประจำปี
-                </div>
-            </div>
-            <div class="news-item">
-                <div class="img"></div>
-                <div class="news-text">
-                    "มาริโอ้ เมาเร่อ" เป็นอีกหนึ่งดาราหนุ่มที่ถูกจับตามองอย่างมาก
-                    ช่วงฤดูกาลคัดเลือกทหารเกณฑ์ประจำปี
-                </div>
-            </div>
-            <div class="news-item">
-                <div class="img"></div>
-                <div class="news-text">
-                    "มาริโอ้ เมาเร่อ" เป็นอีกหนึ่งดาราหนุ่มที่ถูกจับตามองอย่างมาก
-                    ช่วงฤดูกาลคัดเลือกทหารเกณฑ์ประจำปี
-                </div>
-            </div>
-            <div class="news-item">
-                <div class="img"></div>
-                <div class="news-text">
-                    "มาริโอ้ เมาเร่อ" เป็นอีกหนึ่งดาราหนุ่มที่ถูกจับตามองอย่างมาก
-                    ช่วงฤดูกาลคัดเลือกทหารเกณฑ์ประจำปี
-                </div>
-            </div>
-        </div>
 
-        <div class="monthly-n">ข่าวประจำเดือนพฤศจิกายน (120)</div>
-        <div class="news-subtype-n">
-            <div class="news-item-n">
-                <div class="img"></div>
-                <div class="news-text">
-                    "มาริโอ้ เมาเร่อ" เป็นอีกหนึ่งดาราหนุ่มที่ถูกจับตามองอย่างมาก
-                    ช่วงฤดูกาลคัดเลือกทหารเกณฑ์ประจำปี
+            <div
+                ng-repeat="m in list2.data"
+                ng-show="m.length > 0"
+                >
+                <div class="monthly">ข่าวประจำเดือน{{thMonth[$index]}} ({{m.length}})</div>
+                <div class="news-subtype">
+                    <div
+                        class="news-item"
+                        ng-repeat="news in m.data"
+                        ng-click="readmoreClick(news.news_id)"
+                        >
+                        <div class="img"
+                             ng-style="{'background-image': 'url('+news.news_cover_url+')'}"></div>
+                        <div class="news-text">
+                            {{(news.news_description.length > 160) ? news.news_description.substring(0,160)+"...": news.news_description}}
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="news-item-n">
-                <div class="img"></div>
-                <div class="news-text">
-                    "มาริโอ้ เมาเร่อ" เป็นอีกหนึ่งดาราหนุ่มที่ถูกจับตามองอย่างมาก
-                    ช่วงฤดูกาลคัดเลือกทหารเกณฑ์ประจำปี
-                </div>
-            </div>
-            <div class="news-item-n">
-                <div class="img"></div>
-                <div class="news-text">
-                    "มาริโอ้ เมาเร่อ" เป็นอีกหนึ่งดาราหนุ่มที่ถูกจับตามองอย่างมาก
-                    ช่วงฤดูกาลคัดเลือกทหารเกณฑ์ประจำปี
-                </div>
+                <div style="clear: both;"></div>
             </div>
         </div>
 
@@ -125,7 +100,7 @@
                 <div class="news-body">
                     <h2 id="news-name">{{newsPrev.news_name}}</h2>
 
-                    <p id="news-description">{{(newsPrev.news_description.length > 10) ? newsPrev.news_description.substring(0,160)+"...": newsPrev.news_description;}}</p>
+                    <p id="news-description">{{(newsPrev.news_description.length > 160) ? newsPrev.news_description.substring(0,160)+"...": newsPrev.news_description;}}</p>
                 </div>
             </div>
 
@@ -135,7 +110,7 @@
                 <div class="news-body">
                     <h2 id="news-name">{{newsCur.news_name}}</h2>
 
-                    <p id="news-description">{{(newsCur.news_description.length > 10) ? newsCur.news_description.substring(0,255)+"...": newsCur.news_description;}}</p>
+                    <p id="news-description">{{(newsCur.news_description.length > 255) ? newsCur.news_description.substring(0,255)+"...": newsCur.news_description;}}</p>
                 </div>
             </div>
 
@@ -144,7 +119,7 @@
                 <div class="news-body">
                     <h2 id="news-name">{{newsNext.news_name}}</h2>
 
-                    <p id="news-description">{{(newsNext.news_description.length > 10) ? newsNext.news_description.substring(0,160)+"...": newsNext.news_description;}}</p>
+                    <p id="news-description">{{(newsNext.news_description.length > 160) ? newsNext.news_description.substring(0,160)+"...": newsNext.news_description;}}</p>
                 </div>
             </div>
 

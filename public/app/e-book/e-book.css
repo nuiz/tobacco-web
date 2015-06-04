@@ -84,7 +84,7 @@
     width: 40px;
     height: 53px;
     background: url(images/britney.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .mag2 {
@@ -94,7 +94,7 @@
     width: 40px;
     height: 53px;
     background: url(images/britney2.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .mag3 {
@@ -104,7 +104,7 @@
     width: 40px;
     height: 53px;
     background: url(images/britney.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .mag4 {
@@ -114,7 +114,7 @@
     width: 40px;
     height: 53px;
     background: url(images/britney2.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .mag5 {
@@ -124,7 +124,7 @@
     width: 40px;
     height: 53px;
     background: url(images/britney.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .mag6 {
@@ -134,7 +134,7 @@
     width: 40px;
     height: 53px;
     background: url(images/britney2.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .mag7 {
@@ -144,7 +144,7 @@
     width: 40px;
     height: 53px;
     background: url(images/britney.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .mag8 {
@@ -154,7 +154,7 @@
     width: 40px;
     height: 53px;
     background: url(images/britney2.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .book_2 {
@@ -164,7 +164,7 @@
     width: 280px;
     height: 450px;
     background: url(images/books.png);
-    background-size: 100%;
+    background-size: cover;
 
     cursor: pointer;
 }
@@ -176,7 +176,7 @@
     width: 40px;
     height: 53px;
     background: url(images/britney2.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .book2 {
@@ -186,7 +186,7 @@
     width: 40px;
     height: 53px;
     background: url(images/britney.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .book3 {
@@ -196,7 +196,7 @@
     width: 40px;
     height: 53px;
     background: url(images/britney2.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .book4 {
@@ -206,7 +206,7 @@
     width: 40px;
     height: 53px;
     background: url(images/britney.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .book5 {
@@ -216,7 +216,7 @@
     width: 40px;
     height: 53px;
     background: url(images/britney2.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .book6 {
@@ -226,7 +226,7 @@
     width: 40px;
     height: 53px;
     background: url(images/britney.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .book7 {
@@ -236,7 +236,7 @@
     width: 40px;
     height: 53px;
     background: url(images/britney2.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .book8 {
@@ -246,27 +246,21 @@
     width: 40px;
     height: 53px;
     background: url(images/britney.jpg);
-    background-size: 100%;
+    background-size: cover;
+}
+
+.centerbook-wrap {
+    position: absolute;
+    top: 103px;
+    left: 95px;
 }
 
 .magshf {
-    position: absolute;
-    top: 142px;
-    left: 95px;
+    margin-top: 39px;
     width: 60px;
     height: 80px;
     background: url(images/Britny.png);
-    background-size: 100%;
-}
-
-.magshf2 {
-    position: absolute;
-    top: 261px;
-    left: 95px;
-    width: 60px;
-    height: 80px;
-    background: url(images/magazine.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .b_shf {
@@ -284,7 +278,7 @@
     width: 190px;
     height: 35px;
     background: url(images/shelfsmall.png);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .shelf_small {
@@ -294,7 +288,7 @@
     width: 190px;
     height: 35px;
     background: url(images/shelfsmall.png);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .shelf_book {
@@ -303,7 +297,7 @@
     width: 220px;
     height: 80px;
     background: url(images/shelfbook.png);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .label_book {
@@ -312,7 +306,7 @@
     width: 320px;
     height: 108px;
     background: url(images/labelebook.png);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .search {
@@ -322,7 +316,7 @@
     width: 275px;
     height: 49px;
     background: url(images/search.png);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .lb_category {
@@ -332,7 +326,7 @@
     width: 240px;
     height: 50px;
     background: url(images/category.png);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .bg_black {
@@ -350,8 +344,8 @@
     margin-left: 150px;
     width: 105px;
     height: 128px;
-    background: url(images/britney.jpg);
-    background-size: 100%;
+    /*background: url(images/britney.jpg);*/
+    background-size: cover;
 }
 
 .back_home {

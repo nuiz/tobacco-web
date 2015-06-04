@@ -37,6 +37,15 @@ $(function(){
             socket.emit("subscribe", {kiosk_id: kiosk_id});
         });
         socket.on('publish', function(data){
+            if(typeof data.error != "undefined"){
+                alert(data.error.message);
+                $.post('auth.php?action=logout', function(){
+                    window.location.reload();
+                }, 'json');
+
+                return;
+            }
+
             $.post('auth.php?action=login', {user: data}, function(data2){
                 alert("เข้าสู่ระบบ สำเร็จแล้ว");
 

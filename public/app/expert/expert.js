@@ -42,6 +42,11 @@ expertapp.controller('ExpertListCtl', ['$scope', '$http', function ($scope, $htt
             $scope.gurus = data.data;
         });
     };
+
+    $scope.closeCatClick = function(){
+        $scope.selectedCat=null;
+        $scope.selectedGuru = null;
+    };
 }]);
 
 expertapp.filter('startFrom', function () {

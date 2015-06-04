@@ -19,11 +19,6 @@
         </div>
     </div>
 
-    <style>
-        button.active {
-            background: gray;
-        }
-    </style>
     <div class="select">
         <div class="block_select">
             <div class="label_select"
@@ -36,9 +31,9 @@
         <div class="line">
             <div class="Textline" ng-click="clickMain()">หมวดหมู่ {{main_category.category_name}}</div>
             <div style="float: right; margin: 10px 10px 0 0;">
-                <button ng-click="clickFilter('video')" ng-class="{'active': filterType=='video'}">แสดงเฉพาะ video</button>
-                <button ng-click="clickFilter('book')" ng-class="{'active': filterType=='book'}">แสดงเฉพาะ e-book</button>
-                <button ng-click="clickFilter(false)" ng-class="{'active': filterType==false}">แสดงทั้งหมด</button>
+                <button ng-click="clickFilter('video')" class="filter-btn" ng-class="{'active': filterType=='video'}">แสดงเฉพาะ video</button>
+                <button ng-click="clickFilter('book')" class="filter-btn" ng-class="{'active': filterType=='book'}">แสดงเฉพาะ e-book</button>
+                <button ng-click="clickFilter(false)" class="filter-btn" ng-class="{'active': filterType==false}">แสดงทั้งหมด</button>
             </div>
         </div>
 <!--        <div class="buttonleft"></div>-->

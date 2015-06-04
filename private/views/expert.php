@@ -7,7 +7,7 @@
     <div class="circle">
         <div class="circle-grow" ng-hide="selectedCat==null"></div>
         <div class="lever" ng-class="{down: catPage==1}" ng-click="clickLever()" ng-hide="selectedCat!=null"></div>
-        <div class="close-cat" ng-hide="selectedCat==null" ng-click="selectedCat=null"></div>
+        <div class="close-cat" ng-hide="selectedCat==null" ng-click="closeCatClick()"></div>
 
         <div class="guru-chose-block" ng-hide="selectedGuru==null">
             <div class="history-btn"></div>

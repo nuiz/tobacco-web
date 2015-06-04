@@ -24,14 +24,15 @@
     top: 35px;
     right: 15px;
     font-size: 18px;
+    cursor: pointer;
 }
 
 .brief {
     position: absolute;
     top: 90px;
     left: 10px;
-    width: 1000px;
-    height: 575px;
+    width: 926px;
+    height: 488px;
     background: url(images/brief.png);
     background-size: 100%;
     z-index: 4;
@@ -39,33 +40,39 @@
 
 .text_caption {
     text-align: center;
-    font-size: 42px;
-    margin-top: 51px;
+    font-size: 30px;
 }
 
 .number {
-    font-size: 30px;
-    margin-top: 20px;
+    font-size: 19px;
+    margin-top: 8px;
 }
 
 .monthly {
-    position: absolute;
-    left: 5px;
-    top: 123px;
-    width: 920px;
+    /*position: absolute;*/
+    /*left: 5px;*/
+    /*top: 123px;*/
+    /*width: 920px;*/
+    /*height: 30px;*/
+    /*font-size: 28px;*/
+    /*line-height: 1;*/
+    /*text-align: center;*/
+    /*background: rgb(216, 216, 216);*/
+
     height: 30px;
     font-size: 28px;
     line-height: 1;
     text-align: center;
     background: rgb(216, 216, 216);
+    margin: 10px 10px 0 10px;
 }
 
 .news-subtype {
-    position: absolute;
+    /*position: absolute;*/
     top: 155px;
     left: 5px;
     width: 920px;
-    height: 220px;
+    /*height: 220px;*/
 }
 
 .news-item {
@@ -75,6 +82,8 @@
     width: 300px;
     height: 100px;
     background: rgba(216, 216, 216, 0.35);
+    cursor: pointer;
+    position: relative;
 }
 
 .img {
@@ -84,7 +93,7 @@
     width: 125px;
     height: 90px;
     background: url(images/pictureNews.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 
 .news-text {
