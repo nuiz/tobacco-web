@@ -1,6 +1,20 @@
 /**
  * Created by NUIZ on 23/3/2558.
  */
+
+(function(){
+    var status = "Right Click Disabled";
+    function disableClick(event)
+    {
+        console.log(event);
+        if(event.button==2)
+        {
+            return false;
+        }
+    }
+    document.onmousedown = disableClick;
+})();
+
 $(function(){
     var appW = 1280;
     var appH = 720;

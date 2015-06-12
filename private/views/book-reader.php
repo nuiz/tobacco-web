@@ -52,7 +52,7 @@
 
 </head>
 
-<body ng-app="book-reader" ng-controller="ReaderCtl">
+<body ng-app="book-reader" ng-controller="ReaderCtl" oncontextmenu="return false">
 
 <!-- BEGIN FLIPBOOK STRUCTURE -->
 <div id="fb5-ajax">

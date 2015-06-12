@@ -24,7 +24,7 @@ if(isset($_GET["kiosk_id"])){
     <script src="public/assert/js/main.js"></script>
     <script src="public/app/config.js"></script>
 </head>
-<body>
+<body oncontextmenu="return false">
 <div id="main">
     <?php
     $fnActivePage = function($page){

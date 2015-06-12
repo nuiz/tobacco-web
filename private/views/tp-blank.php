@@ -19,7 +19,7 @@ session_start();
     <script src="public/assert/js/main.js"></script>
     <script src="public/app/config.js"></script>
 </head>
-<body>
+<body oncontextmenu="return false">
 <div id="main">
     <div id="main-body-2">
         <?php $fnCallPage = function(){

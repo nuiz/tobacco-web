@@ -12,7 +12,7 @@
     <div style="text-align: center; padding: 20px;">
         <div style="font-size: 26px; font-weight: bold;">{{news.news_name}}</div>
 <!--        <a href="?view=news" style="line-height: 30px;">กลับหน้าหลัก</a><br>-->
-        <img src="{{news.news_cover_url}}" height="300" width="820" style="margin: 20px 0 0 0; object-fit: cover;">
+        <img src="{{news.news_cover_url}}" height="300" width="520" style="margin: 20px 0 0 0; object-fit: cover;">
     </div>
     <div class="txtType">
         <div><a ng-repeat="item in news.news_images" href="{{item.image_url}}" ng-show="$index==0" rel="prettyPhoto[pp_gal]" title="">คลิกเพื่อดูรูปภาพเพิ่มเติม</a></div>
