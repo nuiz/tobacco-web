@@ -76,7 +76,7 @@
              ng-repeat="item in posts"
              ng-class="{'post-text': item.post_type=='text', 'post-video': item.post_type=='video', 'post-video': item.post_type=='image'}">
             <div class="user-des">
-                <div class="user-img"><img src="http://placehold.it/40x40"></div>
+                <div class="user-img"><img src="{{item.user.picture}}" style="width: 38px;  height: 38px;  object-fit: cover;"></div>
                 <div class="user-name"><a href="?view=feed-user&account_id={{item.user.account_id}}">{{item.user.firstname + ' ' + item.user.lastname}}</a></div>
                 <div class="post-time"><small>17 พย. 2558 เวลา 15:00 น.</small></div>
             </div>

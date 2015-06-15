@@ -14,7 +14,7 @@
             <div class="blog-btn"></div>
             <div class="phone-btn"></div>
             <div class="content-btn"></div>
-            <div class="display-picture"></div>
+            <div class="display-picture" ng-style="{'background-image': 'url('+selectedGuru.picture+')'}"></div>
             <div class="name">{{selectedGuru.firstname}} {{selectedGuru.lastname}}</div>
             <div class="cat_name">{{selectedGuru.guru_cat_name}}</div>
             <div style="text-align: center"><div class="leaf"></div></div>
@@ -24,6 +24,7 @@
              ng-repeat="item in gurus"
              ng-class="'guru-'+($index+1)"
              ng-hide="selectedCat==null"
+             ng-style="{'background-image': 'url('+item.picture+')'}"
              ng-click="clickGuru(item)">
         </div>
 

@@ -29,7 +29,13 @@
                 width: 425px;
                 margin-top: 195px;
                 margin-left: 420px;
-                font-size: 14px;">{{itemshow.kmcenter_description}}
+                font-size: 17px;
+                line-height: 27px;
+                color: white;">
+                ชื่อ : {{itemshow.kmcenter_name}}<br />
+                ที่ตั้ง : {{itemshow.kmcenter_location}}<br />
+                เบอร์โทรศัพท์ : {{itemshow.kmcenter_phone}}<br />
+                รายละเอียด : {{itemshow.kmcenter_description}}
             </div>
             <div class="back" ng-click="itemshow = false">< Back</div>
         </div>
