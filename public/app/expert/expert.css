@@ -148,6 +148,7 @@
     position: absolute;
     left: 511px;
     top: 170px;
+    -webkit-transform: rotate(-7deg);
     transform: rotate(-7deg);
 
     cursor: pointer;
@@ -155,6 +156,7 @@
 
 .lever.down {
     top: 249px;
+    -webkit-transform: rotate(7deg);
     transform: rotate(7deg);
 }
 
@@ -215,6 +217,7 @@
 
 .cat-2 .yellow-line {
     width: 83px;
+    -webkit-transform: rotate(42deg);
     transform: rotate(42deg);
     top: -15px;
     left: -67px;
@@ -234,6 +237,7 @@
 
 .cat-1 .yellow-line {
     width: 118px;
+    -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     top: -57px;
     left: -31px;
@@ -253,6 +257,7 @@
 
 .cat-11 .yellow-line {
     width: 145px;
+    -webkit-transform: rotate(128deg);
     transform: rotate(128deg);
     top: -53px;
     left: 13px;
@@ -272,6 +277,7 @@
 
 .cat-10 .yellow-line {
     width: 117px;
+    -webkit-transform: rotate(148deg);
     transform: rotate(148deg);
     top: -23px;
     left: 38px;
@@ -291,6 +297,7 @@
 
 .cat-9 .yellow-line {
     width: 130px;
+    -webkit-transform: rotate(36deg);
     transform: rotate(36deg);
     top: 80px;
     left: 37px;
@@ -310,6 +317,7 @@
 
 .cat-8 .yellow-line {
     width: 130px;
+    -webkit-transform: rotate(36deg);
     transform: rotate(36deg);
     top: 80px;
     left: 37px;
@@ -329,6 +337,7 @@
 
 .cat-7 .yellow-line {
     width: 92px;
+    -webkit-transform: rotate(36deg);
     transform: rotate(36deg);
     top: 72px;
     left: 39px;
@@ -348,6 +357,7 @@
 
 .cat-6 .yellow-line {
     width: 96px;
+    -webkit-transform: rotate(143deg);
     transform: rotate(143deg);
     top: 75px;
     left: -77px;
@@ -367,6 +377,7 @@
 
 .cat-5 .yellow-line {
     width: 65px;
+    -webkit-transform: rotate(143deg);
     transform: rotate(143deg);
     top: 59px;
     left: -56px;
@@ -386,6 +397,7 @@
 
 .cat-4 .yellow-line {
     width: 51px;
+    -webkit-transform: rotate(199deg);
     transform: rotate(199deg);
     top: 7px;
     left: -47px;
@@ -405,6 +417,7 @@
 
 .cat-3 .yellow-line {
     width: 83px;
+    -webkit-transform: rotate(206deg);
     transform: rotate(206deg);
     top: -8px;
     left: -72px;

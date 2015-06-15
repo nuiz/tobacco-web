@@ -6,7 +6,6 @@
     var status = "Right Click Disabled";
     function disableClick(event)
     {
-        console.log(event);
         if(event.button==2)
         {
             return false;

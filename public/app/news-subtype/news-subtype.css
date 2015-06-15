@@ -44,3 +44,14 @@
 #main-body {
     width: 100%;
 }
+
+.close-btn {
+    cursor: pointer;
+    background: url(images/close-btn.png);
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 30px;
+    left: 780px;
+    z-index: 2;
+}
