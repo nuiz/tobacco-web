@@ -224,3 +224,7 @@ a.paging.active {
     background-image: url(images/wg-1048-sq.jpg);
     width: 6px;
 }
+
+.mCustomScrollBox {
+    -webkit-filter: blur(0px);
+}

@@ -86,8 +86,8 @@
                     <img ng-repeat="img in item.images" src="{{img.image_url}}" class="post-img" />
                 </div>
                 <div ng-if="item.post_type=='video'" class="video-wrap">
-                    <video class="" controls
-                           preload width="540" height="303">
+                    <video class="video-player" controls
+                           width="540" height="303">
                         <source src="{{item.video_url}}" type='video/mp4'>
                     </video>
                 </div>

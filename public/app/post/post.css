@@ -176,3 +176,20 @@ a.add-comment, a.like-btn, a.unlike-btn {
     margin-left: 0;
     border: none;
 }
+
+
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    /*background-color: #fff;*/
+    /*background-color: rgba(255,255,255,.75);*/
+    /*filter: "alpha(opacity=75)";*/
+    /*-ms-filter: "alpha(opacity=75)";*/
+
+    line-height: 30px;
+    background-image: url(images/wg-1048-sq.jpg);
+    width: 6px;
+}
+
+.mCustomScrollBox {
+    -webkit-filter: blur(0px);
+}

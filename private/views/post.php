@@ -1,4 +1,4 @@
-<link href="public/assert/video-js/video-js.min.css" rel="stylesheet">
+<!--<link href="public/assert/video-js/video-js.min.css" rel="stylesheet">-->
 <!--<script src="public/assert/video-js/video.js"></script>-->
 <script src="bower_components/angularjs/angular.min.js"></script>
 <link rel="stylesheet" href="public/app/post/post.css"/>
@@ -26,9 +26,9 @@
         <div class="post"
              ng-class="{'post-text': item.post_type=='text', 'post-video': item.post_type=='video', 'post-video': item.post_type=='image'}">
             <div class="user-des">
-                <div class="user-img"><img src="http://placehold.it/40x40"></div>
+                <div class="user-img"><img src="{{item.user.picture}}" style="width: 38px;  height: 38px;  object-fit: cover;"></div>
                 <div class="user-name"><a href="#">{{item.user.firstname + ' ' + item.user.lastname}}</a></div>
-                <div class="post-time"><small>17 พย. 2558 เวลา 15:00 น.</small></div>
+                <div class="post-time"><small>{{dateThai(item.created_at)}}</small></div>
             </div>
             <div class="content">
                 <div>{{item.post_text}}</div>
@@ -36,11 +36,9 @@
                     <img ng-repeat="img in item.images" src="{{img.image_url}}" class="post-img" />
                 </div>
                 <div ng-if="item.post_type=='video'" class="video-wrap">
-                    <video videojs class="video-js vjs-default-skin vjs-big-play-centered video-player" controls
-                           preload="auto" width="540" height="303"
-                           data-setup="{}">
+                    <video class="video-player" controls
+                           width="540" height="303">
                         <source src="{{item.video_url}}" type='video/mp4'>
-                        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
                     </video>
                 </div>
             </div>
@@ -57,9 +55,9 @@
             <div class="post comment"
                 ng-repeat="c in comments">
                 <div class="user-des">
-                    <div class="user-img"><img src="http://placehold.it/40x40"></div>
+                    <div class="user-img"><img src="{{c.user.picture}}" style="width: 38px;  height: 38px;  object-fit: cover;"></div>
                     <div class="user-name"><a href="#">{{c.user.firstname + ' ' + c.user.lastname}}</a></div>
-                    <div class="post-time"><small>17 พย. 2558 เวลา 15:00 น.</small></div>
+                    <div class="post-time"><small>{{dateThai(c.created_at)}}</small></div>
                 </div>
                 <div class="content">
                     <div>{{c.comment_text}}</div>
