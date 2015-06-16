@@ -21,7 +21,7 @@
             <div class="shelf_small"></div>
                 <div class="centerbook-wrap">
                     <a
-                        ng-repeat="b in randomBooks"
+                        ng-repeat="b in randomBooks | limitTo : 2"
                         href="?view=book-reader&tp=tp-none&content_id={{b.content_id}}">
                         <div class="magshf"
                              ng-style="{'background-image': 'url('+b.book_cover_url+')'}"></div>
@@ -45,7 +45,7 @@
 
         <div class="bg_black">
             <a
-                ng-repeat="b in randomBooks"
+                ng-repeat="b in randomBooks  | limitTo : 3"
                 href="?view=book-reader&tp=tp-none&content_id={{b.content_id}}">
             <div class="mag"
                 ng-style="{'background-image': 'url('+b.book_cover_url+')'}"></div>

@@ -340,7 +340,7 @@
 
 .mag {
     float: left;
-    margin-top: -20px;
+    margin-top: -35px;
     margin-left: 150px;
     width: 105px;
     height: 128px;
@@ -350,7 +350,7 @@
 
 .back_home {
     position: absolute;
-    bottom: -2px;
+    bottom: 0px;
     left: 5px;
     width: 100px;
     height: 100px;

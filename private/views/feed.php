@@ -1,4 +1,4 @@
-<link href="public/assert/video-js/video-js.min.css" rel="stylesheet">
+<!--<link href="public/assert/video-js/video-js.min.css" rel="stylesheet">-->
 <!--<script src="public/assert/video-js/video.js"></script>-->
 <script src="public/assert/customScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 <link rel="stylesheet" href="public/assert/customScrollbar/jquery.mCustomScrollbar.min.css"/>
@@ -78,7 +78,7 @@
             <div class="user-des">
                 <div class="user-img"><img src="{{item.user.picture}}" style="width: 38px;  height: 38px;  object-fit: cover;"></div>
                 <div class="user-name"><a href="?view=feed-user&account_id={{item.user.account_id}}">{{item.user.firstname + ' ' + item.user.lastname}}</a></div>
-                <div class="post-time"><small>17 พย. 2558 เวลา 15:00 น.</small></div>
+                <div class="post-time"><small>{{dateThai(item.created_at)}}</small></div>
             </div>
             <div class="content">
                 <div>{{item.post_text}}</div>
@@ -86,11 +86,9 @@
                     <img ng-repeat="img in item.images" src="{{img.image_url}}" class="post-img" />
                 </div>
                 <div ng-if="item.post_type=='video'" class="video-wrap">
-                    <video my-player class="video-js vjs-default-skin vjs-big-play-centered" controls
-                           preload width="540" height="303"
-                           data-setup="{}">
+                    <video class="" controls
+                           preload width="540" height="303">
                         <source src="{{item.video_url}}" type='video/mp4'>
-                        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
                     </video>
                 </div>
             </div>

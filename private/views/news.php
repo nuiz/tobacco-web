@@ -42,7 +42,7 @@
                 ng-repeat="m in list2.data"
                 ng-show="m.length > 0"
                 >
-                <div class="monthly">ข่าวประจำเดือน{{thMonth[$index]}} ({{m.length}})</div>
+                <div class="monthly">ข่าวประจำเดือน{{thMonth[11-$index]}} ({{m.length}})</div>
                 <div class="news-subtype">
                     <div
                         class="news-item"
@@ -60,27 +60,7 @@
                 <div style="clear: both;"></div>
             </div>
 
-            <div
-                ng-repeat="m in list2.data"
-                ng-show="m.length > 0"
-                >
-                <div class="monthly">ข่าวประจำเดือน{{thMonth[$index]}} ({{m.length}})</div>
-                <div class="news-subtype">
-                    <div
-                        class="news-item"
-                        ng-repeat="news in m.data"
-                        ng-click="readmoreClick(news.news_id)"
-                        >
-                        <div class="img"
-                             ng-style="{'background-image': 'url('+news.news_cover_url+')'}"></div>
-                        <div class="news-text">
-                            {{(news.news_description.length > 160) ? news.news_description.substring(0,160)+"...": news.news_description}}
-                        </div>
-                        <div style="clear: both;"></div>
-                    </div>
-                </div>
-                <div style="clear: both;"></div>
-            </div>
+
         </div>
 
         <a class="back"> x </a>

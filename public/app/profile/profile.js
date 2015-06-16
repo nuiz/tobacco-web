@@ -179,6 +179,31 @@ profileapp.controller('FeedListCtl', ['$scope', '$http', function ($scope, $http
     };
 
     $scope.form.vm = new PostForm();
+
+    (function($scope){
+        var thMonth = [
+            "มกราคม",
+            "กุมภาพันธ์",
+            "มีนาคม",
+            "เมษายน",
+            "พฤษภาคม",
+            "มิถุนายน",
+            "กรกฎาคม",
+            "สิงหาคม",
+            "กันยายนน",
+            "ตุลาคม",
+            "พฤจิกายน",
+            "ธันวาคม"
+        ];
+
+        $scope.dateThai = function(dateInput){
+            var dateObject = new Date(dateInput);
+            var date = "วันที่ "+dateObject.getDate()+" "+thMonth[dateObject.getMonth()]+" "+(dateObject.getFullYear()+543);
+            var time = dateObject.getHours()+":"+dateObject.getMinutes()+" น.";
+
+            return date + " เวลา " + time;
+        };
+    })($scope);
 }]);
 
 var videojs_id = 0;

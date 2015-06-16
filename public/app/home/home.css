@@ -4,7 +4,7 @@
 }
 
 .dateTime {
-    margin: 72px 26px;
+    padding: 72px 0 0 26px;
     font-size: 23px;
     color: white;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.82);

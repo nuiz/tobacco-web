@@ -116,6 +116,7 @@ app.controller('NewsController', ['$scope', '$http', function ($scope, $http) {
         });
 
         $http.get(url).success(function (data) {
+            data.data.reverse();
             $scope.list2 = data;
         });
     };
