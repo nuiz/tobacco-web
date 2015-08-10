@@ -92,7 +92,7 @@
 
 .label_select {
     position: relative;
-    padding-top: 144px;
+    padding-top: 150px;
     float: left;
     top: -30px;
     margin-left: 30px;
@@ -101,7 +101,7 @@
     background: url(images/block.png);
     background-size: 100%;
     color: #FEE5B1;
-    font-size: 22px;
+    font-size: 30px;
     line-height: 1;
     text-align: center;
     box-sizing: border-box;
@@ -485,4 +485,13 @@
     background: url(images/next.png);
     background-size: 100%;
     cursor: pointer;
+}
+
+strong.ng-binding{
+    font-size: 14px;
+    white-space:normal;
+}
+
+td.ng-binding{
+    font-size: 15px;
 }
