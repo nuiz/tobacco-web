@@ -35,7 +35,7 @@ function onUserReady(cb){
 };
 
 profileapp.controller('FeedListCtl', ['$scope', '$http', function ($scope, $http) {
-    //$("#content-1").mCustomScrollbar({});
+    //$(".mCustomScrollbar").mCustomScrollbar({ scrollInertia: 0 });
 
     $scope.limit = 15;
     $scope.currentPage = 1;

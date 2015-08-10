@@ -125,14 +125,23 @@
     position: absolute;
     top: 200px;
     left: 65px;
-    width: 300px;
+    width: 500px;
     height: 350px;
     border: #8F3D1A solid 1px;
+}
+.detail {
+    height: 350px;
+    width: 225px;
+    margin-top: 195px;
+    margin-left: 620px;
+    font-size: 17px;
+    line-height: 27px;
+    color: white;
 }
 .back{
     position: absolute;
     bottom: 20px;
-    right: 200px;
+    right: 172px;
     width: 100px;
     height: 28px;
     font-size: 25px;

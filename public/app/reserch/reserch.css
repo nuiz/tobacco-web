@@ -464,3 +464,25 @@
     box-shadow: 0 0 1px 0px rgba(255, 255, 255, 0.59) inset;
     color: white;
 }
+
+.content-prev-btn {
+    position: absolute;
+    top: 416px;
+    left: 233px;
+    width: 60px;
+    height: 60px;
+    background: url(images/prev.png);
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.content-next-btn {
+    position: absolute;
+    top: 416px;
+    right: 12px;
+    width: 60px;
+    height: 61px;
+    background: url(images/next.png);
+    background-size: 100%;
+    cursor: pointer;
+}

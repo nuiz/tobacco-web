@@ -10,27 +10,38 @@
 <div ng-app="profile" ng-controller="ProfileCtl">
     <div class="tab">
         <a class="logo" href="?view=feed"></a>
-<!--        <div class="search">ค้นหา</div>-->
+        <div class="search">
+            <form action="index.php">
+                <input type="hidden" name="view" value="feed-search">
+                <input type="text" name="keyword" placeholder="ค้นหาพนักงาน" style="  width: 391px;
+  height: 35px;
+  display: block;
+  outline: none;
+  border: none;
+  background: none;
+  padding-left: 10px;">
+            </form>
+        </div>
         <div class="status">
-            <div class="tus">
+            <div class="tus" ng-if="user.account_id">
                 <a href="?view=feed-user&account_id={{user.account_id}}" style="color: white; text-decoration: none;">
-                    <img src="http://placehold.it/40x40" class="profile-image">
+                    <img src="{{user.picture}}" width="40" height="40" class="profile-image">
                     <?php //echo $_SESSION['user']['firstname']; ?>
                     {{user.firstname}}
                 </a>
             </div>
         </div>
         <div class="icon">
-            <div class="icon-setting"></div>
+            <!-- <div class="icon-setting"></div> -->
         </div>
     </div>
     <div class="mCustomScrollbar data" ng-controller="FeedListCtl">
-        <div>
+        <div ng-if="user.account_id">
             <a class="wood-bg-btn" ng-click="form.vm.setFormshow('text')">โพสต์ข้อความ</a>
             <a class="wood-bg-btn" ng-click="form.vm.setFormshow('image')">โพสต์รูปภาพ</a>
             <a class="wood-bg-btn" ng-click="form.vm.setFormshow('video')">โพสต์วิดีโอ</a>
         </div>
-        <div class="form-post-section">
+        <div class="form-post-section" ng-if="user.account_id">
             <form id="form-post-text" ng-show="form.vm.formshow=='text'" ng-submit="form.vm.textSubmit()">
                 <div>
                     <textarea type="text" class="post-textarea" ng-model="form.vm.formText.post_text"></textarea>
@@ -65,7 +76,7 @@
                 </div>
             </form>
         </div>
-        <div class="paging-list">
+        <div class="paging-list" ng-show="total > 0">
             หน้าที่
             <a ng-repeat="item in paging"
                class="paging"
@@ -101,7 +112,7 @@
                 <div style="margin-top: 5px;">{{item.like_count}} คนถูกใจสิ่งนี้ {{item.comment_count}} ความคิดเห็น</div>
             </div>
         </div>
-        <div class="paging-list">
+        <div class="paging-list" ng-show="total > 0">
             หน้าที่
             <a ng-repeat="item in paging"
                class="paging"

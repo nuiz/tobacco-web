@@ -1,0 +1,49 @@
+@font-face {
+	font-family: CS_PraJad;
+	src: url("CS_PraJad/CSPraJad.otf") format("opentype");
+}
+
+@font-face {
+	font-family: CS_PraJad;
+	font-weight: bold;
+	src: url("CS_PraJad/CSPraJad-bold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: CS_PraJad;
+	font-style: italic;
+	src: url("CS_PraJad/CSPraJad-Italic.otf") format("opentype");
+}
+
+@font-face {
+	font-family: CS_PraJad;
+	font-style: italic;
+	font-style: bold;
+	src: url("CS_PraJad/CSPraJad-boldItalic.otf") format("opentype");
+}
+
+/* th sarabun */
+
+@font-face {
+	font-family: THSarabun;
+	src: url("THSarabun/THSarabun.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: THSarabun;
+	font-weight: bold;
+	src: url("THSarabun/THSarabun Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: THSarabun;
+	font-style: italic;
+	src: url("THSarabun/THSarabun Italic.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: THSarabun;
+	font-style: italic;
+	font-style: bold;
+	src: url("THSarabun/THSarabun BoldItalic.ttf") format("truetype");
+}

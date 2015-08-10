@@ -1,0 +1,71 @@
+#main {
+    background: url(images/bgnews.jpg);
+    background-size: 100%;
+}
+
+.icon-news {
+    background: url(images/icon-news.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-video {
+    background: url(images/icon-video.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-ebook {
+    background: url(images/icon-ebook.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.search-wrap {
+    position: absolute;
+    top: 83px;
+    left: 90px;
+    background-color: rgb(218, 154, 70);
+    width: 800px;
+    height: 542px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px black inset;
+}
+
+.search-wrap a, .search-wrap {
+    color: white;
+    text-decoration: none;
+}
+
+.search-static {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.search-static strong {
+    font-weight: bold;
+}
+
+.search-list {
+    padding: 10px;
+    padding-top: 0;
+}
+
+.search-list-item {
+    font-size: 18px;
+}

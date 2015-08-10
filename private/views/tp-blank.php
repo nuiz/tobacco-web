@@ -12,12 +12,19 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1024, initial-scale=1">
+    <link rel="stylesheet" href="public/assert/font/font.css"/>
     <link rel="stylesheet" href="public/assert/css/main.css"/>
     <link rel="stylesheet" href="bower_components/open-sans-fontface/open-sans.css"/>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="public/assert/js/socket.io.js"></script>
     <script src="public/assert/js/main.js"></script>
     <script src="public/app/config.js"></script>
+	<script>
+window.config = {
+    nfc_auth_ip: "http://<?php echo $_SERVER["HTTP_HOST"];?>:5000",
+    api_url: "http://<?php echo $_SERVER["HTTP_HOST"];?>/tobacco"
+};
+</script>
 </head>
 <body oncontextmenu="return false">
 <div id="main">

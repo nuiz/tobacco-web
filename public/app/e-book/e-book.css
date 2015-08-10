@@ -318,6 +318,15 @@
     background: url(images/search.png);
     background-size: cover;
 }
+.search-input {
+    margin-left: 61px;
+    margin-top: 8px;
+    width: 173px;
+    height: 32px;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+}
 
 .lb_category {
     position: absolute;
@@ -357,4 +366,12 @@
     background: url(images/backhome.png);
     background-size: 100%;
     z-index: 1;
+}
+
+
+.type-title {
+    text-align: center;
+    color: white;
+    font-size: 38px;
+    padding-top: 16px;
 }

@@ -25,7 +25,7 @@
            ng-repeat="item in books"
            ng-class="'magazine'+($index+1)"
            ng-style="{'background-image': 'url('+item.book_cover_url+')'}"
-           href="?view=book-reader&tp=tp-none&content_id={{item.content_id}}"
+           href="?view=book-reader&tp=tp-none&content_id={{item.content_id}}#book5/page1"
            title="">
             <div class="magazine"></div>
         </a>

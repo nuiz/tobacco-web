@@ -17,12 +17,20 @@ if(isset($_GET["kiosk_id"])){
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1024, initial-scale=1">
+    <link rel="stylesheet" href="public/assert/font/font.css"/>
     <link rel="stylesheet" href="public/assert/css/main.css"/>
     <link rel="stylesheet" href="bower_components/open-sans-fontface/open-sans.css"/>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="public/assert/js/socket.io.js"></script>
     <script src="public/assert/js/main.js"></script>
     <script src="public/app/config.js"></script>
+	<script>
+window.config = {
+    nfc_auth_ip: "http://58.137.91.19:5000",
+    api_url: "http://58.137.91.19/tobacco"
+};
+</script>
+    <?php //echo $_SERVER["HTTP_HOST"];?>
 </head>
 <body oncontextmenu="return false">
 <div id="main">
@@ -33,6 +41,16 @@ if(isset($_GET["kiosk_id"])){
     };
     ?>
     <nav id="main-nav" class="nav">
+        <?php if(empty($_COOKIE['kiosk_id']) && empty($_GET['kiosk_id'])){?>
+        <div style="  position: absolute;
+  z-index: 2;
+  width: 122px;
+  background: white;
+  margin-left: 90px;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;">หากต้องการเข้าใช้งานระบบ KM เดิม <a href="http://192.168.0.159">คลิกที่นี่</a></div>
+        <?php }?>
         <div id="main-nav2">
             <?php if(@$_SESSION['user']){?>
             <a class="profile-btn" href="?view=feed"></a>
@@ -60,6 +78,17 @@ if(isset($_GET["kiosk_id"])){
                 <a class="nav-menu <?php $fnActivePage("faq");?>" href="?view=faq">
                     <i class="active-icon active-left"></i> FAQ <i class="active-icon active-right"></i>
                 </a>
+            </div>
+            <div>
+                <form action="index.php">
+                    <input type="hidden" name="view" value="search">
+                    <input type="search" placeholder="search" name="keyword" required style="
+                    margin: 10px;
+                    margin-left: 30px;
+                    border-radius: 4px;
+                    padding: 10px;
+                    width: 175px;">
+                </form>
             </div>
         </div>
     </nav>

@@ -8,4 +8,4 @@
 
 session_destroy();
 
-header("location: ?view=news");
+header("location: ?view=news&ts=".time());

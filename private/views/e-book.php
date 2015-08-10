@@ -5,12 +5,14 @@
     <div ng-app="ebook" ng-controller="EbookListCtl">
         <div class="back_home" ng-click="backhome()"></div>
         <div class="book" ng-click="bookClick(2)">
+            <div class="type-title">หนังสือ</div>
             <div class="booksClick"> > </div>
             <div ng-class="'mag'+($index+1)"
                  ng-style="{'background-image': 'url('+item.book_cover_url+')'}"
                  ng-repeat="item in books_group[0]"></div>
         </div>
         <div class="book_2" ng-click="bookClick(1)">
+            <div class="type-title">นิตยสาร</div>
             <div class="booksClick"> < </div>
             <div ng-class="'book'+($index+1)" ng-style="{'background-image': 'url('+item.book_cover_url+')'}" ng-repeat="item in books_group[1]"></div>
 <!--            <div class="book1"></div>-->
@@ -22,14 +24,19 @@
                 <div class="centerbook-wrap">
                     <a
                         ng-repeat="b in randomBooks | limitTo : 2"
-                        href="?view=book-reader&tp=tp-none&content_id={{b.content_id}}">
+                        href="?view=book-reader&tp=tp-none&content_id={{b.content_id}}#book5/page1">
                         <div class="magshf"
                              ng-style="{'background-image': 'url('+b.book_cover_url+')'}"></div>
                     </a>
                 </div>
         </div>
         <div class="label_book"></div>
-<!--        <div class="search"></div>-->
+        <div class="search">
+            <form action="index.php">
+                <input type="hidden" name="view" value="subpage">
+                <input type="text" name="keyword" class="search-input" required>
+            </form>
+        </div>
 
         <div class="lb_category">
             <a class="type" href="#"></a>
@@ -45,8 +52,9 @@
 
         <div class="bg_black">
             <a
-                ng-repeat="b in randomBooks  | limitTo : 3"
-                href="?view=book-reader&tp=tp-none&content_id={{b.content_id}}">
+                ng-repeat="b in randomBooks  | limitTo : 5"
+                ng-if="$index > 1"
+                href="?view=book-reader&tp=tp-none&content_id={{b.content_id}}#book5/page1">
             <div class="mag"
                 ng-style="{'background-image': 'url('+b.book_cover_url+')'}"></div>
             </a>

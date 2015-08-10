@@ -47,6 +47,37 @@ ebookapp.controller('ReaderCtl', ['$scope', '$http', function ($scope, $http) {
         fetchBook();
     });
 
+    (function($scope){
+        var thMonth = [
+            "มกราคม",
+            "กุมภาพันธ์",
+            "มีนาคม",
+            "เมษายน",
+            "พฤษภาคม",
+            "มิถุนายน",
+            "กรกฎาคม",
+            "สิงหาคม",
+            "กันยายนน",
+            "ตุลาคม",
+            "พฤจิกายน",
+            "ธันวาคม"
+        ];
+
+        $scope.dateThai = function(dateInput, timeStamp){
+            if(!timeStamp){
+                var dateObject = new Date(dateInput);
+            }
+            else {
+                var dateObject = new Date();
+                dateObject.setTime(dateInput);
+            }
+            var date = "วันที่ "+dateObject.getDate()+" "+thMonth[dateObject.getMonth()]+" "+(dateObject.getFullYear()+543);
+            var time = dateObject.getHours()+":"+dateObject.getMinutes()+" น.";
+
+            return date + " เวลา " + time;
+        };
+    })($scope);
+
     function fetchBook(){
         PDFJS.workerSrc = 'pdfjs/src/worker_loader.js';
 
@@ -55,6 +86,7 @@ ebookapp.controller('ReaderCtl', ['$scope', '$http', function ($scope, $http) {
         var thePDF = null;
 
         $scope.pages = [];
+        var successNumPage = 0;
 
         PDFJS.getDocument($scope.book.book_url).then(function(pdf) {
 
@@ -65,54 +97,51 @@ ebookapp.controller('ReaderCtl', ['$scope', '$http', function ($scope, $http) {
             numPages = pdf.numPages;
 
             //Start with first page
-            pdf.getPage( 1 ).then( handlePages );
+            //pdf.getPage( 1 ).then( handlePages );
+            for(var num = 1; num <= numPages; num++){
+                //$scope.pages.push(null);
+                pdf.getPage(num).then(handlePage);
+            }
         });
 
 
 
-        function handlePages(page)
+        function handlePage(page)
         {
-            //This gives us the page's dimensions at full scale
-            var viewport = page.getViewport( 0.7 );
+            $scope.pages[page.pageIndex] = {
+                page: page
+            };
 
-            //We'll create a canvas for each page to draw it on
-            var canvas = document.createElement( "canvas" );
-            canvas.style.display = "block";
-            var context = canvas.getContext('2d');
-            //canvas.height = viewport.height;
-            //canvas.width = viewport.width;
+            successNumPage++;
+            // if ( thePDF !== null && currPage <= numPages )
 
-            canvas.height = 671;
-            canvas.width = 506;
-
-            //Draw it on the canvas
-            page.render({canvasContext: context, viewport: viewport});
-
-            //Add it to the web page
-            //document.body.appendChild( canvas );
-            var blob = dataUrlToBlob(canvas.toDataURL());
-            $scope.pages.push({
-                canvas: canvas
-                //blob: blob,
-                //url: urlCreator.createObjectURL(blob),
-                //data_url: canvas.toDataURL()
-            });
-
-            //Move to next page
-            currPage++;
-            if ( thePDF !== null && currPage <= numPages )
+            if ( successNumPage >= numPages )
             {
-                thePDF.getPage( currPage ).then( handlePages );
-            }
-            else {
                 $scope.$apply();
-
-                $scope.pages.forEach(function(item, index){
-                    $('.bookpage[bookpage="'+index+'"]').append(item.canvas);
-                });
-
                 $.loadBook();
+                cbCompletePages();
             }
+        }
+
+        function cbCompletePages(){
+            $scope.pages.forEach(function(item, index){
+                var viewport = item.page.getViewport(1.5);
+
+                //We'll create a canvas for each page to draw it on
+                var canvas = document.createElement( "canvas" );
+                canvas.style.display = "block";
+                var context = canvas.getContext('2d');
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                //Draw it on the canvas
+                item.page.render({canvasContext: context, viewport: viewport});
+
+                // var blob = dataUrlToBlob(canvas.toDataURL());
+
+                $('.bookpage[bookpage="'+index+'"]').append(canvas);
+                $(canvas).css({'width': '100%'});
+            });
         }
 
         //PDFJS.getDocument($scope.book.book_url).then(function(pdf) {

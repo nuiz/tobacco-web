@@ -9,16 +9,16 @@
         <a class="logo" href="?view=feed"></a>
 <!--        <div class="search">ค้นหา</div>-->
         <div class="status">
-            <div class="tus">
+            <div class="tus" ng-if="user.account_id">
                 <a href="?view=feed-user&account_id={{user.account_id}}" style="color: white; text-decoration: none;">
-                    <img src="http://placehold.it/40x40" class="profile-image">
+                    <img src="{{user.picture}}" class="profile-image" width="40" height="40">
                     <?php //echo $_SESSION['user']['firstname']; ?>
                     {{user.firstname}}
                 </a>
             </div>
         </div>
         <div class="icon">
-            <div class="icon-setting"></div>
+            <!-- <div class="icon-setting"></div> -->
         </div>
     </div>
     <!-- end topbar -->
@@ -65,13 +65,13 @@
             </div>
         </div>
 
-        <div class="comment-form">
+        <div class="comment-form" ng-if="user.account_id">
             <form ng-submit="addComment()" style="padding: 1px 20px 20px 20px;
   margin: 0 0 0 50px;
   background: rgba(0,0,0,0.2);">
                 <div class="post comment comment-add-block">
                     <div class="user-des">
-                        <div class="user-img"><img src="http://placehold.it/40x40"></div>
+                        <div class="user-img"><img src="{{user.picture}}" class="profile-image" width="40" height="40"></div>
                         <div class="user-name"><a href="#">{{userlogin.firstname + ' ' + userlogin.lastname}}</a></div>
                         <div class="post-time"><small>(แสดงความคิดเห็น)</small></div>
                     </div>

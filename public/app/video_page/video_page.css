@@ -42,7 +42,6 @@
     height: 50px;
     background: url(images/logo1.png);
     background-size: 100%;
-
 }
 
 .leftlogoII {
@@ -86,7 +85,7 @@
     height: 698px;
     /*background: #826933;*/
     float: left;
-    padding-top: 22px;
+    padding-top: 18px;
 }
 
 .share {

@@ -3,6 +3,6 @@
  */
 
 window.config = {
-    nfc_auth_ip: "http://127.0.0.1:5000",
-    api_url: "http://127.0.0.1/tobacco"
+    nfc_auth_ip: "http://58.137.91.19:5000",
+    api_url: "http://172.20.55.21/tobacco"
 };

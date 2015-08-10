@@ -28,7 +28,7 @@ loginapp.controller('LoginCTL', ['$scope', '$http', function ($scope, $http) {
                 };
 
                 $http(req).success(function(){
-                    window.location.href="?view=news"
+                    window.location.href="?view=feed"
                 });
             }
             else {

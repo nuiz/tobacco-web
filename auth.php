@@ -21,7 +21,9 @@ if($_GET['action']=="login"){
 }
 
 if($_GET['action']=="get"){
-    $user = $_SESSION['user'];
-    unset($user["password"]);
+    $user = @$_SESSION['user'];
+    if(isset($user["password"])){
+    	unset($user["password"]);
+    }
     echo json_encode($user);
 }

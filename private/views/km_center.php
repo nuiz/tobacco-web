@@ -25,13 +25,7 @@
         </div>
         <div class="location" ng-show="itemshow">
             <div class="map" style="background-size: cover;" ng-style="{'background-image': 'url('+itemshow.kmcenter_map_pic_url+')'}"></div>
-            <div style="height: 350px;
-                width: 425px;
-                margin-top: 195px;
-                margin-left: 420px;
-                font-size: 17px;
-                line-height: 27px;
-                color: white;">
+            <div class="detail">
                 ชื่อ : {{itemshow.kmcenter_name}}<br />
                 ที่ตั้ง : {{itemshow.kmcenter_location}}<br />
                 เบอร์โทรศัพท์ : {{itemshow.kmcenter_phone}}<br />

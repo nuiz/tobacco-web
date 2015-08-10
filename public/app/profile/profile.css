@@ -39,6 +39,7 @@
 }
 .profile-image {
     vertical-align: middle;
+    object-fit: cover;
 }
 
 .tus{
@@ -131,8 +132,8 @@
 }
 
 .post-img {
-    width: 180px;
-    height: 180px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     margin: 5px 5px 0 0;
 }

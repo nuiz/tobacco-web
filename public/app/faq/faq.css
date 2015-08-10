@@ -13,11 +13,11 @@
 }
 
 .txtAns {
+    padding: 0 20px;
     padding-top: 130px;
-    width: 400px;
     text-align: center;
     font-size: 32px;
-    color: #F49647;
+    color: white;
 }
 
 .Ans_prs {
@@ -70,10 +70,10 @@
 }
 
 .Qus {
-    padding-top: 175px;
-    padding-left: 7px;
+    padding-top: 154px;
+    padding-left: 20px;
     left: 8px;
-    color: #F49647;
+    color: white;
     font-size: 21px;
 }
 

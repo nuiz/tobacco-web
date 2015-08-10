@@ -53,7 +53,8 @@ html, body {
     padding: 0;
     margin: 0;
     overflow: hidden;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'THSarabun', 'Open Sans', sans-serif;
+    background-color: #CCA266;
 }
 
 #main {
@@ -70,6 +71,7 @@ html, body {
     margin-left: -640px;
 
     -webkit-filter: blur(0px);
+    box-shadow: 0px 0px 12px 3px #333;
 }
 
 #main-nav {
@@ -137,18 +139,20 @@ html, body {
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
+    margin-top: 12px;
 }
 
 .nav-menu {
-    padding: 12px;
-    margin: 5px 0;
+    padding: 10px 0;
+    margin: 0px 0;
     display: block;
     color: white;
     text-decoration: none;
     text-align: center;
-    font-size: 22px;
-
+    font-size: 34px;
+    font-weight: bold;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    letter-spacing: 0px;
 }
 .nav-menu:hover, .nav-menu.active {
     color: #ff9600;

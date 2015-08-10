@@ -212,7 +212,7 @@
 .cat-2 {
     left: 146px;
     top: 50px;
-    background-image: url(images/icon/01.png);
+    /*background-image: url(images/icon/01.png);*/
 }
 
 .cat-2 .yellow-line {
@@ -225,14 +225,14 @@
 
 .cat-2 .name {
     bottom: 98px;
-    right: 46px;
+    left: -57px;
     text-align: right;
 }
 
 .cat-1 {
     left: 264px;
     top: 29px;
-    background-image: url(images/icon/02.png);
+    /*background-image: url(images/icon/02.png);*/
 }
 
 .cat-1 .yellow-line {
@@ -244,15 +244,16 @@
 }
 
 .cat-1 .name {
-    bottom: 173px;
-    left: -60px;
+    bottom: 172px;
+    left: 27px;
     text-align: left;
+    box-sizing: border-box;
 }
 
 .cat-11 {
     left: 364px;
     top: 75px;
-    background-image: url(images/icon/03.png);
+    /*background-image: url(images/icon/03.png);*/
 }
 
 .cat-11 .yellow-line {
@@ -265,14 +266,14 @@
 
 .cat-11 .name {
     bottom: 166px;
-    left: 46px;
+    left: 130px;
     text-align: left;
 }
 
 .cat-10 {
     left: 423px;
     top: 158px;
-    background-image: url(images/icon/04.png);
+    /*background-image: url(images/icon/04.png);*/
 }
 
 .cat-10 .yellow-line {
@@ -285,14 +286,14 @@
 
 .cat-10 .name {
     bottom: 110px;
-    left: 100px;
+    left: 115px;
     text-align: left;
 }
 
 .cat-9 {
     left: 429px;
     top: 268px;
-    background-image: url(images/icon/05.png);
+    /*background-image: url(images/icon/05.png);*/
 }
 
 .cat-9 .yellow-line {
@@ -312,7 +313,7 @@
 .cat-8 {
     left: 372px;
     top: 374px;
-    background-image: url(images/icon/06.png);
+    /*background-image: url(images/icon/06.png);*/
 }
 
 .cat-8 .yellow-line {
@@ -324,15 +325,15 @@
 }
 
 .cat-8 .name {
-    top: 119px;
-    left: 100px;
+    top: 104px;
+    left: 154px;
     text-align: left;
 }
 
 .cat-7 {
     left: 246px;
     top: 420px;
-    background-image: url(images/icon/07.png);
+    /*background-image: url(images/icon/07.png);*/
 }
 
 .cat-7 .yellow-line {
@@ -345,14 +346,14 @@
 
 .cat-7 .name {
     top: 99px;
-    right: -135px;
+    left: 122px;
     text-align: right;
 }
 
 .cat-6 {
     left: 138px;
     top: 397px;
-    background-image: url(images/icon/08.png);
+    /*background-image: url(images/icon/08.png);*/
 }
 
 .cat-6 .yellow-line {
@@ -365,14 +366,14 @@
 
 .cat-6 .name {
     top: 104px;
-    right: 46px;
+    left: -68px;
     text-align: right;
 }
 
 .cat-5 {
     left: 57px;
     top: 316px;
-    background-image: url(images/icon/09.png);
+    /*background-image: url(images/icon/09.png);*/
 }
 
 .cat-5 .yellow-line {
@@ -392,7 +393,7 @@
 .cat-4 {
     left: 34px;
     top: 215px;
-    background-image: url(images/icon/10.png);
+    /*background-image: url(images/icon/10.png);*/
 }
 
 .cat-4 .yellow-line {
@@ -412,7 +413,7 @@
 .cat-3 {
     left: 70px;
     top: 111px;
-    background-image: url(images/icon/11.png);
+    /*background-image: url(images/icon/11.png);*/
 }
 
 .cat-3 .yellow-line {
@@ -485,3 +486,94 @@
     top: 410px;
 }
 
+/*lightbox*/
+
+#overlay {
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: black;
+    opacity: 0;
+}
+
+#overlay.overlay-active{
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    opacity: .8;
+}
+
+.lightbox{
+    border-radius: 6px;
+    background: white;
+    box-shadow: 0 0 16px rgba(0, 0, 0, .4);
+    position: absolute;
+    width: 500px;
+    top: 0;
+    left: 50%;
+    margin-top: 10%;
+    margin-left: -250px;
+    z-index: 3;
+    opacity: 0;
+    display: none;
+    padding: 16px;
+    box-sizing: border-box;
+    padding-right: 0;
+}
+
+.lightbox.lightbox-active{
+    display: inline-block;
+    opacity: 1;
+}
+
+.lightbox .wrap {
+    min-height: 200px;
+    max-height: 500px;
+    padding-right: 16px;
+    overflow: auto;
+}
+
+
+.lightbox .close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    top: -5px;
+    right: -5px;
+    cursor: pointer;
+}
+
+.close-popup-btn {
+    width: 28px;
+    height: 28px;
+    background-color: red;
+    display: block;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    cursor: pointer;
+    background: url(images/close-btn.png);
+}
+
+.history-btn, .blog-btn, .phone-btn, .content-btn {
+    cursor: pointer;
+}
+
+.lightbox h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.lightbox p {
+    text-indent: 32px;
+}

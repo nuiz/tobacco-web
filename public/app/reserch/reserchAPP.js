@@ -3,6 +3,22 @@
  */
 "use strict";
 var reserchapp = angular.module('reserch', []);
+
+function startFrom (input, start) {
+    start = +start; //parse to int\
+    return input.slice(start);
+}
+
+function filterType (input, type) {
+    var list = type?
+        input.filter(function(item){
+            return item.content_type == type;
+        })
+        : input;
+
+    return list;
+}
+
 reserchapp.controller('ReserchListCtl', ['$scope', '$http', function ($scope, $http) {
     $scope.main_category = null;
     $scope.lv2_category = null;
@@ -15,6 +31,8 @@ reserchapp.controller('ReserchListCtl', ['$scope', '$http', function ($scope, $h
 
     $scope.lv2_categories = [];
     $scope.lv3_categories = [];
+
+    $scope.pagingContent = 0;
 
     $scope.backClick = function () {
         window.location.href = "?view=category";
@@ -64,7 +82,6 @@ reserchapp.controller('ReserchListCtl', ['$scope', '$http', function ($scope, $h
     $scope.fetchContents = function(){
         var url = window.config.api_url+"/content/by_category?category_id="+$scope.category.category_id;
         $http.get(url).success(function(data){
-            console.log(data);
             $scope.contents = data.data;
         });
     };
@@ -74,31 +91,28 @@ reserchapp.controller('ReserchListCtl', ['$scope', '$http', function ($scope, $h
             window.location.href = "?view=video_page&content_id="+item.content_id;
         }
         else {
-            window.location.href = "?view=book-reader&tp=tp-none&content_id="+item.content_id;
+            window.location.href = "?view=book-reader&tp=tp-none&content_id="+item.content_id+"#book5/page1";
         }
     };
 
     $scope.filterType = false;
     $scope.clickFilter = function(type){
         $scope.filterType = type;
+        $scope.pagingContent = 0;
     };
+
+    $scope.getFilterContentLength = function(){
+        var list = $scope.contents;
+        list = filterType(list, $scope.filterType);
+
+        return list.length;
+    }
 }]);
 
 reserchapp.filter('startFrom', function () {
-    return function (input, start) {
-        start = +start; //parse to int
-        return input.slice(start);
-    }
+    return startFrom;
 });
 
 reserchapp.filter('filterType', function () {
-    return function (input, type) {
-        var list = type?
-            input.filter(function(item){
-                return item.content_type == type;
-            })
-            : input;
-
-        return list;
-    }
+    return filterType;
 });

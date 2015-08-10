@@ -19,8 +19,18 @@ subpageapp.controller('SubpageListCtl', ['$scope', '$http', function ($scope, $h
     }
 
     $scope.books = [];
-    var url = window.config.api_url+"/ebook?book_type_id="+getParameterByName('book_type_id');
-    $http.get(url).success(function (data) {
-        $scope.books = data.data;
-    });
+
+    var keyword = getParameterByName('keyword');
+    if(keyword == null){
+        var url = window.config.api_url+"/ebook?book_type_id="+getParameterByName('book_type_id');
+        $http.get(url).success(function (data) {
+            $scope.books = data.data;
+        });
+    }
+    else {
+        var url = window.config.api_url+"/ebook/search?keyword="+keyword;
+        $http.get(url).success(function (data) {
+            $scope.books = data.data;
+        });
+    }
 }]);

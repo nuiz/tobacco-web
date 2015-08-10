@@ -6,9 +6,13 @@
 var app = angular.module('news-app', []);
 app.controller('NewsController', ['$scope', '$http', function ($scope, $http) {
     $scope.date = new Date();
+    $scope.dateNow = new Date();
     $scope.setMonth = function(month){
+        var now = new Date();
+        if($scope.date.getFullYear() == now.getFullYear()){
+            if(month > now.getMonth()) return;
+        }
         $scope.date.setMonth(month);
-
         $scope.getNews();
     };
     $scope.prevYear = function(){
@@ -73,6 +77,11 @@ app.controller('NewsController', ['$scope', '$http', function ($scope, $http) {
 
         $scope.fetchDisplay();
     };
+
+    setInterval(function(){
+        $scope.next();
+        $scope.$apply();
+    }, 15000);
 
     $scope.fetchDisplay = function () {
         $scope.newsPrev = $scope.news[$scope.currentNews - 1] || $scope.news[$scope.news.length - 1];

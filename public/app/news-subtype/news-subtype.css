@@ -1,5 +1,5 @@
 .blcType{
-    position: absolute;
+    /*position: absolute;
     top: 0;
     left: 202px;
     width: 600px;
@@ -13,7 +13,24 @@
     box-shadow: 0 1px 6px 2px rgba(0,0,0,0.4);
     overflow: auto;
     padding-bottom: 20px;
-    box-sizing: border-box;
+    box-sizing: border-box;*/
+      position: absolute;
+  top: 0;
+  left: 202px;
+  width: 600px;
+  height: 90%;
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
+  margin-top: 37px;
+  border-radius: 26px;
+  box-shadow: 0 1px 6px 2px rgba(0,0,0,0.4);
+  overflow: auto;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  background-color: rgb(150, 108, 66);
+  color: white;
+  font-size: 16px;
 }
 
 .blcType-bg {

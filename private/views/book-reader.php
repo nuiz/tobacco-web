@@ -1,4 +1,4 @@
-<!doctype html>
+﻿﻿<!doctype html>
 <html>
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -22,6 +22,13 @@
     <script src="pdfjs/src/display/annotation_helper.js"></script>
 
     <script src="public/app/config.js"></script>
+<script>
+window.config = {
+    nfc_auth_ip: "http://<?php echo $_SERVER["HTTP_HOST"];?>:5000",
+    api_url: "http://<?php echo $_SERVER["HTTP_HOST"];?>/tobacco"
+};
+</script>
+
     <link rel="stylesheet" href="public/app/book-reader/book-reader.css"/>
     <script src="public/app/book-reader/book-reader.js"></script>
 
@@ -37,12 +44,14 @@
     <script src="book_reader/js/onload.js"></script>
 
 
+    <link rel="stylesheet" href="public/assert/font/font.css"/>
     <!-- style css  -->
     <style>
         html,body {
             margin: 0;
             padding: 0;
             overflow:auto !important;
+            font-family: THSarabun;
         }
 
         #fb5 .fb5-bcg-book {
@@ -52,7 +61,7 @@
 
 </head>
 
-<body ng-app="book-reader" ng-controller="ReaderCtl" oncontextmenu="return false">
+<body ng-app="book-reader" ng-controller="ReaderCtl">
 
 <!-- BEGIN FLIPBOOK STRUCTURE -->
 <div id="fb5-ajax">
@@ -124,17 +133,22 @@
                 <div style="padding: 10px 30px; background: rgba(0, 0, 0, 0.258824); height: 100%;">
                     <h3>ชื่อหนังสือ</h3>
                    <p>{{book.content_name}}</p>
-                    <p>&nbsp;</p>
+                   <h3>คำอธิบาย</h3>
+                   <p>{{book.content_description}}</p>
                     <h3>ชื่อผู้แต่ง</h3>
                    <p>{{book.book_author}}</p>
-                    <p>&nbsp;</p>
+                    <h3>วันที่ตีพิมพ์</h3>
+                   <p>{{dateThai(book.book_date)}}</p>
                     <h3>วันที่เผยแพร่</h3>
-                   <p>{{book.created_at}}</p>
-                    <p>&nbsp;</p>
+                   <p>{{dateThai(book.created_at,true)}}</p>
                 </div>
             </section>
             <!-- END ABOUT -->
-
+<style>
+#fb5 #fb5-about p {
+    font-size: 1.375em;
+}
+</style>
 
             <!-- BEGIN BOOK -->
             <div id="fb5-book">
@@ -211,11 +225,12 @@
             <div class="fb5-menu" id="fb5-center">
                 <ul>
 
+                    <?php if(!isset($_COOKIE["kiosk_id"])){ ?>
                     <!-- icon download -->
                     <li>
                         <a title="DOWNLOAD" class="fb5-download" href="{{book.book_url}}" download=""></a>
                     </li>
-
+                    <?php }?>
 
                     <!-- icon_zoom_in -->
                     <li>
@@ -247,7 +262,7 @@
 
                     <!-- icon_home -->
                     <li>
-                        <a title="SHOW HOME PAGE " class="fb5-home" href="?view=e-book"></a>
+                        <a title="SHOW HOME PAGE " class="fb5-home" href="<?php echo $_SERVER['HTTP_REFERER'];?>"></a>
                     </li>
 
                 </ul>
@@ -322,7 +337,7 @@
                 <div id="fb5-menu-holder">
 
                     <ul id="fb5-slider">
-
+<!-- 
                         <li class="1">
                             <img alt="" data-src="pages/thumbs/1_.jpg">
                         </li>
@@ -361,7 +376,7 @@
 
                         <li class="12">
                             <img alt="" data-src="pages/thumbs/12_.jpg">
-                        </li>
+                        </li> -->
 
                     </ul>
 

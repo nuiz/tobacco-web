@@ -3,22 +3,6 @@
 <script src="public/app/reserch/reserchAPP.js"></script>
 <div ng-app="reserch"
      ng-controller="ReserchListCtl">
-    <div class="Tinews">
-        <div class="CaptionNews">
-            <div class="Pic_other" ng-repeat="item in contents | filterType:filterType | limitTo: 12" ng-click="contentClick(item)">
-                <div ng-if="item.content_type=='video'" class="content-thumb"
-                     ng-style="{'background-image': 'url('+item.videos[0].video_thumb_url+')'}">
-                </div>
-                <div ng-if="item.content_type=='book'" class="content-thumb"
-                     ng-style="{'background-image': 'url('+item.book_cover_url+')'}">
-                </div>
-                <div>
-                    <strong>{{item.content_name}}</strong>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="select">
         <div class="block_select">
             <div class="label_select"
@@ -54,7 +38,21 @@
 <!--            <div class="down"></div>-->
         </div>
     </div>
-    <div ng-app="reserch"
-         ng-controller="ReserchListCtl">
+    <div class="content-prev-btn" ng-hide="pagingContent <= 0" ng-click="pagingContent=pagingContent-1"></div>
+    <div class="content-next-btn" ng-hide="(pagingContent+1)*10 >= getFilterContentLength()" ng-click="pagingContent=pagingContent+1"></div>
+    <div class="Tinews">
+        <div class="CaptionNews">
+            <div class="Pic_other" ng-repeat="item in contents | filterType: filterType | startFrom: pagingContent*10 | limitTo: 10" ng-click="contentClick(item)">
+                <div ng-if="item.content_type=='video'" class="content-thumb"
+                     ng-style="{'background-image': 'url('+item.videos[0].video_thumb_url+')'}">
+                </div>
+                <div ng-if="item.content_type=='book'" class="content-thumb"
+                     ng-style="{'background-image': 'url('+item.book_cover_url+')'}">
+                </div>
+                <div style="line-height: 17px; margin-top: 10px;">
+                    <strong>{{item.content_name.length>50? item.content_name.substring(0, 50)+"...": item.content_name}}</strong>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
