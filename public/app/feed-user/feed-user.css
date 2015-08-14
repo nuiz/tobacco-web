@@ -70,7 +70,8 @@
     left: 100px;
     width: 850px;
     height: 640px;
-    background: url(images/block.jpg);
+    background-color: #fff;
+    border-radius: 25px;
     color: #141823;
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75) inset;
     box-sizing: border-box;
@@ -83,18 +84,17 @@
 }
 
 .post {
-    margin: 30px 0 0 0;
-    /*border-bottom: 1px solid #461a08;*/
-    box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.42) inset;
+    margin: 20px 0 0 0;
+    background-color: whitesmoke;
+    border-radius: 5px;
     padding: 10px;
-    background-color: rgba(203, 95, 17, 0.32);
 }
 
 .post .user-des {
-    background-image: url(images/wg-1048-sq.jpg);
+    background-color: gainsboro;
     padding: 12px 12px 0 12px;
     border-radius: 0 12px 12px 0;
-    color: whitesmoke;
+    color: #000;
     height: 50px;
 }
 
@@ -140,7 +140,11 @@
 .post .description {
     margin-top: 10px;
     color: rgb(87, 29, 29);
-    font-size: 12px;
+}
+
+.description  .ng-binding{
+    font-size: 13px;
+    word-spacing: 3px;
 }
 
 .video-wrap {
@@ -151,11 +155,11 @@
 
 .wood-bg-btn {
     border-radius: 6px;
-    background: url(images/wood-bg-btn.jpg);
+    background: darkred;;
     background-position: center;
     display: inline-block;
     padding: 10px 15px;
-    box-shadow: 1px 1px 1px 0 rgba(92, 68, 36, 0.8) inset;
+    /*box-shadow: 1px 1px 1px 0 rgba(92, 68, 36, 0.8) inset;*/
     cursor: pointer;
     color: white;
 
@@ -166,6 +170,8 @@
 a.add-comment, a.like-btn, a.unlike-btn {
     color: rgb(47, 54, 108);
     text-decoration: none;
+    font-size: 16px;
+    margin-right: 5px;
 }
 
 .form-post-section {
@@ -227,4 +233,8 @@ a.paging.active {
 
 .mCustomScrollBox {
     -webkit-filter: blur(0px);
+}
+
+.ng-binding{
+    font-size: 18px;
 }

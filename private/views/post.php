@@ -67,7 +67,7 @@
 
         <div class="comment-form" ng-if="user.account_id">
             <form ng-submit="addComment()" style="padding: 1px 20px 20px 20px;
-  margin: 0 0 0 50px;
+            border-radius: 10px;
   background: rgba(0,0,0,0.2);">
                 <div class="post comment comment-add-block">
                     <div class="user-des">

@@ -71,7 +71,8 @@
     left: 100px;
     width: 850px;
     height: 640px;
-    background: url(images/block.jpg);
+    background-color: #fff;
+    border-radius: 25px;
     color: #141823;
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75) inset;
     box-sizing: border-box;
@@ -81,21 +82,21 @@
 
 .data a {
     color: white;
+    font-size: 16px;
+    margin-right: 5px;
 }
 
 .post {
-    margin: 30px 0 0 0;
-    /*border-bottom: 1px solid #461a08;*/
-    box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.42) inset;
+    margin: 20px 0 0 0;
     padding: 10px;
-    background-color: rgba(203, 95, 17, 0.32);
+    background-color: whitesmoke;
 }
 
 .post .user-des {
-    background-image: url(images/wg-1048-sq.jpg);
+    background-color: gainsboro;
     padding: 12px 12px 0 12px;
     border-radius: 0 12px 12px 0;
-    color: whitesmoke;
+    color: #000;
     height: 50px;
 }
 
@@ -114,7 +115,7 @@
 
 .post .post-time small {
     margin-left: 8px;
-    font-size: 11px;
+    font-size: 14px;
     line-height: 25px;
 }
 
@@ -139,9 +140,13 @@
 }
 
 .post .description {
-    margin-top: 10px;
+    margin-top: 15px;
     color: rgb(87, 29, 29);
-    font-size: 12px;
+}
+
+.description  .ng-binding{
+    font-size: 13px;
+    word-spacing: 3px;
 }
 
 .video-wrap {
@@ -152,14 +157,13 @@
 
 .wood-bg-btn {
     border-radius: 6px;
-    background: url(images/wood-bg-btn.jpg);
+    background-color: darkred;
     background-position: center;
     display: inline-block;
     padding: 10px 15px;
-    box-shadow: 1px 1px 1px 0 rgba(92, 68, 36, 0.8) inset;
+    /*box-shadow: 1px 1px 1px 0 rgba(92, 68, 36, 0.8) inset;*/
     cursor: pointer;
     color: white;
-
     outline: none;
     border: none;
 }
@@ -167,21 +171,25 @@
 a.add-comment, a.like-btn, a.unlike-btn {
     color: rgb(47, 54, 108);
     text-decoration: none;
+    margin-right: 5px;
 }
 
 .form-post-section {
     margin-top: 10px;
 }
 
-.form-post-text {
-
+input[type="file"]{
+    margin: 10px 0 7px 0;
 }
 
 .post-textarea {
-    background: rgba(115, 47, 11, 0.39);
-    width: 100%;
+    background: #fff;
+    width: 98%;
     height: 80px;
     resize: none;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .form-image-thumb {
@@ -228,4 +236,16 @@ a.paging.active {
 
 .mCustomScrollBox {
     -webkit-filter: blur(0px);
+}
+
+.form-post-section button{
+    margin:5px 0;
+}
+a.wood-bg-btn:hover,
+.wood-bg-btn:hover {
+    opacity: 0.8;
+}
+
+.ng-binding{
+    font-size: 18px;
 }

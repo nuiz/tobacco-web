@@ -21,13 +21,6 @@
     padding-top: 22px;
 }
 
-.video {
-    width: 680px;
-    height: 350px;
-    background: #000000;
-    margin: 0 auto;
-}
-
 .block_admin {
     width: 690px;
     height: 255px;
@@ -118,7 +111,7 @@
 
 #video-page {
     height: 100%;
-    background: url(images/block.jpg);
+    background: #fff; 
     width: 980px;
 }
 
