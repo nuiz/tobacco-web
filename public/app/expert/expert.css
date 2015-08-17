@@ -76,28 +76,27 @@
 }
 
 .history-btn {
-    background-image: url(images/sub-icon/history.png);
+    background-image: url(images/sub-icon/ref_history.png);
     height: 40px;
     width: 40px;
     background-size: 100%;
 
     position: absolute;
-    left: 44px;
-    top: 70px;
+    left: 65px;
+    top: 45px;
 }
 
 .blog-btn {
-    background-image: url(images/sub-icon/blog.png);
+    background-image: url(images/sub-icon/ref_profile.png);
     height: 40px;
     width: 40px;
     background-size: 100%;
-
     position: absolute;
-    left: 90px;
-    top: 20px;
+    left: 130px;
+    top: 15px;
 }
 
-.phone-btn {
+/*.phone-btn {
     background-image: url(images/sub-icon/phone.png);
     height: 40px;
     width: 40px;
@@ -106,17 +105,16 @@
     position: absolute;
     left: 167px;
     top: 20px;
-}
+}*/
 
 .content-btn {
-    background-image: url(images/sub-icon/content.png);
+    background-image: url(images/sub-icon/ref_trophy.png);
     height: 40px;
     width: 40px;
     background-size: 100%;
-
     position: absolute;
-    left: 216px;
-    top: 70px;
+    left: 195px;
+    top: 45px;
 }
 
 .display-picture {
