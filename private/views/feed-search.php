@@ -21,10 +21,14 @@
         </div>
         <div class="status">
             <div class="tus" ng-if="user.account_id">
-                <a href="?view=feed-user&account_id={{user.account_id}}" style="color: white; text-decoration: none;">
+                <span>
                     <img src="{{user.picture}}" width="40" height="40" class="profile-image">
                     <?php //echo $_SESSION['user']['firstname']; ?>
                     {{user.firstname}}
+                </span>
+                |
+                <a href="?view=feed-user&account_id={{user.account_id}}" style="color: white; text-decoration: none;">
+                    ดูข้อมูลส่วนตัว
                 </a>
             </div>
         </div>

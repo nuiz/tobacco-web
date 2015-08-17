@@ -53,7 +53,7 @@ window.config = {
         <?php }?>
         <div id="main-nav2">
             <?php if(@$_SESSION['user']){?>
-            <a class="profile-btn" href="?view=feed"></a>
+            <a class="story-btn" href="?view=feed"></a>
             <a class="logout-btn" href="?view=logout&tp=tp-none"></a>
             <?php }else {?>
             <a class="login-btn" href="?view=login"></a>

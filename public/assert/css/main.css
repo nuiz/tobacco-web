@@ -94,13 +94,13 @@ html, body {
     z-index: 1;
 }
 
-#main-nav2 .profile-btn {
+#main-nav2 .story-btn {
     display: block;
-    background-image: url(images/nav/profile-icon.png);
+    background-image: url(images/nav/story-btn.png);
     width: 44px;
     height: 92px;
     position: absolute;
-    background-size: 100%;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     left: -39px;
     top: 152px;

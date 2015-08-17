@@ -50,7 +50,7 @@
                      ng-style="{'background-image': 'url('+item.book_cover_url+')'}">
                 </div>
                 <div style="line-height: 17px; margin-top: 10px;">
-                    <strong>{{item.content_name.length>50? item.content_name.substring(0, 50)+"...": item.content_name}}</strong>
+                    <strong>{{item.content_name.length>50? item.content_name.substring(0, 36)+"...": item.content_name}}</strong>
                 </div>
             </div>
         </div>

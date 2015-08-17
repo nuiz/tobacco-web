@@ -23,10 +23,14 @@
         </div>
         <div class="status">
             <div class="tus" ng-if="user.account_id">
-                <a href="?view=feed-user&account_id={{user.account_id}}" style="color: white; text-decoration: none;">
-                    <img src="{{user.picture}}" class="profile-image" width="40" height="40">
+                <span>
+                    <img src="{{user.picture}}" width="40" height="40" class="profile-image">
                     <?php //echo $_SESSION['user']['firstname']; ?>
                     {{user.firstname}}
+                </span>
+                |
+                <a href="?view=feed-user&account_id={{user.account_id}}" style="color: white; text-decoration: none;">
+                    ดูข้อมูลส่วนตัว
                 </a>
             </div>
         </div>
@@ -35,6 +39,16 @@
         </div>
     </div>
     <div class="mCustomScrollbar data" ng-controller="FeedListCtl">
+        <div class="user-profile">
+            <div class="user-profile-picture">
+                <img src="{{user.picture}}" />
+            </div>
+            <div class="user-profile-detail">
+                <div>รหัสพนักงาน: {{user.username}}</div>
+                <div>ชื่อ: {{user.firstname}} {{user.lastname}}</div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
         <div class="paging-list" ng-show="total > 0">
             หน้าที่
             <a ng-repeat="item in paging"

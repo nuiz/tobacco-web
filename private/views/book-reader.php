@@ -1,4 +1,4 @@
-﻿﻿<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -140,7 +140,7 @@ window.config = {
                     <h3>วันที่ตีพิมพ์</h3>
                    <p>{{dateThai(book.book_date)}}</p>
                     <h3>วันที่เผยแพร่</h3>
-                   <p>{{dateThai(book.created_at,true)}}</p>
+                   <p>{{dateThai(book.created_at, true)}}</p>
                 </div>
             </section>
             <!-- END ABOUT -->

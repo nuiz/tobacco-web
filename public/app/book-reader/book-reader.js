@@ -69,12 +69,13 @@ ebookapp.controller('ReaderCtl', ['$scope', '$http', function ($scope, $http) {
             }
             else {
                 var dateObject = new Date();
-                dateObject.setTime(dateInput);
+                dateObject.setTime(parseInt(dateInput) * 1000);
             }
             var date = "วันที่ "+dateObject.getDate()+" "+thMonth[dateObject.getMonth()]+" "+(dateObject.getFullYear()+543);
             var time = dateObject.getHours()+":"+dateObject.getMinutes()+" น.";
 
-            return date + " เวลา " + time;
+            //return date + " เวลา " + time;
+            return date;
         };
     })($scope);
 

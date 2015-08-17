@@ -113,12 +113,14 @@
     text-decoration: none;
     font-weight: bold;
     margin-left: 8px;
+    font-size: 24px;
+    line-height: 23px;
 }
 
 .post .post-time small {
     margin-left: 8px;
-    font-size: 11px;
-    line-height: 25px;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .video-player {
@@ -143,6 +145,12 @@
     font-size: 12px;
 }
 
+.content .ng-binding{
+    font-size: 22px;
+    color: #000;
+    font-weight: bold;
+}
+
 .video-wrap {
     margin: 10px auto 0 auto;
     text-align: center;
@@ -158,7 +166,6 @@
     box-shadow: 1px 1px 1px 0 rgba(92, 68, 36, 0.8) inset;
     cursor: pointer;
     color: white;
-
     outline: none;
     border: none;
 }
@@ -166,14 +173,20 @@
 a.add-comment, a.like-btn, a.unlike-btn {
     color: rgb(47, 54, 108);
     text-decoration: none;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.description{
+    font-weight: bold;
+}
+
+.description .ng-binding{
+    font-size: 16px;
 }
 
 .form-post-section {
     margin-top: 10px;
-}
-
-.form-post-text {
-
 }
 
 .post-textarea {
@@ -227,4 +240,23 @@ a.paging.active {
 
 .mCustomScrollBox {
     -webkit-filter: blur(0px);
+}
+
+
+.user-profile {
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+}
+
+.user-profile-picture {
+    float: left;
+    max-width: 200px;
+    min-height: 200px;
+}
+
+.user-profile-detail {
+    float: left;
+    width: 560px;
+    margin-left: 10px;
+    font-size: 22px;
 }

@@ -10,10 +10,14 @@
 <!--        <div class="search">ค้นหา</div>-->
         <div class="status">
             <div class="tus" ng-if="user.account_id">
-                <a href="?view=feed-user&account_id={{user.account_id}}" style="color: white; text-decoration: none;">
-                    <img src="{{user.picture}}" class="profile-image" width="40" height="40">
+                <span>
+                    <img src="{{user.picture}}" width="40" height="40" class="profile-image">
                     <?php //echo $_SESSION['user']['firstname']; ?>
                     {{user.firstname}}
+                </span>
+                |
+                <a href="?view=feed-user&account_id={{user.account_id}}" style="color: white; text-decoration: none;">
+                    ดูข้อมูลส่วนตัว
                 </a>
             </div>
         </div>
@@ -67,7 +71,7 @@
 
         <div class="comment-form" ng-if="user.account_id">
             <form ng-submit="addComment()" style="padding: 1px 20px 20px 20px;
-  margin: 0 0 0 50px;
+
   background: rgba(0,0,0,0.2);">
                 <div class="post comment comment-add-block">
                     <div class="user-des">

@@ -83,7 +83,7 @@
     color: #141823;
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75) inset;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 20px 20px 20px 30px;
     overflow: auto;
 }
 
@@ -92,7 +92,7 @@
 }
 
 .post {
-    margin: 40px 0 0 0;
+    margin: 20px 0 0 0;
     padding-bottom: 10px;
     border-bottom: 1px solid #461a08;
 }
@@ -112,12 +112,14 @@
     text-decoration: none;
     font-weight: bold;
     margin-left: 8px;
+    font-size: 24px;
+    line-height: 23px;
 }
 
 .post .post-time small {
     margin-left: 8px;
-    font-size: 11px;
-    line-height: 25px;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .video-player {
@@ -142,6 +144,12 @@
     font-size: 12px;
 }
 
+.content .ng-binding{
+    font-size: 22px;
+    color: #000;
+    font-weight: bold;
+}
+
 .video-wrap {
     margin: 10px auto 0 auto;
     text-align: center;
@@ -157,7 +165,7 @@
     box-shadow: 1px 1px 1px 0 rgba(92, 68, 36, 0.8) inset;
     cursor: pointer;
     color: white;
-
+    margin-top: 5px;
     outline: none;
     border: none;
 }
@@ -165,12 +173,21 @@
 a.add-comment, a.like-btn, a.unlike-btn {
     color: rgb(47, 54, 108);
     text-decoration: none;
+    font-size: 20px;
+}
+
+.description{
+    font-weight: bold;
+}
+
+.description .ng-binding{
+    font-size: 18px;
 }
 
 /** comment extend **/
-.comment {
+/*.comment {
     margin-left: 50px;
-}
+}*/
 
 .comment-add-block {
     margin-left: 0;
@@ -192,4 +209,8 @@ a.add-comment, a.like-btn, a.unlike-btn {
 
 .mCustomScrollBox {
     -webkit-filter: blur(0px);
+}
+
+textarea.ng-pristine.ng-untouched.ng-valid{
+    border: none;
 }
