@@ -29,7 +29,7 @@
                     {{user.firstname}}
                 </span>
                 |
-                <a href="?view=feed-user&account_id={{user.account_id}}" style="color: white; text-decoration: none;">
+                <a href="?view=feed-user&account_id={{user.account_id}}" style="color: #000; text-decoration: none; font-size:16px;>
                     ดูข้อมูลส่วนตัว
                 </a>
             </div>
@@ -39,17 +39,17 @@
         </div>
     </div>
     <div class="mCustomScrollbar data" ng-controller="FeedListCtl">
-        <div class="user-profile">
-            <div class="user-profile-picture">
+        <div class="user-profile" style="border-bottom:1px solid gainsboro; padding: 10px 0;">
+            <div class="user-profile-picture" style="float: left; margin-right: 20px;">
                 <img src="{{user.picture}}" />
             </div>
-            <div class="user-profile-detail">
-                <div>รหัสพนักงาน: {{user.username}}</div>
-                <div>ชื่อ: {{user.firstname}} {{user.lastname}}</div>
+            <div class="user-profile-detail" style="float: left;"">
+                <div style="margin: 10px 0;">รหัสพนักงาน: {{user.username}}</div>
+                <div style="margin: 10px 0;">ชื่อ: {{user.firstname}} {{user.lastname}}</div>
             </div>
             <div style="clear: both;"></div>
         </div>
-        <div class="paging-list" ng-show="total > 0">
+        <div class="paging-list" ng-show="total > 0" stlye="color: #000;">
             หน้าที่
             <a ng-repeat="item in paging"
                class="paging"
@@ -85,7 +85,7 @@
                 <div style="margin-top: 5px;">{{item.like_count}} คนถูกใจสิ่งนี้ {{item.comment_count}} ความคิดเห็น</div>
             </div>
         </div>
-        <div class="paging-list" ng-show="total > 0">
+        <div class="paging-list" ng-show="total > 0" style="color: #000;s">
             หน้าที่
             <a ng-repeat="item in paging"
                class="paging"

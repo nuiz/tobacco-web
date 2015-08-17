@@ -34,7 +34,7 @@
         <div class="search">
             <form action="index.php">
                 <input type="hidden" name="view" value="subpage">
-                <input type="text" name="keyword" class="search-input" required>
+                <input type="text" name="keyword" class="search-input" required style="border:none;">
             </form>
         </div>
 

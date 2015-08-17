@@ -211,8 +211,12 @@ a.paging {
 
 a.paging.active {
     background-color: #c16e26;
-    border-color: rgb(158, 93, 30);
+    border-color: none;
     color: white;
+    border-radius:5px; 
+}
+a.paging.active:hover{
+    opacity: 0.8;
 }
 
 .paging-list {

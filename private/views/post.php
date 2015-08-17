@@ -16,7 +16,7 @@
                     {{user.firstname}}
                 </span>
                 |
-                <a href="?view=feed-user&account_id={{user.account_id}}" style="color: white; text-decoration: none;">
+                <a href="?view=feed-user&account_id={{user.account_id}}" style="color: white; text-decoration: none; font-size: 16px;">
                     ดูข้อมูลส่วนตัว
                 </a>
             </div>
