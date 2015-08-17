@@ -242,3 +242,21 @@ a.paging.active:hover{
 .ng-binding{
     font-size: 18px;
 }
+
+.delete-post{
+    position: absolute;
+    right: 35px;
+    display: inline;
+}
+.delete-post a{
+    color:#000;
+    text-decoration: none;
+}
+
+.delete-post a img{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.delete-post a:hover{
+    color: rgb(47, 54, 108);
+}
