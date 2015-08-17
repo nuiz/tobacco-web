@@ -193,6 +193,23 @@ a.add-comment, a.like-btn, a.unlike-btn {
     border: none;
 }
 
+.delete-post{
+    position: absolute;
+    right: 35px;
+    display: inline;
+}
+.delete-post a{
+    color:#000;
+    text-decoration: none;
+}
+
+.delete-post a img{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.delete-post a:hover{
+    color: rgb(47, 54, 108);
+}
 
 
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {

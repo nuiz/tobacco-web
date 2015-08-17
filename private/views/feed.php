@@ -7,6 +7,14 @@
 <link rel="stylesheet" href="public/app/profile/profile.css"/>
 <script src="public/app/profile/profile.js"></script>
 
+<style type="text/css">
+
+.delete-post a:hover{
+    color: rgb(47, 54, 108) !important;;
+}
+
+</style>
+
 <div ng-app="profile" ng-controller="ProfileCtl">
     <div class="tab">
         <a class="logo" href="?view=feed"></a>
@@ -92,6 +100,8 @@
              ng-repeat="item in posts"
              ng-class="{'post-text': item.post_type=='text', 'post-video': item.post_type=='video', 'post-video': item.post_type=='image'}">
             <div class="user-des">
+                <div class="delete-post" style="position: absolute; right: 25px; display: inline;">
+                <a href="" style="color:#000; text-decoration: none;"><img src="public/app/feed-user/images.delete.png" alt="delete icon" style="vertical-align: middle; margin-right: 3px;"> ลบ </a></div>
                 <div class="user-img"><img src="{{item.user.picture}}" style="width: 38px;  height: 38px;  object-fit: cover;"></div>
                 <div class="user-name"><a href="?view=feed-user&account_id={{item.user.account_id}}">{{item.user.firstname + ' ' + item.user.lastname}}</a></div>
                 <div class="post-time"><small>{{dateThai(item.created_at)}}</small></div>
