@@ -89,6 +89,16 @@ profileapp.controller('FeedListCtl', ['$scope', '$http', function ($scope, $http
         });
     };
 
+    $scope.delete = function(item){
+        if(!confirm('คุณแน่ใจหรือไม่?')) {
+          return;
+        }
+        var url = window.config.api_url+"/blog/post/delete/"+item.post_id+"?auth_token="+window.userlogin.auth_token;
+        $http.get(url).success(function(data){
+          refreshPage();
+        });
+    };
+
     $scope.form = {};
     function PostForm(){}
     PostForm.prototype.formshow = false;
