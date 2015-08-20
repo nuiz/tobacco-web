@@ -41,6 +41,7 @@ border: mome;">
       </div>
   </div>
     <div class="mCustomScrollbar data" ng-controller="FeedListCtl">
+        <div class="buttonleft"><img src="img/icon_black.png"> กลับไปหน้า{{backText}}</div>
         <div class="user-profile" style="border-bottom:1px solid gainsboro; padding: 10px 0;">
             <div class="user-profile-picture" style="float: left; margin-right: 20px;">
                 <img src="{{user.picture}}" />
@@ -102,9 +103,4 @@ border: mome;">
         </div>
     </div>
     <div class="homepage" ng-click="homeClick()"></div>
-<<<<<<< HEAD
-    <div class="expertBack"></div>
 </div>
-=======
-</div>
->>>>>>> origin/master

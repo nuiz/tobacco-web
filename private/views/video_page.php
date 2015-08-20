@@ -103,7 +103,7 @@
 </style>
 
 <div id="video-page" ng-app="video-page" ng-controller="VideoPageCtrl">
-<div class="buttonleft"><img src="img/icongrp.png"> กลับไปหมวดหมู่</div>
+<div class="buttonleft"><img src="public/app/video_page/images/icongrp.png"> กลับไปหมวดหมู่</div>
     <div class="blockleft">
         <div class="video">
             <video width="100%" height="100%" id="videoPlayer" controls></video>
@@ -131,6 +131,6 @@
             </div>
         </div>
     </div>
-	
+
     <div class="categoryBack"></div>
 </div>

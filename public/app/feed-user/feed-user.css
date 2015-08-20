@@ -270,3 +270,15 @@ a.paging.active:hover{
     background:url(images/back.png) no-repeat;
     background-size: 100%;
 }
+
+.buttonleft {
+	font-size:20px;
+	border-bottom:1px solid whitesmoke;
+	padding-bottom: 10px;
+  float: right;
+}
+.buttonleft img{
+  width: 20px;
+  height: 20px;
+  margin-right: 2px;
+}

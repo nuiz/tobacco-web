@@ -39,9 +39,9 @@
         </div>
     </div>
     <!-- end topbar -->
-    
+
     <div class="data" ng-controller="PostCtl">
-    <div class="buttonleft"><img src="img/icon_black.png"> กลับไปหน้าหลัก</div>
+        <div class="buttonleft"><img src="img/icon_black.png"> กลับไปหน้าหลัก</div>
         <div class="post"
              ng-class="{'post-text': item.post_type=='text', 'post-video': item.post_type=='video', 'post-video': item.post_type=='image'}">
             <div class="user-des">
@@ -115,6 +115,6 @@
 </div>
 <<<<<<< HEAD
 
- 
+
 =======
 >>>>>>> origin/master
