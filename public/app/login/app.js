@@ -3,10 +3,26 @@
  */
 var loginapp = angular.module('loginApp', []);
 loginapp.controller('LoginCTL', ['$scope', '$http', function ($scope, $http) {
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1);
+            if (c.indexOf(name) == '0') {
+              return c.substring(name.length,c.length);
+            }
+        }
+        return "";
+    }
+
     $scope.submitLogin = function(){
+        var kiosk_id = getCookie('kiosk_id');
+        var login_url = window.config.api_url+'/login?client_type=' + (kiosk_id == ""? "pc": "kiosk");
+        
         var req1 = {
             method: 'POST',
-            url: window.config.api_url+'/login',
+            url: login_url,
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
@@ -28,7 +44,7 @@ loginapp.controller('LoginCTL', ['$scope', '$http', function ($scope, $http) {
                 };
 
                 $http(req).success(function(){
-                    window.location.href="?view=feed"
+                    window.location.href="?view=feed";
                 });
             }
             else {

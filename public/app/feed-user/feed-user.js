@@ -66,7 +66,12 @@ profileapp.controller('FeedListCtl', ['$scope', '$http', function ($scope, $http
                 console.log($scope.paging, $scope.total);
             });
     }
-    onUserReady(refreshPage);
+    onUserReady(function() {
+      $http.get(window.config.api_url+'/account/'+getParameterByName('account_id')).success(function(data){
+          $scope.userProfile = data;
+      });
+      refreshPage();
+    });
 
     $scope.setCurrentPage = function(cur){
         $scope.currentPage = cur;

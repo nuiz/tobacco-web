@@ -6,20 +6,22 @@
 <div ng-app="center" ng-controller="CenterListCtl">
     <div class="LabelKM">
         <div class="txtLabel" ng-hide="itemshow">
-            <div class="clickcenter">คลิกเพื่อส่งจดหมายหาศูนย์การเรียนรู้ KM</div>
+            <!-- <div class="clickcenter">คลิกเพื่อส่งจดหมายหาศูนย์การเรียนรู้ KM</div> -->
             <div class="blockpic">
                 <a class="kmPic" ng-click="centershow(center)"
                    ng-repeat="center in centers | startFrom:currentPage*pageSize | limitTo: 4" href="#">
-                    <div class="kmMsg">
-                    </div>
+                    <!-- <div class="kmMsg">
+                    </div> -->
+                    <div class="left-leaf"></div>
+                    <div class="right-leaf"></div>
                     <div class="kmText">
                         {{center.kmcenter_name}}
                     </div>
                 </a>
 
                 <div class="line"></div>
-                <button class="buttonleft" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"></button>
-                <button class="buttonright" ng-disabled="currentPage >= (centers.length/pageSize) - 1"
+                <button class="buttonleft" ng-disabled="currentPage == 0" ng-hide="currentPage == 0" ng-click="currentPage=currentPage-1"></button>
+                <button class="buttonright" ng-disabled="currentPage >= (centers.length/pageSize) - 1" ng-hide="currentPage >= (centers.length/pageSize) - 1"
                         ng-click="currentPage=currentPage+1"></button>
             </div>
         </div>

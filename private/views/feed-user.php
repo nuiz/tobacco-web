@@ -44,11 +44,11 @@ border: mome;">
         <div class="buttonleft"><img src="img/icon_black.png"> กลับไปหน้า{{backText}}</div>
         <div class="user-profile" style="border-bottom:1px solid gainsboro; padding: 10px 0;">
             <div class="user-profile-picture" style="float: left; margin-right: 20px;">
-                <img src="{{user.picture}}" />
+                <img src="{{userProfile.picture}}" />
             </div>
-            <div class="user-profile-detail" style="float: left;"">
-                <div style="margin: 10px 0;">รหัสพนักงาน: {{user.username}}</div>
-                <div style="margin: 10px 0;">ชื่อ: {{user.firstname}} {{user.lastname}}</div>
+            <div class="user-profile-detail" style="float: left;">
+                <div style="margin: 10px 0;">รหัสพนักงาน: {{userProfile.username}}</div>
+                <div style="margin: 10px 0;">ชื่อ: {{userProfile.firstname}} {{userProfile.lastname}}</div>
             </div>
             <div style="clear: both;"></div>
         </div>

@@ -51,7 +51,7 @@
                   </a>
                 </div>
                 <div class="user-img"><img src="{{item.user.picture}}" style="width: 38px;  height: 38px;  object-fit: cover;"></div>
-                <div class="user-name"><a href="#">{{item.user.firstname + ' ' + item.user.lastname}}</a></div>
+                <div class="user-name"><a href="?view=feed-user&account_id={{item.user.account_id}}">{{item.user.firstname + ' ' + item.user.lastname}}</a></div>
                 <div class="post-time"><small>{{dateThai(item.created_at)}}</small></div>
             </div>
             <div class="content">
@@ -85,7 +85,7 @@
                       </a>
                     </div>
                     <div class="user-img"><img src="{{c.user.picture}}" style="width: 38px;  height: 38px;  object-fit: cover;"></div>
-                    <div class="user-name"><a href="#">{{c.user.firstname + ' ' + c.user.lastname}}</a></div>
+                    <div class="user-name"><a href="?view=feed-user&account_id={{c.user.account_id}}">{{c.user.firstname + ' ' + c.user.lastname}}</a></div>
                     <div class="post-time"><small>{{dateThai(c.created_at)}}</small></div>
                 </div>
                 <div class="content">

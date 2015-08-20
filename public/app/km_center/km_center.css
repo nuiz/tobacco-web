@@ -80,6 +80,36 @@
     height: 128px;
     background: url(images/13.png);
     background-size: 100%;
+    position: relative;
+}
+
+.kmPic .left-leaf {
+    background-image: url(images/active-left.png);
+    width: 26px;
+    height: 33px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    visibility: hidden;
+    position: absolute;
+    top: 60px;
+    left: -34px;
+}
+
+.kmPic .right-leaf {
+    background-image: url(images/active-right.png);
+    width: 26px;
+    height: 33px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    visibility: hidden;
+    position: absolute;
+    top: 60px;
+    right: -33px;
+}
+
+.kmPic:hover .right-leaf,
+.kmPic:hover .left-leaf {
+  visibility: visible;
 }
 
 .kmMsg {
@@ -114,7 +144,7 @@
 
 .blockpic{
     position: absolute;
-    top: 140px;
+    top: 80px;
     left: 60px;
     width: 779px;
     height: 303px;
@@ -140,7 +170,7 @@
 }
 .back{
     position: absolute;
-    bottom: 20px;
+    bottom: 58px;
     right: 172px;
     width: 100px;
     height: 28px;
