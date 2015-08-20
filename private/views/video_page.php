@@ -86,12 +86,27 @@
         height: 75px;
         margin: 10px 0px 15px 5px;
     }
+.buttonleft {
+	font-size:19px;
+	border-bottom:1px solid #fff;
+	padding-bottom: 10px;
+	padding: 20px 0 15px 0;
+    margin: 0 20px;
+}
+
+.buttonleft img{
+	width:20px;
+	height:20px;
+	vertical-align:middle;
+	margin-right:5px;
+}
 </style>
 
 <div id="video-page" ng-app="video-page" ng-controller="VideoPageCtrl">
+<div class="buttonleft"><img src="img/icongrp.png"> กลับไปหมวดหมู่</div>
     <div class="blockleft">
         <div class="video">
-            <video width="100%" height="100%" id="videoPlayer" controls=""></video>
+            <video width="100%" height="100%" id="videoPlayer" controls></video>
         </div>
         <div class="block_admin">
             <div class="video-info">
@@ -116,5 +131,6 @@
             </div>
         </div>
     </div>
-
+	
+    <div class="categoryBack"></div>
 </div>

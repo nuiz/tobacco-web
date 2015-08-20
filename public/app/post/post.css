@@ -241,3 +241,14 @@ a.add-comment, a.like-btn, a.unlike-btn {
 .ng-binding{
     font-size: 18px;
 }
+.buttonleft {
+	font-size:20px;
+	border-bottom:1px solid whitesmoke;
+	padding-bottom: 10px;
+}
+.buttonleft img{
+	width:20px;
+	height:20px;
+	vertical-align:middle;
+	margin-right:5px;
+}
