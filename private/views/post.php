@@ -7,18 +7,31 @@
     <!-- topbar -->
     <div class="tab">
         <a class="logo" href="?view=feed"></a>
-<!--        <div class="search">ค้นหา</div>-->
+        <div class="search">
+            <form action="index.php">
+                <input type="hidden" name="view" value="feed-search">
+                <input type="text" name="keyword" placeholder="ค้นหาพนักงาน" style="  width: 391px;
+  height: 35px;
+  display: block;
+  outline: none;
+  border: none;
+  background: none;
+  padding-left: 10px;
+  border: mome;">
+            </form>
+        </div>
         <div class="status">
             <div class="tus" ng-if="user.account_id">
                 <span>
+
+                  <a href="?view=feed-user&account_id={{user.account_id}}" style="color: white; text-decoration: none; font-size: 16px;">
+                    ดูข้อมูลของ
                     <img src="{{user.picture}}" width="40" height="40" class="profile-image">
                     <?php //echo $_SESSION['user']['firstname']; ?>
                     {{user.firstname}}
+                  </a>
                 </span>
-                |
-                <a href="?view=feed-user&account_id={{user.account_id}}" style="color: white; text-decoration: none; font-size: 16px;">
-                    ดูข้อมูลส่วนตัว
-                </a>
+                <span class="user-point-display">({{user.point}})</span>
             </div>
         </div>
         <div class="icon">
@@ -32,7 +45,11 @@
         <div class="post"
              ng-class="{'post-text': item.post_type=='text', 'post-video': item.post_type=='video', 'post-video': item.post_type=='image'}">
             <div class="user-des">
-                <div class="delete-post"><a href=""><img src="img/delete.png" alt="delete icon" style="width:20px; height:20px;"> ลบ </a></div>
+                <div class="delete-post" ng-hide="item.user.account_id!=user.account_id">
+                  <a href="" ng-click="delete(item)">
+                    <img src="img/delete.png" alt="delete icon" style="width:20px; height:20px;"> ลบ
+                  </a>
+                </div>
                 <div class="user-img"><img src="{{item.user.picture}}" style="width: 38px;  height: 38px;  object-fit: cover;"></div>
                 <div class="user-name"><a href="#">{{item.user.firstname + ' ' + item.user.lastname}}</a></div>
                 <div class="post-time"><small>{{dateThai(item.created_at)}}</small></div>
@@ -62,7 +79,11 @@
             <div class="post comment"
                 ng-repeat="c in comments">
                 <div class="user-des">
-                    <div class="delete-post"><a href=""><img src="img/delete.png" alt="delete icon" style="width:20px; height:20px;"> ลบ </a></div>
+                    <div class="delete-post" ng-hide="c.user.account_id!=user.account_id">
+                      <a href="" ng-click="deleteComment(c)">
+                        <img src="img/delete.png" alt="delete icon" style="width:20px; height:20px;"> ลบ
+                      </a>
+                    </div>
                     <div class="user-img"><img src="{{c.user.picture}}" style="width: 38px;  height: 38px;  object-fit: cover;"></div>
                     <div class="user-name"><a href="#">{{c.user.firstname + ' ' + c.user.lastname}}</a></div>
                     <div class="post-time"><small>{{dateThai(c.created_at)}}</small></div>
@@ -92,5 +113,8 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 
  
+=======
+>>>>>>> origin/master

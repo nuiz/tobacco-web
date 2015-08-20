@@ -7,37 +7,39 @@
 <link rel="stylesheet" href="public/app/feed-user/feed-user.css"/>
 <script src="public/app/feed-user/feed-user.js"></script>
 <div ng-app="profile" ng-controller="ProfileCtl">
-    <div class="tab">
-        <a class="logo" href="?view=feed"></a>
-        <div class="search">
-            <form action="index.php">
-                <input type="hidden" name="view" value="feed-search">
-                <input type="text" name="keyword" placeholder="ค้นหาพนักงาน" style="  width: 391px;
-      height: 35px;
-      display: block;
-      outline: none;
-      border: none;
-      background: none;
-      padding-left: 10px;">
-            </form>
-        </div>
-        <div class="status">
-            <div class="tus" ng-if="user.account_id">
-                <span>
-                    <img src="{{user.picture}}" width="40" height="40" class="profile-image">
-                    <?php //echo $_SESSION['user']['firstname']; ?>
-                    {{user.firstname}}
-                </span>
-                |
-                <a href="?view=feed-user&account_id={{user.account_id}}" style="color: #000; text-decoration: none; font-size:16px;>
-                    ดูข้อมูลส่วนตัว
+  <div class="tab">
+      <a class="logo" href="?view=feed"></a>
+      <div class="search">
+          <form action="index.php">
+              <input type="hidden" name="view" value="feed-search">
+              <input type="text" name="keyword" placeholder="ค้นหาพนักงาน" style="  width: 391px;
+height: 35px;
+display: block;
+outline: none;
+border: none;
+background: none;
+padding-left: 10px;
+border: mome;">
+          </form>
+      </div>
+      <div class="status">
+          <div class="tus" ng-if="user.account_id">
+              <span>
+
+                <a href="?view=feed-user&account_id={{user.account_id}}" style="color: white; text-decoration: none; font-size: 16px;">
+                  ดูข้อมูลของ
+                  <img src="{{user.picture}}" width="40" height="40" class="profile-image">
+                  <?php //echo $_SESSION['user']['firstname']; ?>
+                  {{user.firstname}}
                 </a>
-            </div>
-        </div>
-        <div class="icon">
-            <!-- <div class="icon-setting"></div> -->
-        </div>
-    </div>
+              </span>
+              <span class="user-point-display">({{user.point}})</span>
+          </div>
+      </div>
+      <div class="icon">
+          <!-- <div class="icon-setting"></div> -->
+      </div>
+  </div>
     <div class="mCustomScrollbar data" ng-controller="FeedListCtl">
         <div class="user-profile" style="border-bottom:1px solid gainsboro; padding: 10px 0;">
             <div class="user-profile-picture" style="float: left; margin-right: 20px;">
@@ -60,7 +62,11 @@
              ng-repeat="item in posts"
              ng-class="{'post-text': item.post_type=='text', 'post-video': item.post_type=='video', 'post-video': item.post_type=='image'}">
             <div class="user-des">
-                <div class="delete-post"><a href=""><img src="img/delete.png" alt="delete icon" style="width:20px; height:20px;"> ลบ </a></div>
+                <div class="delete-post">
+                  <a href="" ng-click="delete(item)">
+                    <img src="img/delete.png" alt="delete icon" style="width:20px; height:20px;"> ลบ
+                  </a>
+                </div>
                 <div class="user-img"><img src="{{item.user.picture}}" style="width: 38px;  height: 38px;  object-fit: cover;"></div>
                 <div class="user-name"><a href="?view=feed-user&account_id={{item.user.account_id}}">{{item.user.firstname + ' ' + item.user.lastname}}</a></div>
                 <div class="post-time"><small>{{dateThai(item.created_at)}}</small></div>
@@ -96,5 +102,9 @@
         </div>
     </div>
     <div class="homepage" ng-click="homeClick()"></div>
+<<<<<<< HEAD
     <div class="expertBack"></div>
 </div>
+=======
+</div>
+>>>>>>> origin/master

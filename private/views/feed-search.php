@@ -11,25 +11,27 @@
             <form action="index.php">
                 <input type="hidden" name="view" value="feed-search">
                 <input type="text" name="keyword" placeholder="ค้นหาพนักงาน" style="  width: 391px;
-      height: 35px;
-      display: block;
-      outline: none;
-      border: none;
-      background: none;
-      padding-left: 10px;">
+  height: 35px;
+  display: block;
+  outline: none;
+  border: none;
+  background: none;
+  padding-left: 10px;
+  border: mome;">
             </form>
         </div>
         <div class="status">
             <div class="tus" ng-if="user.account_id">
                 <span>
+
+                  <a href="?view=feed-user&account_id={{user.account_id}}" style="color: white; text-decoration: none; font-size: 16px;">
+                    ดูข้อมูลของ
                     <img src="{{user.picture}}" width="40" height="40" class="profile-image">
                     <?php //echo $_SESSION['user']['firstname']; ?>
                     {{user.firstname}}
+                  </a>
                 </span>
-                |
-                <a href="?view=feed-user&account_id={{user.account_id}}" style="color: white; text-decoration: none;">
-                    ดูข้อมูลส่วนตัว
-                </a>
+                <span class="user-point-display">({{user.point}})</span>
             </div>
         </div>
         <div class="icon">
