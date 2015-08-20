@@ -60,7 +60,7 @@
              ng-repeat="item in posts"
              ng-class="{'post-text': item.post_type=='text', 'post-video': item.post_type=='video', 'post-video': item.post_type=='image'}">
             <div class="user-des">
-                <div class="delete-post"><a href=""><img src="../../img/delete.png" alt="delete icon"> ลบ </a></div>
+                <div class="delete-post"><a href=""><img src="img/delete.png" alt="delete icon" style="width:20px; height:20px;"> ลบ </a></div>
                 <div class="user-img"><img src="{{item.user.picture}}" style="width: 38px;  height: 38px;  object-fit: cover;"></div>
                 <div class="user-name"><a href="?view=feed-user&account_id={{item.user.account_id}}">{{item.user.firstname + ' ' + item.user.lastname}}</a></div>
                 <div class="post-time"><small>{{dateThai(item.created_at)}}</small></div>
