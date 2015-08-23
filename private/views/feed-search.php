@@ -31,7 +31,7 @@
                     {{user.firstname}}
                   </a>
                 </span>
-                <span class="user-point-display">({{user.point}})</span>
+                <span class="user-point-display">(คะแนนสะสม {{user.point}})</span>
             </div>
         </div>
         <div class="icon">
@@ -39,7 +39,7 @@
         </div>
     </div>
     <!-- end topbar -->
-    <div class="data" ng-controller="SearchUserCtl" style="background: rgb(155, 106, 31);">
+    <div class="data" ng-controller="SearchUserCtl">
         <div>
             <div ng-repeat="item in search_users" style="margin-top: 10px;">
                 <a href="?view=feed-user&account_id={{item.account_id}}" style="text-decoration: none;">

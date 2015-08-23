@@ -5,105 +5,8 @@
 <script src="bower_components/angularjs/angular.min.js"></script>
 <script src="public/app/video_page/video_page.js"></script>
 
-<style type="text/css">
-    #video-page{
-        background: #f1f1f1;
-        background-size: 100%;
-    }
-    .blockleft{
-        width: 680px;
-    }
-    .video{
-        height: 350px;
-        width: 640px;
-        margin: 0 20px;
-        padding: 8px 0;
-        background:#000;
-    }
-    .list_video{
-        background:#fff;
-        height: 355px;
-        padding: 5px;
-    }
-
-    .text{
-        width: 135px;
-        padding-top: 10px;
-    }
-    .video-info{
-        background: #fff;
-        margin: 0 20px;
-        width: 640px;
-        color: #000;
-        min-height: 180px;
-    }
-    .txt_admin{
-        color: #000;
-        font-size: 28px;
-        padding: 5px 0 10px 0;
-        border-bottom: 1px solid #e2e2e2;
-        margin-right: 10px;
-    }
-    .txt_other,
-    .txt_report{
-        color: dimgray;
-        margin-top: 5px;
-        padding-right: 10px;
-        font-size: 16px;
-    }
-    .txt_report{
-        font-size: 20px;
-    }
-    .test{
-        margin: 0 20px;
-        width: 630px;
-        position: relative;
-        top: 40px;
-    }
-    .hr{
-        border-bottom: 2px solid darkred;
-        position: relative;
-        top: 0px;
-        width: 525px;
-    }
-    a.wood-bg-btn{
-        background: darkred;
-        position: relative;
-        top: -20px;
-        right: -5px;
-        font-size: 20px;
-        padding-top: 9px;
-    }
-    a.wood-bg-btn:hover{
-        opacity: 0.8;
-    }
-    .list_video .text{
-        font-size: 20px;
-    }
-    .list{
-        border-bottom: 1px solid #e2e2e2;
-        padding-bottom: 5px;
-        height: 75px;
-        margin: 10px 0px 15px 5px;
-    }
-.buttonleft {
-	font-size:19px;
-	border-bottom:1px solid #fff;
-	padding-bottom: 10px;
-	padding: 20px 0 15px 0;
-    margin: 0 20px;
-}
-
-.buttonleft img{
-	width:20px;
-	height:20px;
-	vertical-align:middle;
-	margin-right:5px;
-}
-</style>
-
 <div id="video-page" ng-app="video-page" ng-controller="VideoPageCtrl">
-<div class="buttonleft"><img src="public/app/video_page/images/icongrp.png"> กลับไปหมวดหมู่</div>
+<div class="buttonleft"><a href="{{backHref}}" style="color: inherit; text-decoration: none;"><img src="public/app/video_page/images/icongrp.png"> กลับไปหมวดหมู่</a></div>
     <div class="blockleft">
         <div class="video">
             <video width="100%" height="100%" id="videoPlayer" controls></video>
@@ -112,6 +15,9 @@
             <div class="video-info">
                 <div class="txt_admin">{{content.content_name}} ({{videoShow.video_name}})</div>
     <!--            <div class="txt_grp">หมวดหมู่ ความรู้ทั่วไป</div>-->
+                <div class="txt_other">
+                  <a href="{{videoShow.video_url}}" download style="color: inherit; text-descoration: none;">Download</a>
+                </div>
                 <div class="txt_other">2 ก.พ. 58</div>
                 <div class="txt_report">{{content.content_description}}</div>
             </div>

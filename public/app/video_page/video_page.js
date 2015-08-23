@@ -17,6 +17,16 @@ app.controller("VideoPageCtrl", ['$scope', '$http', function($scope, $http){
     $http.get(window.config.api_url+'/content/' + getParameterByName('content_id')).success(function (data) {
         $scope.content = data;
         $scope.displayVideo(data.videos[0]);
+
+        $http.get(window.config.api_url+'/category/'+$scope.content.category_id).success(function(data){
+            var fnGetParent = function(obj) {
+              if(obj.parent) {
+                return fnGetParent(obj.parent);
+              }
+              return obj.category_id;
+            };
+            $scope.backHref = "?view=reserch&tp=tp-blank&id=" + fnGetParent(data);
+        });
     });
 
     $scope.displayVideo = function(item){

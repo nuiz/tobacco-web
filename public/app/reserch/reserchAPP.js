@@ -59,7 +59,7 @@ reserchapp.controller('ReserchListCtl', ['$scope', '$http', function ($scope, $h
             $scope.lv2_categories = data.data;
             $scope.lv3_categories = [];
             if($scope.lv2_categories.length > 0 && firstBeforeLv2){
-                $scope.lv2Click($scope.lv2_categories[0].category_id);
+                $scope.lv2Click($scope.lv2_categories[0]);
                 firstBeforeLv2 = false;
             }
         });

@@ -42,7 +42,7 @@
                     {{user.firstname}}
                   </a>
                 </span>
-                <span class="user-point-display">({{user.point}})</span>
+                <span class="user-point-display">(คะแนนสะสม {{user.point}})</span>
             </div>
         </div>
         <div class="icon">

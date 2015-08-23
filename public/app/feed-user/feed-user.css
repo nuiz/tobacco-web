@@ -277,6 +277,11 @@ a.paging.active:hover{
 	padding-bottom: 10px;
   float: right;
 }
+
+.buttonleft a {
+  color: inherit;
+  text-decoration: none;
+}
 .buttonleft img{
   width: 20px;
   height: 20px;

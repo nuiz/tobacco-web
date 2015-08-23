@@ -73,6 +73,13 @@ profileapp.controller('FeedListCtl', ['$scope', '$http', function ($scope, $http
       refreshPage();
     });
 
+    $scope.backText = "หลัก";
+    $scope.backHref = document.referrer;
+    if(/(view=expert)/.test(document.referrer)) {
+      $scope.backText = "ผู้เชี่ยวชาญ";
+      $scope.backHref = document.referrer;
+    }
+
     $scope.setCurrentPage = function(cur){
         $scope.currentPage = cur;
         refreshPage();

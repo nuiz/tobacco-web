@@ -79,7 +79,7 @@
     left: 100px;
     width: 850px;
     height: 640px;
-    background: url(images/block.jpg);
+    background: white;
     color: #141823;
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75) inset;
     box-sizing: border-box;
@@ -88,7 +88,7 @@
 }
 
 .data a {
-    color: white;
+    color: inherit;
 }
 
 .post {

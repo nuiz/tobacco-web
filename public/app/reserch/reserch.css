@@ -450,6 +450,7 @@
     width: 136px;
     height: 136px;
     background-size: cover;
+    background-position: center;
 }
 
 .filter-btn {

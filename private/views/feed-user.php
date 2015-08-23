@@ -33,7 +33,7 @@ border: mome;">
                   {{user.firstname}}
                 </a>
               </span>
-              <span class="user-point-display">({{user.point}})</span>
+              <span class="user-point-display">(คะแนนสะสม {{user.point}})</span>
           </div>
       </div>
       <div class="icon">
@@ -41,7 +41,7 @@ border: mome;">
       </div>
   </div>
     <div class="mCustomScrollbar data" ng-controller="FeedListCtl">
-        <div class="buttonleft"><img src="img/icon_black.png"> กลับไปหน้า{{backText}}</div>
+        <div class="buttonleft"><a href="{{backHref}}"><img src="img/icon_black.png"> กลับไปหน้า{{backText}}</a></div>
         <div class="user-profile" style="border-bottom:1px solid gainsboro; padding: 10px 0;">
             <div class="user-profile-picture" style="float: left; margin-right: 20px;">
                 <img src="{{userProfile.picture}}" />

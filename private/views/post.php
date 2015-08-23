@@ -31,7 +31,7 @@
                     {{user.firstname}}
                   </a>
                 </span>
-                <span class="user-point-display">({{user.point}})</span>
+                <span class="user-point-display">(คะแนนสะสม {{user.point}})</span>
             </div>
         </div>
         <div class="icon">
@@ -41,7 +41,7 @@
     <!-- end topbar -->
 
     <div class="data" ng-controller="PostCtl">
-        <div class="buttonleft"><img src="img/icon_black.png"> กลับไปหน้าหลัก</div>
+        <div class="buttonleft"><a href="?view=feed"><img src="img/icon_black.png"> กลับไปหน้าหลัก</a></div>
         <div class="post"
              ng-class="{'post-text': item.post_type=='text', 'post-video': item.post_type=='video', 'post-video': item.post_type=='image'}">
             <div class="user-des">

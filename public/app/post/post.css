@@ -246,6 +246,10 @@ a.add-comment, a.like-btn, a.unlike-btn {
 	border-bottom:1px solid whitesmoke;
 	padding-bottom: 10px;
 }
+.buttonleft a {
+  color: #333333;
+  text-decoration: none;
+}
 .buttonleft img{
   width: 20px;
   height: 20px;
