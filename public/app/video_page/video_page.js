@@ -33,4 +33,29 @@ app.controller("VideoPageCtrl", ['$scope', '$http', function($scope, $http){
         $scope.videoShow = item;
         $('#videoPlayer').attr('src', item.video_url).get(0).play();
     };
+
+    (function($scope){
+        var thMonth = [
+            "มกราคม",
+            "กุมภาพันธ์",
+            "มีนาคม",
+            "เมษายน",
+            "พฤษภาคม",
+            "มิถุนายน",
+            "กรกฎาคม",
+            "สิงหาคม",
+            "กันยายนน",
+            "ตุลาคม",
+            "พฤจิกายน",
+            "ธันวาคม"
+        ];
+
+        $scope.dateThai = function(dateInput){
+            var dateObject = new Date(dateInput * 1000);
+            var date = "วันที่ "+dateObject.getDate()+" "+thMonth[dateObject.getMonth()]+" "+(dateObject.getFullYear()+543);
+            var time = dateObject.getHours()+":"+dateObject.getMinutes()+" น.";
+
+            return date + " เวลา " + time;
+        };
+    })($scope);
 }]);

@@ -16,9 +16,12 @@
                 <div class="txt_admin">{{content.content_name}} ({{videoShow.video_name}})</div>
     <!--            <div class="txt_grp">หมวดหมู่ ความรู้ทั่วไป</div>-->
                 <div class="txt_other">
+
+                </div>
+                <div class="txt_other">
+                  {{dateThai(content.created_at)}} ({การเข้าชม {{content.view_count}} ครั้ง)
                   <a href="{{videoShow.video_url}}" download style="color: inherit; text-descoration: none;">Download</a>
                 </div>
-                <div class="txt_other">2 ก.พ. 58</div>
                 <div class="txt_report">{{content.content_description}}</div>
             </div>
             <div class="test"ng-show="content.question_count!=0" >
