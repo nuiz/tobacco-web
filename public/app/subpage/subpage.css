@@ -11,7 +11,12 @@
     background: url(images/labelebook.png);
     background-size: 100%;
 }
-
+p.text-subject{
+	color: #fce6ab;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 45px;
+}
 .search {
     position: absolute;
     top: 45px;

@@ -5,7 +5,7 @@
 <div ng-app="subpage" ng-controller="SubpageListCtl">
 <div>
     <div class="bgSubPage"></div>
-    <div class="label_book"></div>
+    <div class="label_book"><p class="text-subject">หนังสือ</p></div>
     <!--<div class="search"></div>-->
     <div class="back_home" ng-click="subpageClick()"></div>
         <div class="category">

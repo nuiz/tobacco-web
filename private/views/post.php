@@ -47,7 +47,7 @@
             <div class="user-des">
                 <div class="delete-post" ng-hide="item.user.account_id!=user.account_id">
                   <a href="" ng-click="delete(item)">
-                    <img src="img/delete.png" alt="delete icon" style="width:20px; height:20px;"> ลบ
+                    <img src="img/delete.png" alt="delete icon" style="width:15px; height:15px;"> ลบ
                   </a>
                 </div>
                 <div class="user-img"><img src="{{item.user.picture}}" style="width: 38px;  height: 38px;  object-fit: cover;"></div>

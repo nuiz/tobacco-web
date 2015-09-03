@@ -19,7 +19,7 @@
 
                 </div>
                 <div class="txt_other">
-                  {{dateThai(content.created_at)}} ({การเข้าชม {{content.view_count}} ครั้ง)
+                  {{dateThai(content.created_at)}} (การเข้าชม {{content.view_count}} ครั้ง)
                   <a href="{{videoShow.video_url}}" download style="color: inherit; text-descoration: none;">Download</a>
                 </div>
                 <div class="txt_report">{{content.content_description}}</div>

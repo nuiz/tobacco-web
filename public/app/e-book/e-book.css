@@ -261,6 +261,7 @@
     height: 80px;
     background: url(images/Britny.png);
     background-size: cover;
+	margin-bottom:70px;
 }
 
 .b_shf {
@@ -283,7 +284,7 @@
 
 .shelf_small {
     position: absolute;
-    top: 320px;
+    top: 350px;
     left: 30px;
     width: 190px;
     height: 35px;
@@ -375,3 +376,38 @@
     font-size: 38px;
     padding-top: 16px;
 }
+
+/* button */
+.buttonleft {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    width: 40px;
+    height: 40px;
+    background: url(../km_center/images/no.png);
+    background-size: 100%;
+    border: none;
+    box-shadow: none;
+}
+
+.buttonright {
+    position: absolute;
+    top: 50%;
+    right: 28%;
+    width: 40px;
+    height: 40px;
+    background: url(../km_center/images/rightno.png);
+    background-size: 100%;
+    border: none;
+    box-shadow: none;
+}
+
+/* ribbbon */
+.icon-recom{
+	background:url(images/ribbon_red.gif) no-repeat;
+	background-position:top right;
+	position:absolute;
+	width:50px;
+	height:50px;
+}
+

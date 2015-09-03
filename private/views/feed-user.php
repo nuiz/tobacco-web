@@ -43,12 +43,31 @@ border: mome;">
     <div class="mCustomScrollbar data" ng-controller="FeedListCtl">
         <div class="buttonleft"><a href="{{backHref}}"><img src="img/icon_black.png"> กลับไปหน้า{{backText}}</a></div>
         <div class="user-profile" style="border-bottom:1px solid gainsboro; padding: 10px 0;">
-            <div class="user-profile-picture" style="float: left; margin-right: 20px;">
-                <img src="{{userProfile.picture}}" />
+            <div class="user-profile-picture upp-01" style="float: left; margin-right: 20px;">
+               	<div class="li-01">
+                    <a href="" class="link-user link-photo">
+                        <img class="images-display" src="{{userProfile.picture}}" />
+                        <span class="icon-display-edit"></span>
+                    </a>    
+                    <div class="edit-photo box-1">
+                        <a href="" class="edit01 d-user box-2">
+                            <span class="img-photo-edit p-01"></span>
+                            <div class="edit-display-text t-01">อัพเดตรูปประจำตัว</div>
+                        </a>
+                    </div><!--edit-phpto-->
+            	</div>
             </div>
             <div class="user-profile-detail" style="float: left;">
-                <div style="margin: 10px 0;">รหัสพนักงาน: {{userProfile.username}}</div>
-                <div style="margin: 10px 0;">ชื่อ: {{userProfile.firstname}} {{userProfile.lastname}}</div>
+            	<div class="edit-text">
+                	<div style="margin: 10px 0;">รหัสพนักงาน: {{userProfile.username}}</div>
+                	<div style="margin: 10px 0;">ชื่อ: {{userProfile.firstname}} {{userProfile.lastname}}</div>
+                	<div class="edit-text-profile">
+                    	<a href="" class="link-text-profile">
+                        	<div class="edit-icon"><i class="icon-edit-text"></i></div>
+                    		แก้ไขข้อมูลการติดต่อและข้อมูลพื้นฐาน
+                        </a>
+                    </div>
+                </div><!--edit-text-->
             </div>
             <div style="clear: both;"></div>
         </div>
@@ -65,7 +84,7 @@ border: mome;">
             <div class="user-des">
                 <div class="delete-post">
                   <a href="" ng-click="delete(item)">
-                    <img src="img/delete.png" alt="delete icon" style="width:20px; height:20px;"> ลบ
+                    <img src="img/delete.png" alt="delete icon" style="width:15px; height:15px;"> ลบ
                   </a>
                 </div>
                 <div class="user-img"><img src="{{item.user.picture}}" style="width: 38px;  height: 38px;  object-fit: cover;"></div>

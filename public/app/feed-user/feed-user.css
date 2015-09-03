@@ -254,8 +254,7 @@ a.paging.active:hover{
 }
 
 .delete-post a img{
-    vertical-align: middle;
-    margin-right: 5px;
+    vertical-align: bottom;
 }
 .delete-post a:hover{
     color: rgb(47, 54, 108);
@@ -273,9 +272,8 @@ a.paging.active:hover{
 
 .buttonleft {
 	font-size:20px;
-	border-bottom:1px solid whitesmoke;
 	padding-bottom: 10px;
-  float: right;
+  	float: right;
 }
 
 .buttonleft a {
@@ -286,4 +284,105 @@ a.paging.active:hover{
   width: 20px;
   height: 20px;
   margin-right: 2px;
+}
+
+/* edit photo*/
+
+.upp-01{
+	overflow:hidden;
+	width:130px;
+	height:150px;
+}
+.li-01{
+	height:150px;
+}
+img.images-display{
+	width:100%;
+	height: 100%;
+}
+.box-1{
+	visibility:hidden;
+	top: 125px;
+    width: 129px;
+    position: absolute;
+    height: 35px;
+}
+.li-01:hover .box-1{
+	visibility:visible;
+}
+.edit-display-text{
+	color:#fff;
+	font-size:15px;
+	-webkit-font-smoothing: antialiased;
+    font-weight: bold;
+    padding: 10px 0 12px 19px;
+    text-align: center;
+    position: absolute;
+    width: 85%;
+    top: 0px;
+}
+.edit-display-text:hover{
+	background:url(images/icon-camera-white.gif) no-repeat rgba(0, 0, 0, .9);
+	background-size: 19%;
+    background-position: 5% 42%;
+    padding: 10px 0 10px 19px;
+}
+.box-1 a{
+	text-decoration:none;
+}
+.icon-display-edit{
+	background:url(images/icon-camera-white.gif) no-repeat;
+	width: 35px;
+    height: 35px;
+    background-position: 50% 50%;
+    background-size: 100%;
+    position: absolute;
+    top: 125px;
+    left: 3.8px;
+}
+.li-01:hover .icon-display-edit,
+.li-01:hover .edit-display-text:hover span.img-photo-edit{
+	display:none;
+}
+span.img-photo-edit{
+	background:url(images/icon-camera-white.gif) no-repeat;
+	width: 30px;
+    height: 30px;
+    background-position: 0% 50%;
+    background-size: 80%;
+    margin: 2px 0 5px 5px;
+	display:inline-block;
+}
+.edit-photo{
+    background: rgba(0, 0, 0, .6);
+}
+
+/* edit profile */
+.user-profile-detail{
+	overflow:hidden;
+}
+.edit-text-profile{
+	visibility:hidden;
+}
+.edit-text:hover .edit-text-profile{
+	visibility:visible;
+}
+a.link-text-profile{
+	color:#5890ff;
+	text-decoration:none;
+	vertical-align: middle;
+}
+.edit-icon{
+	padding: 2.5px 4px 1px 4px;
+    background-color: #5890ff;
+    border-radius: 3px;
+    float: left;
+	margin-right:5px;
+}
+.icon-edit-text{
+	background:url(images/icon-pen.gif) no-repeat;
+	background-size:100%;
+	width:12px;
+	height:12px;
+	display: inline-block;
 }

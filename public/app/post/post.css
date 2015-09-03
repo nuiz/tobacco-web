@@ -195,7 +195,7 @@ a.add-comment, a.like-btn, a.unlike-btn {
 
 .delete-post{
     position: absolute;
-    right: 35px;
+    right: 50px;
     display: inline;
 }
 .delete-post a{
@@ -204,8 +204,7 @@ a.add-comment, a.like-btn, a.unlike-btn {
 }
 
 .delete-post a img{
-    vertical-align: middle;
-    margin-right: 5px;
+    vertical-align: bottom;
 }
 .delete-post a:hover{
     color: rgb(47, 54, 108);
@@ -255,3 +254,4 @@ a.add-comment, a.like-btn, a.unlike-btn {
   height: 20px;
   margin-right: 2px;
 }
+

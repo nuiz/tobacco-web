@@ -17,10 +17,16 @@
             <div ng-class="'book'+($index+1)" ng-style="{'background-image': 'url('+item.book_cover_url+')'}" ng-repeat="item in books_group[1]"></div>
 <!--            <div class="book1"></div>-->
         </div>
+        <button class="buttonleft" ng-disabled="currentPage == 0" ng-hide="currentPage == 0" ng-click="currentPage=currentPage-1"></button>
+        <button class="buttonright" ng-disabled="currentPage >= (centers.length/pageSize) - 1" ng-hide="currentPage >= (centers.length/pageSize) - 1" ng-click="currentPage=currentPage+1"></button>
         <div class="b_shf">
-            <div class="shelf_smalls"></div>
+            <div class="shelf_smalls">
+            	<div class="tag"><i class="tag-name"></i></div>
+            </div>
             <div class="shelf_book"></div>
-            <div class="shelf_small"></div>
+            <div class="shelf_small">
+            	<div class="tag"><i class="tag-name-recom"></i></div>
+            </div>
                 <div class="centerbook-wrap">
                     <a
                         ng-repeat="b in randomBooks | limitTo : 2"
@@ -55,8 +61,11 @@
                 ng-repeat="b in randomBooks  | limitTo : 5"
                 ng-if="$index > 1"
                 href="?view=book-reader&tp=tp-none&content_id={{b.content_id}}#book5/page1">
-            <div class="mag"
-                ng-style="{'background-image': 'url('+b.book_cover_url+')'}"></div>
+            <div class="mag" ng-style="{'background-image': 'url('+b.book_cover_url+')'}">
+             	<div class="ribbon">
+                	<i class="icon-recom"></i>
+                </div>
+            </div>
             </a>
         </div>
 
