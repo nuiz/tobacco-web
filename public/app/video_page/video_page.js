@@ -55,7 +55,8 @@ app.controller("VideoPageCtrl", ['$scope', '$http', function($scope, $http){
             var date = "วันที่ "+dateObject.getDate()+" "+thMonth[dateObject.getMonth()]+" "+(dateObject.getFullYear()+543);
             var time = dateObject.getHours()+":"+dateObject.getMinutes()+" น.";
 
-            return date + " เวลา " + time;
+            // return date + " เวลา " + time;
+            return date;
         };
     })($scope);
 }]);

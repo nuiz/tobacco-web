@@ -224,7 +224,7 @@ profileapp.controller('FeedListCtl', ['$scope', '$http', function ($scope, $http
         ];
 
         $scope.dateThai = function(dateInput){
-            var dateObject = new Date(dateInput);
+            var dateObject = new Date(dateInput.replace(" ", "T"));
             var date = "วันที่ "+dateObject.getDate()+" "+thMonth[dateObject.getMonth()]+" "+(dateObject.getFullYear()+543);
             var time = dateObject.getHours()+":"+dateObject.getMinutes()+" น.";
 

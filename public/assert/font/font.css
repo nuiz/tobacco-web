@@ -26,24 +26,32 @@
 
 @font-face {
 	font-family: THSarabun;
-	src: url("THSarabun/THSarabun.ttf") format("truetype");
+	src: url("THSarabun/THSarabun.eot");
+	src: url("THSarabun/THSarabun.eot?#iefix") format("embedded-opentype"),
+				url("THSarabun/THSarabun.ttf") format("truetype");
 }
 
-@font-face {
+/*@font-face {
 	font-family: THSarabun;
 	font-weight: bold;
-	src: url("THSarabun/THSarabun Bold.ttf") format("truetype");
+	src: url("THSarabun/THSarabun Bold.eot");
+	src: url("THSarabun/THSarabun Bold.eot?#iefix") format("embedded-opentype"),
+				url("THSarabun/THSarabun Bold.ttf") format("truetype");
 }
 
 @font-face {
 	font-family: THSarabun;
 	font-style: italic;
-	src: url("THSarabun/THSarabun Italic.ttf") format("truetype");
+	src: url("THSarabun/THSarabun Italic.eot");
+	src: url("THSarabun/THSarabun Italic.eot?#iefix") format("embedded-opentype"),
+				url("THSarabun/THSarabun Italic.ttf") format("truetype");
 }
 
 @font-face {
 	font-family: THSarabun;
 	font-style: italic;
 	font-style: bold;
-	src: url("THSarabun/THSarabun BoldItalic.ttf") format("truetype");
-}
+	src: url("THSarabun/THSarabun BoldItalic.eot");
+	src: url("THSarabun/THSarabun BoldItalic.eot?#iefix") format("embedded-opentype"),
+				url("THSarabun/THSarabun BoldItalic.ttf") format("truetype");
+}*/
