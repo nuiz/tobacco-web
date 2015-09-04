@@ -61,6 +61,9 @@ border: mome;">
             	<div class="edit-text">
                 	<div style="margin: 10px 0;">รหัสพนักงาน: {{userProfile.username}}</div>
                 	<div style="margin: 10px 0;">ชื่อ: {{userProfile.firstname}} {{userProfile.lastname}}</div>
+                    <div style="margin: 10px 0;">วันเกิด: </div>
+                	<div style="margin: 10px 0;">E-Mail: </div>
+                    <div style="margin: 10px 0;">เบอร์โทรศัพท์: </div>
                 	<div class="edit-text-profile">
                     	<a href="" class="link-text-profile">
                         	<div class="edit-icon"><i class="icon-edit-text"></i></div>

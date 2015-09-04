@@ -9,30 +9,41 @@
             <div class="booksClick"> > </div>
             <div ng-class="'mag'+($index+1)"
                  ng-style="{'background-image': 'url('+item.book_cover_url+')'}"
-                 ng-repeat="item in books_group[0]"></div>
+                 ng-repeat="item in books_group[0]">
+                 
+                <!-- <div class="add-new add-recom"></div>  icon เวลาที่แอดหนังสือใหม่ หรือ เป็นหนังสือแนะนำ -->
+                
+                 </div>
         </div>
         <div class="book_2" ng-click="bookClick(1)">
             <div class="type-title">นิตยสาร</div>
             <div class="booksClick"> < </div>
-            <div ng-class="'book'+($index+1)" ng-style="{'background-image': 'url('+item.book_cover_url+')'}" ng-repeat="item in books_group[1]"></div>
+            <div ng-class="'book'+($index+1)" ng-style="{'background-image': 'url('+item.book_cover_url+')'}" ng-repeat="item in books_group[1]">
+            
+            <!-- <div class="add-new add-recom"></div>  icon เวลาที่แอดหนังสือใหม่ หรือ เป็นหนังสือแนะนำ -->
+            
+            </div>
 <!--            <div class="book1"></div>-->
         </div>
         <button class="buttonleft" ng-disabled="currentPage == 0" ng-hide="currentPage == 0" ng-click="currentPage=currentPage-1"></button>
         <button class="buttonright" ng-disabled="currentPage >= (centers.length/pageSize) - 1" ng-hide="currentPage >= (centers.length/pageSize) - 1" ng-click="currentPage=currentPage+1"></button>
         <div class="b_shf">
             <div class="shelf_smalls">
-            	<div class="tag"><i class="tag-name"></i></div>
+            	<i class="tag"><p>ใหม่ล่าสุด</p></i>
             </div>
             <div class="shelf_book"></div>
             <div class="shelf_small">
-            	<div class="tag"><i class="tag-name-recom"></i></div>
+            	<i class="tag"><p>หนังสือแนะนำ</p></i>
             </div>
                 <div class="centerbook-wrap">
                     <a
                         ng-repeat="b in randomBooks | limitTo : 2"
                         href="?view=book-reader&tp=tp-none&content_id={{b.content_id}}#book5/page1">
                         <div class="magshf"
-                             ng-style="{'background-image': 'url('+b.book_cover_url+')'}"></div>
+                             ng-style="{'background-image': 'url('+b.book_cover_url+')'}">
+                             <div class="new-book"><i class="tag-name"></i></div>
+                             <div class="recommend"><i class="tag-name-recom"></i></div>
+                       </div>
                     </a>
                 </div>
         </div>
@@ -62,9 +73,11 @@
                 ng-if="$index > 1"
                 href="?view=book-reader&tp=tp-none&content_id={{b.content_id}}#book5/page1">
             <div class="mag" ng-style="{'background-image': 'url('+b.book_cover_url+')'}">
-             	<div class="ribbon">
-                	<i class="icon-recom"></i>
-                </div>
+             	<div class="most-view">
+                	<i class="icon-most1"></i>
+                    <i class="icon-most2"></i>
+                    <i class="icon-most3"></i>
+                </div><!-- เวลาคนเข้ามาดูมากที่สุดให้แสดง เป็นลำดับ 1 2 3 -->
             </div>
             </a>
         </div>

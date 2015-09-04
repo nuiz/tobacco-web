@@ -20,14 +20,39 @@
     background-size: 100%;
 }
 
-.Textline {
-    position: absolute;
+.category-pagenum{
+ 	position: absolute;
     top: 10px;
     left: 10px;
-    font-size: 24px;
-    color: #FEE5B1;
+	width:50%;
 }
 
+.breadcrumb .active {
+    font-size: 24px;
+	color: #FEE5B1;
+}
+
+.breadcrumb>li+li:before{
+    padding: 0 5px;
+    color:rgba(255, 255, 255, 0.44);
+	content:'\00BB';
+	font-size: 24px;
+}
+
+.breadcrumb ol{
+	list-style:none;
+	display:inline;
+}
+
+.breadcrumb>li {
+    display: inline-block;
+}
+
+.breadcrumb>li a{
+	color:rgba(255, 255, 255, 0.44);
+	font-size: 24px;
+	text-decoration:none;
+}
 .buttonleft {
     position: absolute;
     top: 117px;
@@ -498,4 +523,91 @@ strong.ng-binding{
 
 td.ng-binding{
     font-size: 15px;
+}
+
+/* icon */
+
+.display-video,
+.display-ebook{
+	background: rgba(0, 0, 0, .6);
+    height: 8.6%;
+    position: absolute;
+    background-size: 100%;
+    width: 15.1%;
+    background-position: 50% 50%;
+    margin-top: 95px;
+    border-radius: 0 0 7px 7px;
+}
+.icon-video,
+.icon-ebook{
+	width:25px;
+	height:25px;
+	position:absolute;
+	display:block;
+	margin: 7px 0 0 10px;
+}
+.icon-video{
+	background:url(images/icon-video.png) no-repeat;
+	background-size:100%;
+}
+.icon-ebook{
+	background: url(images/ebook_icon.png) no-repeat;
+	background-size:100%;
+}
+.new{
+	background: url(images/new-icon.png) no-repeat;
+    width: 28px;
+    height: 15px;
+    border-radius: 5px;
+    display: block;
+    margin: 13px 5px 0 0;
+    background-size: 100% 85%;
+    background-position: 50% 50%;
+	float:right;
+}
+.hot{
+	background: url(images/hot-icon.png) no-repeat;
+    width: 28px;
+    height: 15px;
+    border-radius: 5px;
+    display: block;    
+	margin: 13px 5px 0 0;
+    background-size: 100% 85%;
+    background-position: 50% 50%;
+	float:right;
+}
+	
+.content-thumb:hover .display-video,
+.content-thumb:hover .display-ebook{
+	background:#000;
+}
+
+.block_select .active{
+	background:url(images/block-active.png) no-repeat;
+	width: 190px;
+    height: 209px;
+	background-size: 100%;
+	color:#fff;
+	position: relative;
+    padding-top: 145px;
+    float: left;
+    top: -30px;
+}
+.sub-menu .active:hover,
+.subtype:hover,
+.sub-menu .active{
+	position: relative;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    left: 45px;
+    width: 80px;
+    height: 47px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: initial;
+    background: rgba(132, 37, 20, 1);
+    font-size: 14px;
+    border: 1px #CFA588 solid;
+    cursor: pointer;
 }

@@ -403,11 +403,90 @@
 }
 
 /* ribbbon */
-.icon-recom{
-	background:url(images/ribbon_red.gif) no-repeat;
-	background-position:top right;
-	position:absolute;
-	width:50px;
-	height:50px;
-}
 
+.icon-most1,
+.icon-most2,
+.icon-most3{
+	background-position: 50% 50%;
+    position: absolute;
+    width: 40px;
+    height: 65px;
+	top: -50.5%;
+}
+.icon-most1{
+	background: url(images/most-1.png) no-repeat;
+    left: 23.5%;
+	background-size: 100%;
+}
+.icon-most2{
+	background: url(images/most-2.png) no-repeat;
+    left: 50%;
+	background-size: 100%;
+}
+.icon-most3{
+	background: url(images/most-3.png) no-repeat;
+	left: 76.5%;
+	background-size: 100%;
+}
+.tag-name{
+	background: url(images/icon-new.png) no-repeat;
+	background-position: 50% 50%;
+    position: absolute;
+    background-size: 100%;
+    width: 30px;
+    height: 20px;
+    left: -3%;
+    top: 11.3%;
+	float: left;
+    margin-right: 2px;
+}
+.tag-name-recom{
+	background: url(images/tag-recom.png) no-repeat;
+	background-position: 50% 50%;
+    position: absolute;
+    background-size: 100%;
+   	width: 30px;
+    height: 20px;
+    left: -2%;
+    top: 55.5%;
+	float: left;
+    margin-right: 2px;
+}
+.add-new{
+	background: url(images/icon-new.png) no-repeat;
+	background-position: 50% 50%;
+    position: absolute;
+    background-size: 100%;
+   	width: 25px;
+    height: 15px;
+    left: -3px;
+	float: left;
+    margin-right: 2px;
+}
+.add-recom{
+	background: url(images/tag-recom.png) no-repeat;
+	background-position: 50% 50%;
+    position: absolute;
+    background-size: 100%;
+   	width: 25px;
+    height: 15px;
+    left: -3px;
+	float: left;
+    margin-right: 2px;
+}
+.tag{
+	background: url(images/tag.png) no-repeat;
+	background-position: 50% 50%;
+    position: absolute;
+    background-size: 100% 100%;
+    width: 100px;
+    height: 45px;
+    top: 67%;
+    left: 23.5%;
+	color:#fff;
+	text-align:center;
+	font-size:18px;
+}
+.tag p{
+	margin-top: 20px;
+}
