@@ -42,22 +42,24 @@
 }
 .button-slide{
 	position: absolute;
-    left: 130%;
-    top: 50%;
+    width: 100%;
+    top: 40%;
 }
-.btt-left{
-	background:url(images/Rotate-Arrow-Bottom-to-Left.png) no-repeat;
+.btt-next{
+	background:url(images/Bottom-next.png) no-repeat;
 	background-size:100% 100%;
 	width: 60px;
     height: 60px;
     position: absolute;
+    left: 127%;
 }
-.btt-right{
-	background:url(images/Rotate-Arrow-Bottom-to-right.png) no-repeat;
+.btt-back{
+	background:url(images/Bottom-back.png) no-repeat;
 	background-size:100% 100%;
 	width: 60px;
     height: 60px;
     position: absolute;
+	left: -37%;
 }
 	
 

@@ -9,8 +9,8 @@
         <div class="lever" ng-class="{down: catPage==1}" ng-click="clickLever()" ng-hide="selectedCat!=null"></div>
         <div class="close-cat" ng-hide="selectedCat==null" ng-click="closeCatClick()"></div>
         <div class="button-slide">
-        	<i class="btt-left"></i>
-        	<i class="btt-right"></i>
+        	<i class="btt-next"></i>
+        	<i class="btt-back"></i>
         </div>
 
         <div class="guru-chose-block" ng-hide="selectedGuru==null">
