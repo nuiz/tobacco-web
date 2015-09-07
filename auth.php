@@ -27,3 +27,8 @@ if($_GET['action']=="get"){
     }
     echo json_encode($user);
 }
+
+if($_GET['action']=="update"){
+    $_SESSION['user'] = array_merge($_SESSION['user'], $_POST["user"]);
+    echo json_encode($_SESSION['user']);
+}

@@ -73,12 +73,84 @@ profileapp.controller('FeedListCtl', ['$scope', '$http', function ($scope, $http
       refreshPage();
     });
 
+    var $inputUploadPicture = $('#inputUploadPicture');
+    $scope.uploadPictureAjax = false;
+    $scope.clickInputPicture = function()
+    {
+      $inputUploadPicture.val('');
+      $inputUploadPicture.click();
+    };
+
+    $inputUploadPicture.change(function(e){
+      if(this.files.length == 0) return;
+      var file = this.files[0];
+      var fd = new FormData();
+      fd.append('picture', file, file.name);
+
+      $scope.uploadPictureAjax = true;
+      $.ajax({
+          url: window.config.api_url+"/account/"+$scope.userProfile.account_id+"/picture?auth_token="+window.userlogin.auth_token,
+          data: fd,
+          cache: false,
+          contentType: false,
+          processData: false,
+          type: 'POST',
+          success: function(data){
+            $scope.uploadPictureAjax = false;
+            $.post('auth.php?action=update', {
+              user: {
+                picture: data.picture
+              }
+            }, function(data) {
+              window.location.reload();
+            }, 'json');
+            $scope.$apply();
+          }
+      });
+      $scope.$apply();
+    });
+
+    $scope.editMode = false;
+    $scope.toggleEditmode = function()
+    {
+      $scope.editMode = !$scope.editMode;
+    };
+
+    $scope.saveProfileEdit = function()
+    {
+      $.post(window.config.api_url+"/account/edit/"+$scope.userProfile.account_id, {
+        email: $scope.userProfile.email,
+        phone: $scope.userProfile.phone
+      }, function(data){
+        $.post('auth.php?action=update', {
+          user: {
+            email: data.email,
+            phone: data.phone
+          }
+        }, function(data) {
+          // do noting
+        }, 'json');
+        $scope.toggleEditmode();
+        $scope.$apply();
+      }, 'json');
+    };
+
     $scope.backText = "หลัก";
-    $scope.backHref = document.referrer;
+    // $scope.backHref = '?view=feed';
     if(/(view=expert)/.test(document.referrer)) {
       $scope.backText = "ผู้เชี่ยวชาญ";
-      $scope.backHref = document.referrer;
+      // $scope.backHref = document.referrer;
     }
+
+    $scope.backClick = function()
+    {
+      if(/(view=expert)/.test(document.referrer)) {
+        window.history.back();
+      }
+      else {
+        window.href = '?view=feed';
+      }
+    };
 
     $scope.setCurrentPage = function(cur){
         $scope.currentPage = cur;

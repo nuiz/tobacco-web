@@ -9,13 +9,13 @@
         <div class="lever" ng-class="{down: catPage==1}" ng-click="clickLever()" ng-hide="selectedCat!=null"></div>
         <div class="close-cat" ng-hide="selectedCat==null" ng-click="closeCatClick()"></div>
         <div class="button-slide">
-        	<i class="btt-next"></i>
-        	<i class="btt-back"></i>
+        	<i class="btt-next" ng-show="selectedCat!=null && false"></i>
+        	<i class="btt-back" ng-show="selectedCat!=null"></i>
         </div>
 
         <div class="guru-chose-block" ng-hide="selectedGuru==null">
             <div class="history-btn" title="ประวัตของผู้เชี่ยวชาญ" ng-lightbox='{"trigger": "manual", "element": "lightbox-history"}'></div>
-            <div class="blog-btn" title="โพสต์ของผู้เชี่ยวชาญ" ng-click="redirect('?view=feed-user&account_id='+selectedGuru.account_id)"></div>
+            <div class="blog-btn" title="โพสต์ของผู้เชี่ยวชาญ" ng-click="gotoFeedUser(selectedGuru)"></div>
             <div class="phone-btn" ng-lightbox='{"trigger": "manual", "element": "lightbox-telephone"}'></div>
             <div class="content-btn" title="องค์ความรู้ของผู้เชี่ยวชาญ"></div>
             <div class="display-picture" ng-style="{'background-image': 'url('+selectedGuru.picture+')'}"></div>
@@ -25,7 +25,7 @@
         </div>
 
         <div class="guru"
-             ng-repeat="item in gurus"
+             ng-repeat="item in gurusVM"
              ng-class="'guru-'+($index+1)"
              ng-hide="selectedCat==null"
              ng-style="{'background-image': 'url('+item.picture+')'}"

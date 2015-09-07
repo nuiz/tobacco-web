@@ -41,34 +41,43 @@ border: mome;">
       </div>
   </div>
     <div class="mCustomScrollbar data" ng-controller="FeedListCtl">
-        <div class="buttonleft"><a href="{{backHref}}"><img src="img/icon_black.png"> กลับไปหน้า{{backText}}</a></div>
+        <div class="buttonleft"><a href="" ng-click="backClick()"><img src="img/icon_black.png"> กลับไปหน้า{{backText}}</a></div>
         <div class="user-profile" style="border-bottom:1px solid gainsboro; padding: 10px 0;">
-            <div class="user-profile-picture upp-01" style="float: left; margin-right: 20px;">
+            <div class="user-profile-picture upp-01">
                	<div class="li-01">
                     <a href="" class="link-user link-photo">
                         <img class="images-display" src="{{userProfile.picture}}" />
-                        <span class="icon-display-edit"></span>
-                    </a>    
-                    <div class="edit-photo box-1">
-                        <a href="" class="edit01 d-user box-2">
+                        <span class="icon-display-edit" ng-hide="user.account_id!=userProfile.account_id"></span>
+                    </a>
+                    <div class="edit-photo box-1" ng-hide="user.account_id!=userProfile.account_id">
+                        <a href="" class="edit01 d-user box-2" ng-click="clickInputPicture()">
                             <span class="img-photo-edit p-01"></span>
                             <div class="edit-display-text t-01">อัพเดตรูปประจำตัว</div>
                         </a>
                     </div><!--edit-phpto-->
-            	</div>
+          	     </div>
+                 <div class="uploading-picture" ng-show="uploadPictureAjax">Uploading...</div>
             </div>
             <div class="user-profile-detail" style="float: left;">
             	<div class="edit-text">
                 	<div style="margin: 10px 0;">รหัสพนักงาน: {{userProfile.username}}</div>
                 	<div style="margin: 10px 0;">ชื่อ: {{userProfile.firstname}} {{userProfile.lastname}}</div>
-                    <div style="margin: 10px 0;">วันเกิด: </div>
-                	<div style="margin: 10px 0;">E-Mail: </div>
-                    <div style="margin: 10px 0;">เบอร์โทรศัพท์: </div>
-                	<div class="edit-text-profile">
-                    	<a href="" class="link-text-profile">
+                    <!-- <div style="margin: 10px 0;">วันเกิด: </div> -->
+                	<div style="margin: 10px 0;">E-Mail:
+                    <span ng-hide="editMode">{{userProfile.email}}</span>
+                    <input type="text" ng-show="editMode" ng-model="userProfile.email">
+                  </div>
+                  <div style="margin: 10px 0;">เบอร์โทรศัพท์:
+                    <span ng-hide="editMode">{{userProfile.phone}}</span>
+                    <input type="text" ng-show="editMode" ng-model="userProfile.phone">
+                  </div>
+                	<div class="edit-text-profile"  ng-hide="user.account_id!=userProfile.account_id">
+                    	<a href="" class="link-text-profile" ng-hide="editMode" ng-click="toggleEditmode()">
                         	<div class="edit-icon"><i class="icon-edit-text"></i></div>
                     		แก้ไขข้อมูลการติดต่อและข้อมูลพื้นฐาน
-                        </a>
+                      </a>
+                      <button ng-show="editMode" ng-click="saveProfileEdit()">บันทึก</button>
+                      <input type="file" style="display: none;" id="inputUploadPicture" accept=".jpg,.jpeg,.png">
                     </div>
                 </div><!--edit-text-->
             </div>

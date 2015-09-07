@@ -301,11 +301,11 @@ img.images-display{
 	height: 100%;
 }
 .box-1{
-	visibility:hidden;
-	top: 125px;
-    width: 129px;
-    position: absolute;
-    height: 35px;
+  visibility: hidden;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  height: 35px;
 }
 .li-01:hover .box-1{
 	visibility:visible;
@@ -333,12 +333,12 @@ img.images-display{
 .icon-display-edit{
 	background:url(images/icon-camera-white.gif) no-repeat;
 	width: 35px;
-    height: 35px;
-    background-position: 50% 50%;
-    background-size: 100%;
-    position: absolute;
-    top: 125px;
-    left: 3.8px;
+  height: 35px;
+  background-position: 50% 50%;
+  background-size: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 3.8px;
 }
 .li-01:hover .icon-display-edit,
 .li-01:hover .edit-display-text:hover span.img-photo-edit{
@@ -362,10 +362,12 @@ span.img-photo-edit{
 	overflow:hidden;
 }
 .edit-text-profile{
-	visibility:hidden;
+	/*visibility:hidden;*/
+  opacity: 0.8;
 }
 .edit-text:hover .edit-text-profile{
 	visibility:visible;
+  opacity: 1;
 }
 a.link-text-profile{
 	color:#5890ff;
@@ -385,4 +387,23 @@ a.link-text-profile{
 	width:12px;
 	height:12px;
 	display: inline-block;
+}
+.uploading-picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  box-sizing: border-box;
+  padding-top: 45%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+.user-profile-picture {
+  float: left;
+  margin-right: 20px;
+  position: relative;
 }
