@@ -45,7 +45,7 @@
                      ng-repeat="item in lv3_categories | limitTo: 10">
                     <table style="height: 100%; width: 100%;">
                         <tr>
-                            <td style="vertical-align: middle; text-align: center;">{{item.category_name}}</td>
+                            <td style="vertical-align: middle; text-align: center; word-break: break-word;">{{item.category_name}}</td>
                         </tr>
                     </table>
                 </div>
