@@ -20,6 +20,8 @@ function filterType (input, type) {
 }
 
 reserchapp.controller('ReserchListCtl', ['$scope', '$http', function ($scope, $http) {
+    $scope.now = new Date();
+
     $scope.main_category = null;
     $scope.lv2_category = null;
     $scope.lv3_category = null;
@@ -46,6 +48,9 @@ reserchapp.controller('ReserchListCtl', ['$scope', '$http', function ($scope, $h
 
     var firstBeforeLv2 = true;
     $scope.clickMain = function(){
+        $scope.lv3_category = null;
+        $scope.lv2_category = null;
+
         var url = window.config.api_url+"/category/" + getParameterByName('id');
         $http.get(url).success(function (data) {
             $scope.main_category = data;
@@ -67,6 +72,7 @@ reserchapp.controller('ReserchListCtl', ['$scope', '$http', function ($scope, $h
     $scope.clickMain();
 
     $scope.lv2Click = function(lv2){
+        $scope.lv3_category = null;
         $scope.lv2_category = lv2;
         $scope.category = lv2;
         var url = window.config.api_url+"/category?parent_id=" + lv2.category_id;
