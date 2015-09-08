@@ -72,6 +72,7 @@ expertapp.controller('ExpertListCtl', ['$scope', '$http', function ($scope, $htt
         $scope.gurusVM = [];
         $scope.gurusMaxPage = 0;
         $scope.gurusCurPage = 0;
+
         $http.get(window.config.api_url+"/guru?guru_cat_id=" + cat.guru_cat_id).success(function(data){
             $scope.gurus = data.data;
             $scope.gurusMaxPage = Math.floor($scope.gurus.length/8);
@@ -92,7 +93,7 @@ expertapp.controller('ExpertListCtl', ['$scope', '$http', function ($scope, $htt
 
               $scope.clickGuru($scope.gurusVM[indexGuru]);
               hashParams.guru_id = false;
-              // window.location.hash = "";
+              window.location.hash = "";
             }
         });
     };
@@ -101,6 +102,7 @@ expertapp.controller('ExpertListCtl', ['$scope', '$http', function ($scope, $htt
     {
       var size = 8;
       var start = index * size;
+      $scope.gurusCurPage = index;
       $scope.gurusVM = $scope.gurus.slice(start, start + size);
     };
 

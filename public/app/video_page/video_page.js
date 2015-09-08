@@ -49,11 +49,17 @@ app.controller("VideoPageCtrl", ['$scope', '$http', function($scope, $http){
             "พฤจิกายน",
             "ธันวาคม"
         ];
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
 
         $scope.dateThai = function(dateInput){
             var dateObject = new Date(dateInput * 1000);
             var date = "วันที่ "+dateObject.getDate()+" "+thMonth[dateObject.getMonth()]+" "+(dateObject.getFullYear()+543);
-            var time = dateObject.getHours()+":"+dateObject.getMinutes()+" น.";
+            // var time = checkTime(dateObject.getHours())+":"+checkTime(dateObject.getMinutes())+" น.";
 
             // return date + " เวลา " + time;
             return date;

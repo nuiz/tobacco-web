@@ -52,6 +52,7 @@
     height: 60px;
     position: absolute;
     left: 127%;
+  cursor: pointer;
 }
 .btt-back{
 	background:url(images/Bottom-back.png) no-repeat;
@@ -60,8 +61,9 @@
     height: 60px;
     position: absolute;
 	left: -37%;
+  cursor: pointer;
 }
-	
+
 
 /**** guru block *****/
 .guru-chose-block {

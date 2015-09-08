@@ -22,12 +22,18 @@
     <script src="pdfjs/src/display/annotation_helper.js"></script>
 
     <script src="public/app/config.js"></script>
-<script>
-window.config = {
-    nfc_auth_ip: "http://<?php echo $_SERVER["HTTP_HOST"];?>:5000",
-    api_url: "http://<?php echo $_SERVER["HTTP_HOST"];?>/tobacco"
-};
-</script>
+    <script>
+    // window.config = {
+    //     nfc_auth_ip: "http://<?php echo $_SERVER["HTTP_HOST"];?>:5000",
+    //     api_url: "http://<?php echo $_SERVER["HTTP_HOST"];?>/tobacco"
+    // };
+    </script>
+    <script>
+    window.config = {
+        nfc_auth_ip: "http://58.137.91.19:5000",
+        api_url: "http://58.137.91.19/tobacco"
+    };
+    </script>
 
     <link rel="stylesheet" href="public/app/book-reader/book-reader.css"/>
     <script src="public/app/book-reader/book-reader.js"></script>
@@ -337,7 +343,7 @@ window.config = {
                 <div id="fb5-menu-holder">
 
                     <ul id="fb5-slider">
-<!-- 
+<!--
                         <li class="1">
                             <img alt="" data-src="pages/thumbs/1_.jpg">
                         </li>

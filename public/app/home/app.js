@@ -19,10 +19,21 @@ homeApp.controller("HomeCTL", ['$scope', function($scope){
         "ธันวาคม"
     ];
 
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    }
+
+
     function setDate(){
-        var dateNow = new Date();
-        $scope.date = "วันที่ "+dateNow.getDate()+" "+thMonth[dateNow.getMonth()]+" "+(dateNow.getFullYear()+543);
-        $scope.time = dateNow.getHours()+":"+dateNow.getMinutes()+" น.";
+        var dateObject = new Date();
+        var date = "วันที่ " + dateObject.getDate() + " " + thMonth[dateObject.getMonth()] + " " + (dateObject.getFullYear() + 543);
+        var time = checkTime(dateObject.getHours()) + ":" + checkTime(dateObject.getMinutes()) + " น.";
+
+        var dThai = date + " เวลา " + time;
+        $scope.time = dThai;
     }
     setDate();
     setInterval(function(){

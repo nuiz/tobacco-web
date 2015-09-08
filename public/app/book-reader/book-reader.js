@@ -63,6 +63,13 @@ ebookapp.controller('ReaderCtl', ['$scope', '$http', function ($scope, $http) {
             "ธันวาคม"
         ];
 
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
         $scope.dateThai = function(dateInput, timeStamp){
             if(!timeStamp){
                 var dateObject = new Date(dateInput);
@@ -72,7 +79,7 @@ ebookapp.controller('ReaderCtl', ['$scope', '$http', function ($scope, $http) {
                 dateObject.setTime(parseInt(dateInput) * 1000);
             }
             var date = "วันที่ "+dateObject.getDate()+" "+thMonth[dateObject.getMonth()]+" "+(dateObject.getFullYear()+543);
-            var time = dateObject.getHours()+":"+dateObject.getMinutes()+" น.";
+            var time = checkTime(dateObject.getHours())+":"+checkTime(dateObject.getMinutes())+" น.";
 
             //return date + " เวลา " + time;
             return date;

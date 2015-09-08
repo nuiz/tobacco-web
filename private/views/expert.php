@@ -9,8 +9,8 @@
         <div class="lever" ng-class="{down: catPage==1}" ng-click="clickLever()" ng-hide="selectedCat!=null"></div>
         <div class="close-cat" ng-hide="selectedCat==null" ng-click="closeCatClick()"></div>
         <div class="button-slide">
-        	<i class="btt-next" ng-show="selectedCat!=null && false"></i>
-        	<i class="btt-back" ng-show="selectedCat!=null"></i>
+        	<i class="btt-next" ng-show="selectedCat!=null && gurusCurPage < gurusMaxPage" ng-click="setGuruPage(gurusCurPage+1)"></i>
+        	<i class="btt-back" ng-show="selectedCat!=null && gurusCurPage > 0" ng-click="setGuruPage(gurusCurPage-1)"></i>
         </div>
 
         <div class="guru-chose-block" ng-hide="selectedGuru==null">
