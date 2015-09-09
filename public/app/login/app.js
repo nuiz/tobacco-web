@@ -19,7 +19,7 @@ loginapp.controller('LoginCTL', ['$scope', '$http', function ($scope, $http) {
     $scope.submitLogin = function(){
         var kiosk_id = getCookie('kiosk_id');
         var login_url = window.config.api_url+'/login?client_type=' + (kiosk_id == ""? "pc": "kiosk");
-        
+
         var req1 = {
             method: 'POST',
             url: login_url,
@@ -44,7 +44,7 @@ loginapp.controller('LoginCTL', ['$scope', '$http', function ($scope, $http) {
                 };
 
                 $http(req).success(function(){
-                    window.location.href="?view=feed";
+                    window.location.href="?view=feed-user&account_id="+data.account_id;
                 });
             }
             else {

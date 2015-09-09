@@ -95,12 +95,12 @@ $(function(){
                     else {
                         $.post('auth.php?action=login', {user: authData}, function(data2){
                             if(typeof data2.error != "undefined"){
-                                alert("อุปกรณ์ NFC นี้ยังไม่ได้ลงทะเบียน");
+                                alert(data2.error);
                                 return;
                             }
                             alert("เข้าสู่ระบบ สำเร็จแล้ว");
 
-                            var href = "?view=feed&kiosk_id="+kiosk_id;
+                            var href = "?view=feed-user&kiosk_id="+kiosk_id+"&account_id="+authData.account_id;
                             if(window.location.href!=href)
                                 window.location.href=href;
                             else
