@@ -66,10 +66,12 @@ profileapp.controller('FeedListCtl', ['$scope', '$http', function ($scope, $http
                 console.log($scope.paging, $scope.total);
             });
     }
+
+    $http.get(window.config.api_url+'/account/'+getParameterByName('account_id')).success(function(data){
+        $scope.userProfile = data;
+    });
+    
     onUserReady(function() {
-      $http.get(window.config.api_url+'/account/'+getParameterByName('account_id')).success(function(data){
-          $scope.userProfile = data;
-      });
       refreshPage();
     });
 

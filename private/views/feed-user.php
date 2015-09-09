@@ -47,9 +47,9 @@ border: mome;">
                	<div class="li-01">
                     <a href="" class="link-user link-photo">
                         <img class="images-display" src="{{userProfile.picture}}" />
-                        <span class="icon-display-edit" ng-hide="user.account_id!=userProfile.account_id"></span>
+                        <span class="icon-display-edit" ng-show="user.account_id==userProfile.account_id"></span>
                     </a>
-                    <div class="edit-photo box-1" ng-hide="user.account_id!=userProfile.account_id">
+                    <div class="edit-photo box-1" ng-show="user.account_id==userProfile.account_id">
                         <a href="" class="edit01 d-user box-2" ng-click="clickInputPicture()">
                             <span class="img-photo-edit p-01"></span>
                             <div class="edit-display-text t-01">อัพเดตรูปประจำตัว</div>
