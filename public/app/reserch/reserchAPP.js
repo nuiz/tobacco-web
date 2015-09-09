@@ -92,8 +92,33 @@ reserchapp.controller('ReserchListCtl', ['$scope', '$http', function ($scope, $h
     $scope.contents = [];
     $scope.fetchContents = function(){
         var url = window.config.api_url+"/content/by_category?category_id="+$scope.category.category_id;
-        $http.get(url).success(function(data){
-            $scope.contents = data.data;
+        $http.get(url).success(function(data) {
+            $scope.contents = data.data.map(function(o) {
+              o.created_at = parseInt(o.created_at);
+              return o;
+            });
+            $scope.contents.sort(function(a, b) {
+              return b.created_at - a.created_at;
+            });
+            $scope.contents.sort(function(a, b) {
+              return b.created_at - a.created_at;
+            });
+
+            var maxVal = Math.max.apply(null, $scope.contents.map(function(o) {
+              return o.view_count;
+            }));
+
+            $scope.contents = $scope.contents.map(function(o) {
+              if(o.view_count == maxVal && $scope.contents.length > 1) {
+                o.hot = true;
+              }
+              else {
+                o.hot = false;
+              }
+              return o;
+            });
+            console.log($scope.contents);
+            // console.log($scope.now.getTime(), ($scope.contents[9].created_at + (24*60*60*30))*1000);
         });
     };
 

@@ -76,8 +76,8 @@
                         <div class="display-video">
                         	<i class="icon-video"></i>  <!--display ebook-->
                             	<div class="add-new-item add-hot-item">
-                            		<i class="new" ng-show="(item.created_at - 259200)*1000 > now.getTime()"></i> <!-- add new item -->
-                            		<i class="hot" ng-show="false"></i> <!-- item so hot -->
+                            		<i class="new" ng-show="(item.created_at + (24*60*60*7))*1000 > now.getTime()"></i> <!-- add new item -->
+                            		<i class="hot" ng-show="item.hot"></i> <!-- item so hot -->
                                 </div>
                         </div><!-- end icon video-->
                 </div>
@@ -87,8 +87,8 @@
                      	<div class="display-ebook">
                         	<i class="icon-ebook"></i> <!--display ebook-->
                             	<div class="add-new-item add-hot-item">
-                            		<i class="new" ng-show="(item.created_at - 259200)*1000 > now.getTime()"></i> <!-- add new item -->
-                            		<i class="hot" ng-show="false"></i> <!-- item so hot -->
+                            		<i class="new" ng-show="(item.created_at + (24*60*60*7))*1000 > now.getTime()"></i> <!-- add new item -->
+                            		<i class="hot" ng-show="item.hot"></i> <!-- item so hot -->
                                 </div>
                        </div><!-- end icon video-->
                 </div>
