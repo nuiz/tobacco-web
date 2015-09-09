@@ -5,28 +5,30 @@
     <div ng-app="ebook" ng-controller="EbookListCtl">
         <div class="back_home" ng-click="backhome()"></div>
         <div class="book" ng-click="bookClick(2)">
-            <div class="type-title">หนังสือ</div>
+            <div class="type-title">{{category_show[0].category_name}}</div>
             <div class="booksClick"> > </div>
             <div ng-class="'mag'+($index+1)"
                  ng-style="{'background-image': 'url('+item.book_cover_url+')'}"
                  ng-repeat="item in books_group[0]">
-                 
+
                 <!-- <div class="add-new add-recom"></div>  icon เวลาที่แอดหนังสือใหม่ หรือ เป็นหนังสือแนะนำ -->
-                
+
                  </div>
         </div>
         <div class="book_2" ng-click="bookClick(1)">
-            <div class="type-title">นิตยสาร</div>
+            <div class="type-title">{{category_show[1].category_name}}</div>
             <div class="booksClick"> < </div>
-            <div ng-class="'book'+($index+1)" ng-style="{'background-image': 'url('+item.book_cover_url+')'}" ng-repeat="item in books_group[1]">
-            
+            <div ng-class="'book'+($index+1)"
+                ng-style="{'background-image': 'url('+item.book_cover_url+')'}"
+                ng-repeat="item in books_group[1]">
+
             <!-- <div class="add-new add-recom"></div>  icon เวลาที่แอดหนังสือใหม่ หรือ เป็นหนังสือแนะนำ -->
-            
+
             </div>
 <!--            <div class="book1"></div>-->
         </div>
-        <button class="buttonleft" ng-disabled="currentPage == 0" ng-hide="currentPage == 0" ng-click="currentPage=currentPage-1"></button>
-        <button class="buttonright" ng-disabled="currentPage >= (centers.length/pageSize) - 1" ng-hide="currentPage >= (centers.length/pageSize) - 1" ng-click="currentPage=currentPage+1"></button>
+        <button class="buttonleft" ng-click="backCat()"></button>
+        <button class="buttonright" ng-click="nextCat()"></button>
         <div class="b_shf">
             <div class="shelf_smalls">
             	<i class="tag"><p>ใหม่ล่าสุด</p></i>
@@ -37,7 +39,7 @@
             </div>
                 <div class="centerbook-wrap">
                     <a
-                        ng-repeat="b in randomBooks | limitTo : 2"
+                        ng-repeat="b in showpageBooks | limitTo : 2"
                         href="?view=book-reader&tp=tp-none&content_id={{b.content_id}}#book5/page1">
                         <div class="magshf"
                              ng-style="{'background-image': 'url('+b.book_cover_url+')'}">
@@ -62,14 +64,14 @@
             <div class="exit">x
                 <a class="exit1" href="#"></a>
             </div>
-            <div class="booktype" ng-click="bookClick(booktype.book_type_id)" ng-repeat="booktype in booktypes">
-                {{booktype.book_type_name}}
+            <div class="booktype" ng-click="bookClick(cat.category_id)" ng-repeat="cat in category">
+                {{cat.category_name}}
             </div>
         </div>
 
         <div class="bg_black">
             <a
-                ng-repeat="b in randomBooks  | limitTo : 5"
+                ng-repeat="b in showpageBooks  | limitTo : 5"
                 ng-if="$index > 1"
                 href="?view=book-reader&tp=tp-none&content_id={{b.content_id}}#book5/page1">
             <div class="mag" ng-style="{'background-image': 'url('+b.book_cover_url+')'}">

@@ -4,7 +4,7 @@
 "use strict";
 var subpageapp = angular.module('subpage', []);
 subpageapp.controller('SubpageListCtl', ['$scope', '$http', function ($scope, $http) {
-    $http.get(window.config.api_url+'/book_type').success(function (data) {
+    $http.get(window.config.api_url+'/category').success(function (data) {
         $scope.booktypes = data.data;
     });
     $scope.subpageClick = function(){

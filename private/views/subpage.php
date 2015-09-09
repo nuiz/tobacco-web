@@ -16,7 +16,7 @@
                 <a class="exits2" href="#"></a>
             </div>
             <div class="booktype" ng-repeat="booktype in booktypes">
-                {{booktype.book_type_name}}
+                {{category.category_name}}
             </div>
         </div>
     </div>
