@@ -40,7 +40,7 @@ expertapp.controller('ExpertListCtl', ['$scope', '$http', function ($scope, $htt
           if(indexCat > 10) {
             $scope.catPage = 1;
           }
-          $scope.clickCat(indexCat);
+          $scope.clickCat(indexCat%11);
           hashParams.guru_cat_id = false;
         }
     });
