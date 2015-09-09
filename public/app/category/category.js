@@ -10,4 +10,8 @@ categoryapp.controller('CategorysListCtl', ['$scope', '$http', function ($scope,
     $scope.readmoreClick = function (id) {
         window.location.href = "?view=reserch&tp=tp-blank&id="+id;
     }
+    $http.get(window.config.api_url+'/category').success(function (data) {
+        $scope.category1 = data.data.slice(0, 16);
+        $scope.category2 = data.data.slice(16, 32);
+    });
 }]);

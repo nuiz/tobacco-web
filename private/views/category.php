@@ -8,12 +8,15 @@
         <div class="bottom">
             <a class="bottomClick" href="#"></a>
         </div>
-        <div class="icon1" ng-click="readmoreClick(1)">
-            <img src="public/app/category/images/1.png">
+        <div class="icon1"
+          ng-repeat="item in category1"
+          ng-click="readmoreClick(item.category_id)"
+          >
+            <img src="{{item.desktop_icon_url}}">
 
-            <div>กฎหมาย</div>
+            <div>{{item.category_name}}</div>
         </div>
-        <div class="icon1" ng-click="readmoreClick(2)">
+        <!-- <div class="icon1" ng-click="readmoreClick(2)">
             <img src="public/app/category/images/22.png">
 
             <div>จัดซื้อ/จัดจ้าง</div>
@@ -87,10 +90,18 @@
             <img src="public/app/category/images/16.png">
 
             <div>ความรู้ทั่วไป</div>
-        </div>
+        </div> -->
     </div>
     <div class="icon2" style="display: none">
-        <div class="icon1" ng-click="readmoreClick(17)">
+      <div class="icon1"
+        ng-repeat="item in category2"
+          ng-click="readmoreClick(item.category_id)"
+        >
+          <img src="{{item.desktop_icon_url}}">
+
+          <div>{{item.category_name}}</div>
+      </div>
+        <!-- <div class="icon1" ng-click="readmoreClick(17)">
             <img src="public/app/category/images/17.png">
 
             <div>แผนยุทธศาสตร์</div>
@@ -99,7 +110,7 @@
             <img src="public/app/category/images/18.png">
 
             <div>การตลาดการขาย</div>
-        </div>
+        </div> -->
         <div class="bottomBack">
             <a class="bottomBack2" href="#"></a>
         </div>
@@ -123,4 +134,3 @@
         });
     });
 </script>
-
