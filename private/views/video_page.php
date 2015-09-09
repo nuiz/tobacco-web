@@ -20,7 +20,10 @@
                 </div>
                 <div class="txt_other">
                   {{dateThai(content.created_at)}} (การเข้าชม {{content.view_count}} ครั้ง)
-                  <a href="{{videoShow.video_url}}" download style="color: inherit; text-descoration: none;">Download</a>
+                  <a href="{{videoShow.video_url}}" download style="color: inherit; text-descoration: none;">Download Video</a>
+                </div>
+                <div class="txt_other">
+                <a href="{{item.file_url}}" class="attach-file" ng-repeat="item in content.attach_files">{{item.file_name}}</a>
                 </div>
                 <div class="txt_report">{{content.content_description}}</div>
             </div>
