@@ -70,7 +70,7 @@ profileapp.controller('FeedListCtl', ['$scope', '$http', function ($scope, $http
     $http.get(window.config.api_url+'/account/'+getParameterByName('account_id')).success(function(data){
         $scope.userProfile = data;
     });
-    
+
     onUserReady(function() {
       refreshPage();
     });
@@ -291,7 +291,7 @@ profileapp.controller('FeedListCtl', ['$scope', '$http', function ($scope, $http
             "มิถุนายน",
             "กรกฎาคม",
             "สิงหาคม",
-            "กันยายนน",
+            "กันยายน",
             "ตุลาคม",
             "พฤจิกายน",
             "ธันวาคม"

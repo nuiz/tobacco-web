@@ -44,7 +44,7 @@ app.controller("VideoPageCtrl", ['$scope', '$http', function($scope, $http){
             "มิถุนายน",
             "กรกฎาคม",
             "สิงหาคม",
-            "กันยายนน",
+            "กันยายน",
             "ตุลาคม",
             "พฤจิกายน",
             "ธันวาคม"
