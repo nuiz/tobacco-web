@@ -62,9 +62,50 @@
         <span ng-lightbox-close class="close-popup-btn"></span>
         <div class="wrap">
             <h1>องค์ความรู้ผู้เชียวชาญ</h1>
-            <div>
-
-            </div>
+            <div class="list-content">
+               	<div class="content-thumb" style="background-image:url(public/images/home/bg1.jpg);">
+                	<!-- start display video -->
+                    <div class="display-video">
+                    	<i class="icon-video"></i>  <!--display video-->
+                    </div><!-- end icon video-->
+                </div>
+                <div class="subject">
+                  	<h1 class="name-subject">Qlikview</h1>
+                </div>
+            </div><!--list-content-->
+            <div class="list-content">
+               	<div class="content-thumb" style="background-image:url(public/images/home/bg1.jpg);">
+                	<!-- start display ebook -->
+            		<div class="display-ebook">
+                    	<i class="icon-ebook"></i> <!--display ebook-->
+                   </div><!-- end icon video-->
+                </div>
+                <div class="subject">
+                	<h1 class="name-subject">รายงานการจัดการความรู้ "เทคโนโลยีสารสนเทศและการสื่อสารเพื่อการบริหารงานภาครัฐฯ"</h1>
+                </div>
+            </div><!--list-content-->
+            <div class="list-content">
+               	<div class="content-thumb" style="background-image:url(public/images/home/bg1.jpg);">
+                	<!-- start display ebook -->
+            		<div class="display-ebook">
+                    	<i class="icon-ebook"></i> <!--display ebook-->
+                   </div><!-- end icon video-->
+                </div>
+                <div class="subject">
+                	<h1 class="name-subject">รายงานการจัดการความรู้ "เทคโนโลยีสารสนเทศและการสื่อสารเพื่อการบริหารงานภาครัฐฯ"</h1>
+                </div>
+            </div><!--list-content-->
+            <div class="list-content">
+               	<div class="content-thumb" style="background-image:url(public/images/home/bg1.jpg);">
+                	<!-- start display ebook -->
+            		<div class="display-ebook">
+                    	<i class="icon-ebook"></i> <!--display ebook-->
+                   </div><!-- end icon video-->
+                </div>
+                <div class="subject">
+                	<h1 class="name-subject">รายงานการจัดการความรู้ "เทคโนโลยีสารสนเทศและการสื่อสารเพื่อการบริหารงานภาครัฐฯ"</h1>
+                </div>
+            </div><!--list-content-->
         </div>
     </div>
 </div>

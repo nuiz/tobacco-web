@@ -544,9 +544,8 @@
     z-index: 3;
     opacity: 0;
     display: none;
-    padding: 16px;
+    padding: 10px;
     box-sizing: border-box;
-    padding-right: 0;
 }
 
 .lightbox.lightbox-active{
@@ -557,7 +556,6 @@
 .lightbox .wrap {
     min-height: 200px;
     max-height: 500px;
-    padding-right: 16px;
     overflow: auto;
 }
 
@@ -597,4 +595,62 @@
 
 .lightbox p {
     text-indent: 32px;
+}
+
+/* */
+.list-content{
+	width: 48%;
+    float: left;
+	padding-bottom:5px;
+	margin: 0 5px 10px 0;
+    border-bottom: 1px solid whitesmoke;
+}
+.content-thumb {
+    border-radius: 7px;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+	float:left;
+}
+.display-video, .display-ebook {
+    background: rgba(0, 0, 0, .6);
+    height: 10%;
+    position: absolute;
+    background-size: 100%;
+    width: 20%;
+    background-position: 50% 50%;
+    margin-top: 72px;
+    border-radius: 0 0 7px 7px;
+}
+.icon-video {
+    background: url(../reserch/images/icon-video.png) no-repeat;
+    background-size: 100%;
+}
+.icon-ebook {
+    background: url(../reserch/images/ebook_icon.png) no-repeat;
+    background-size: 100%;
+}
+.icon-video, .icon-ebook {
+    width: 20px;
+    height: 25px;
+    position: absolute;
+    display: block;
+    margin: 3px 0 0 10px;
+}
+.content-thumb:hover .display-video, .content-thumb:hover .display-ebook {
+    background: #000;
+}
+.subject{
+	float: left;
+    width: 50%;
+    padding: 0 5px 0 10px;
+    text-align: left;
+}
+.subject h1{
+	text-align:left;
+	font-size:15px;
+}
+.subject h1:hover{
+	color:cornflowerblue;
 }
