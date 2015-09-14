@@ -268,7 +268,11 @@
 
                     <!-- icon_home -->
                     <li>
-                        <a title="SHOW HOME PAGE " class="fb5-home" href="<?php echo $_SERVER['HTTP_REFERER'];?>"></a>
+                        <a title="SHOW HOME PAGE " class="fb5-home" href="<?php
+                          echo preg_match('/view=expert/', $_SERVER['HTTP_REFERER'])
+                            ? $_SERVER['HTTP_REFERER']."#guru_id=".$_GET['guru_id']."&guru_cat_id=".$_GET['guru_cat_id']
+                            : $_SERVER['HTTP_REFERER'];
+                            ?>"></a>
                     </li>
 
                 </ul>

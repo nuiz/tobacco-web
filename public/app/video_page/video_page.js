@@ -25,7 +25,15 @@ app.controller("VideoPageCtrl", ['$scope', '$http', function($scope, $http){
               }
               return obj.category_id;
             };
-            $scope.backHref = "?view=reserch&tp=tp-blank&id=" + fnGetParent(data);
+            $scope.backClick = function()
+            {
+              if(/(view=expert)/.test(document.referrer)) {
+                window.history.back();
+              }
+              else {
+                window.href = "?view=reserch&tp=tp-blank&id=" + fnGetParent(data);
+              }
+            };
         });
     });
 

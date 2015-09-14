@@ -6,7 +6,7 @@
 <script src="public/app/video_page/video_page.js"></script>
 
 <div id="video-page" ng-app="video-page" ng-controller="VideoPageCtrl">
-<div class="buttonleft"><a href="{{backHref}}" style="color: inherit; text-decoration: none;"><img src="public/app/video_page/images/icongrp.png"> กลับไปหมวดหมู่</a></div>
+<div class="buttonleft"><a href="" ng-click="backClick()" style="color: inherit; text-decoration: none;"><img src="public/app/video_page/images/icongrp.png"> กลับ</a></div>
     <div class="blockleft">
         <div class="video">
             <video width="100%" height="100%" id="videoPlayer" controls></video>

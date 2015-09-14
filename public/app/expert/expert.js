@@ -50,6 +50,9 @@ expertapp.controller('ExpertListCtl', ['$scope', '$http', function ($scope, $htt
     $scope.selectedGuru = null;
     $scope.clickGuru = function(item){
         $scope.selectedGuru = item;
+        $http.get(window.config.api_url+"/content?guru_id="+item.account_id).success(function(data){
+          $scope.contents = data.data;
+        });
     };
 
     $scope.catPage = 0;
@@ -123,6 +126,21 @@ expertapp.controller('ExpertListCtl', ['$scope', '$http', function ($scope, $htt
       });
       setTimeout(function() {
         window.location.href = "?view=feed-user&account_id=" + item.account_id;
+      }, 10);
+    };
+
+    $scope.clickContent = function(item, guru){
+      window.location.hash = $.param({
+        guru_id: guru.guru_id,
+        guru_cat_id: guru.guru_cat_id
+      });
+      setTimeout(function() {
+        if(item.content_type == 'video') {
+          window.location.href = "?view=video_page&content_id=" + item.content_id;
+        }
+        else {
+          window.location.href = "?view=book-reader&tp=tp-none&content_id="+item.content_id+"&guru_id="+guru.guru_id+"&guru_cat_id="+guru.guru_cat_id+"#book5/page1";
+        }
       }, 10);
     };
 }]);
