@@ -17,7 +17,7 @@
             <div class="history-btn" title="ประวัตของผู้เชี่ยวชาญ" ng-lightbox='{"trigger": "manual", "element": "lightbox-history"}'></div>
             <div class="blog-btn" title="โพสต์ของผู้เชี่ยวชาญ" ng-click="gotoFeedUser(selectedGuru)"></div>
             <div class="phone-btn" ng-lightbox='{"trigger": "manual", "element": "lightbox-telephone"}'></div>
-            <div class="content-btn" title="องค์ความรู้ของผู้เชี่ยวชาญ"></div>
+            <div class="content-btn" title="องค์ความรู้ของผู้เชี่ยวชาญ" ng-lightbox='{"trigger": "manual", "element": "lightbox-content"}'></div>
             <div class="display-picture" ng-style="{'background-image': 'url('+selectedGuru.picture+')'}"></div>
             <div class="name">{{selectedGuru.firstname}} {{selectedGuru.lastname}}</div>
             <div class="cat_name">{{selectedGuru.guru_cat_name}}</div>
@@ -56,6 +56,15 @@
         <div class="wrap">
             <h1>เบอร์โทรศัพท์ผู้เชี่ยวชาญ</h1>
             <div style="text-align: center;">{{selectedGuru.guru_telephone}}</div>
+        </div>
+    </div>
+    <div class="lightbox" id="lightbox-content">
+        <span ng-lightbox-close class="close-popup-btn"></span>
+        <div class="wrap">
+            <h1>องค์ความรู้ผู้เชียวชาญ</h1>
+            <div>
+
+            </div>
         </div>
     </div>
 </div>
