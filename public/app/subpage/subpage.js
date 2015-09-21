@@ -5,11 +5,17 @@
 var subpageapp = angular.module('subpage', []);
 subpageapp.controller('SubpageListCtl', ['$scope', '$http', function ($scope, $http) {
     $http.get(window.config.api_url+'/category').success(function (data) {
-        $scope.booktypes = data.data;
+        $scope.category = data.data;
     });
     $scope.subpageClick = function(){
         window.location.href = "?view=e-book";
     };
+    $scope.bookClick = function(id){
+        window.location.href = "?view=subpage&category_id="+id;
+    };
+    $http.get(window.config.api_url+'/category/'+getParameterByName('category_id')).success(function (data) {
+        $scope.categoryNow = data;
+    });
 
     function getParameterByName(name) {
         name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -21,10 +27,13 @@ subpageapp.controller('SubpageListCtl', ['$scope', '$http', function ($scope, $h
     $scope.books = [];
 
     var keyword = getParameterByName('keyword');
-    if(keyword == null){
-        var url = window.config.api_url+"/ebook?book_type_id="+getParameterByName('book_type_id');
+    if(!keyword){
+        var url = window.config.api_url+"/content?category_id="+getParameterByName('category_id');
         $http.get(url).success(function (data) {
-            $scope.books = data.data;
+            var list = data.data.filter(function(o) {
+              return o.content_type == "book";
+            });
+            $scope.books = list;
         });
     }
     else {
@@ -33,4 +42,5 @@ subpageapp.controller('SubpageListCtl', ['$scope', '$http', function ($scope, $h
             $scope.books = data.data;
         });
     }
+
 }]);

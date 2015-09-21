@@ -4,7 +4,7 @@
 <div class="body">
     <div ng-app="ebook" ng-controller="EbookListCtl">
         <div class="back_home" ng-click="backhome()"></div>
-        <div class="book" ng-click="bookClick(2)">
+        <div class="book" ng-click="bookClick(category_show[0].category_id)">
             <div class="type-title">{{category_show[0].category_name}}</div>
             <div class="booksClick"> > </div>
             <div ng-class="'mag'+($index+1)"
@@ -15,7 +15,7 @@
 
                  </div>
         </div>
-        <div class="book_2" ng-click="bookClick(1)">
+        <div class="book_2" ng-click="bookClick(category_show[1].category_id)">
             <div class="type-title">{{category_show[1].category_name}}</div>
             <div class="booksClick"> < </div>
             <div ng-class="'book'+($index+1)"

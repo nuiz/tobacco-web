@@ -5,7 +5,7 @@
 <div ng-app="subpage" ng-controller="SubpageListCtl">
 <div>
     <div class="bgSubPage"></div>
-    <div class="label_book"><p class="text-subject">หนังสือ</p></div>
+    <div class="label_book"><p class="text-subject">{{categoryNow.category_name}}</p></div>
     <!--<div class="search"></div>-->
     <div class="back_home" ng-click="subpageClick()"></div>
         <div class="category">
@@ -15,8 +15,8 @@
             <div class="exit2">x
                 <a class="exits2" href="#"></a>
             </div>
-            <div class="booktype" ng-repeat="booktype in booktypes">
-                {{category.category_name}}
+            <div class="booktype" ng-click="bookClick(cat.category_id)" ng-repeat="cat in category">
+                {{cat.category_name}}
             </div>
         </div>
     </div>
